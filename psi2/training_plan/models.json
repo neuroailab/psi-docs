@@ -1,0 +1,220 @@
+[
+  {
+    "id": "psi0.4",
+    "name": "psi0.4",
+    "step": 500000,
+    "stage": "pre",
+    "row": 0,
+    "labelPosition": "above",
+    "status": "done",
+    "modalities": "RGBC",
+    "parent": null,
+    "summary": "The RGBC foundation checkpoint that begins the PSI training lineage.",
+    "recipe": [
+      "500k steps of RGBC pre-training."
+    ],
+    "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/9c3p75h3?nw=nwuserklemenk",
+    "checkpoint": "PSI2_8B_RGBC_bvd2_TPUv5e_restart/model_00490000"
+  },
+  {
+    "id": "psi0.5",
+    "name": "psi0.5",
+    "step": 700000,
+    "stage": "pre",
+    "row": 0,
+    "labelPosition": "above",
+    "status": "done",
+    "modalities": "RGBCFD",
+    "parent": "psi0.4",
+    "summary": "The first RGBCFD PSI checkpoint, adding flow and depth to the original visual recipe.",
+    "recipe": [
+      "500k steps of RGBC pre-training.",
+      "200k steps of RGBCFD pre-training."
+    ],
+    "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/3pe76iz3?nw=nwuserklemenk",
+    "checkpoint": "PSI2_8B_RGBCFD_bvd2_TPUv5e_fromrgb/model_00700000"
+  },
+  {
+    "id": "psi0.5-base",
+    "name": "psi0.5-base",
+    "step": 750000,
+    "stage": "mid",
+    "row": 0,
+    "status": "done",
+    "modalities": "RGBCFD",
+    "parent": "psi0.5",
+    "summary": "The released psi0.5 checkpoint with an additional 32k-context extension phase.",
+    "recipe": [
+      "500k steps of RGBC pre-training.",
+      "200k steps of RGBCFD pre-training.",
+      "50k steps of RGBCFD context extension at 32k context, batch size 64, with a dropped learning rate."
+    ],
+    "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/mozt3n8h/logs",
+    "huggingFace": "https://huggingface.co/StanfordNeuroAILab/psi0_5",
+    "checkpoint": "PSI2_8B_RGBCFD_bvd2_ctx32768_drop_hybrid_marlowe/model_00750000"
+  },
+  {
+    "id": "psi0.5-ctx128k",
+    "name": "psi0.5-ctx128k",
+    "step": 755000,
+    "stage": "mid",
+    "row": 1,
+    "status": "done",
+    "modalities": "RGBCFD",
+    "parent": "psi0.5-base",
+    "summary": "A long-context extension of psi0.5-base for sequences containing up to 100 video frames.",
+    "recipe": [
+      "Train for another 5k steps on RGBCFD sequences with up to 100 video frames, using 128k context length and batch size 64."
+    ]
+  },
+  {
+    "id": "psi0.5-r",
+    "name": "psi0.5-r",
+    "step": 800000,
+    "stage": "mid",
+    "row": 2,
+    "status": "done",
+    "modalities": "RGBCFD",
+    "parent": "psi0.5",
+    "summary": "The robotics-specialized psi0.5 checkpoint, combining robot pre-training with context extension.",
+    "recipe": [
+      "500k steps of RGBC pre-training.",
+      "200k steps of RGBCFD pre-training.",
+      "80k steps of robotics-data pre-training.",
+      "20k steps of robot-data context extension at 32k context and batch size 64."
+    ]
+  },
+  {
+    "id": "psi0.5-r-libero",
+    "name": "psi0.5-r-libero",
+    "step": 810000,
+    "stage": "post",
+    "row": 0,
+    "labelPosition": "left",
+    "status": "training",
+    "modalities": "RGBCFD",
+    "parent": "psi0.5-r",
+    "summary": "A LIBERO-specialized post-trained robotics checkpoint built from psi0.5-r.",
+    "recipe": [
+      "Run 10k steps of LIBERO post-training with RGBCFD, batch size 64, and sequence length 4,096."
+    ]
+  },
+  {
+    "id": "psi0.5-r-abc",
+    "name": "psi0.5-r-abc",
+    "step": 850000,
+    "stage": "post",
+    "row": 1,
+    "status": "planned",
+    "modalities": "RGBCFD",
+    "parent": "psi0.5-r",
+    "summary": "The planned ABC-specialized branch of the psi0.5 robotics checkpoint.",
+    "recipe": [
+      "Run 45k steps of ABC post-training with RGBCFD.",
+      "Finish with 5k steps of ABC context extension at 32k context."
+    ]
+  },
+  {
+    "id": "psi0.6",
+    "name": "psi0.6",
+    "step": 1250000,
+    "stage": "pre",
+    "row": 0,
+    "labelPosition": "above",
+    "status": "done",
+    "modalities": "RGBCFDT",
+    "parent": "psi0.5",
+    "summary": "A multimodal continual-pre-training checkpoint that adds text to the RGBCFD recipe.",
+    "recipe": [
+      "Continually pre-train for 500k steps with RGBCFDT data."
+    ]
+  },
+  {
+    "id": "psi0.6-vlm",
+    "name": "psi0.6-vlm",
+    "step": 1300000,
+    "stage": "mid",
+    "row": 0,
+    "status": "training",
+    "modalities": "RGBCFD",
+    "parent": "psi0.6",
+    "summary": "A VLM-focused psi0.6 branch trained with learning-rate dropping and context extension.",
+    "recipe": [
+      "Train for 30k steps on VLM datasets with learning-rate dropping.",
+      "Run the final 20k steps at 32k context length and batch size 64."
+    ]
+  },
+  {
+    "id": "psi0.6-r",
+    "name": "psi0.6-r",
+    "step": 1450000,
+    "stage": "mid",
+    "row": 2,
+    "status": "planned",
+    "modalities": "RGBCFD",
+    "parent": "psi0.6",
+    "summary": "The planned robot-text specialization of psi0.6.",
+    "recipe": [
+      "Train for 200k steps on robot-text data with RGBCFD."
+    ]
+  },
+  {
+    "id": "psi0.6-r-abc",
+    "name": "psi0.6-r-abc",
+    "step": 1500000,
+    "stage": "post",
+    "row": 0,
+    "status": "planned",
+    "modalities": "RGBCFDT",
+    "parent": "psi0.6",
+    "summary": "A planned ABC post-training branch of psi0.6 using the expanded text-conditioned modality set.",
+    "recipe": [
+      "Run 45k steps of ABC post-training with RGBCFDT.",
+      "Finish with 5k steps of ABC context extension using RGBCFDT at 32k context."
+    ]
+  },
+  {
+    "id": "psi0.7",
+    "name": "psi0.7",
+    "step": 1450000,
+    "stage": "pre",
+    "row": 0,
+    "labelPosition": "above",
+    "status": "training",
+    "modalities": "RGBCFDTP",
+    "parent": "psi0.6",
+    "summary": "The point-track PSI checkpoint, extending psi0.6 with point supervision.",
+    "recipe": [
+      "Pre-train for 200k steps on point tracks and RGBCFDT data, using the full RGBCFDTP modality set."
+    ]
+  },
+  {
+    "id": "psi0.7-poking",
+    "name": "psi0.7-poking",
+    "step": 1500000,
+    "stage": "mid",
+    "row": 0,
+    "status": "done",
+    "modalities": "RGBCFDTP",
+    "parent": "psi0.7",
+    "summary": "A dropped, high-resolution continuation of psi0.7 for point-track poking data.",
+    "recipe": [
+      "Continue to 1.5M steps at high visual resolution with dropping on point tracks and RGBCFDT data."
+    ]
+  },
+  {
+    "id": "psi0.7-r",
+    "name": "psi0.7-r",
+    "step": 1650000,
+    "stage": "mid",
+    "row": 1,
+    "labelPosition": "left",
+    "status": "planned",
+    "modalities": "RGBCFDTP",
+    "parent": "psi0.7",
+    "summary": "The planned robotics continuation of psi0.7, preserving point tracks throughout robot training.",
+    "recipe": [
+      "Follow the 200k-step psi0.6-r robotics recipe on robot data with the full RGBCFDTP modality set."
+    ]
+  }
+]
