@@ -509,10 +509,10 @@ function drawConnector(parent, child) {
   if (child.id === "psi0.7-r") {
     path = [
       `M ${parentX} ${parent.y}`,
-      `C ${parentX} ${parent.y + 84},`,
-      `${parentX + 6} ${child.y - 40},`,
-      `${parentX + 52} ${child.y - 40}`,
-      `C ${parentX + 110} ${child.y - 40},`,
+      `C ${parentX} ${parent.y + 72},`,
+      `${parentX + 6} ${child.y - 70},`,
+      `${parentX + 52} ${child.y - 70}`,
+      `C ${parentX + 110} ${child.y - 70},`,
       `${childX} ${child.y - 70},`,
       `${childX} ${child.y}`,
     ].join(" ");
@@ -610,7 +610,7 @@ function drawNode(model) {
         y: labelY + 32,
         class: "node-step",
       },
-      `${formatStep(model.step)} · ${titleCase(model.status).toUpperCase()}`,
+      formatStep(model.step),
     ),
   );
 
