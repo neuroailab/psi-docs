@@ -117,7 +117,7 @@
   {
     "id": "psi0.6",
     "name": "psi0.6",
-    "step": 1250000,
+    "step": 1030000,
     "stage": "pre",
     "row": 0,
     "labelPosition": "above",
@@ -126,23 +126,26 @@
     "parent": "psi0.5",
     "summary": "A multimodal continual-pre-training checkpoint that adds text to the RGBCFD recipe.",
     "recipe": [
-      "Continually pre-train for 500k steps with RGBCFDT data."
-    ]
+      "Continually pre-train for 200k steps on a 50/50 mix of bvd2 vision and fineweb-edu text, at 4096 context and batch size 512.",
+      "Continue for 130k steps on a four-way mix of vision, text, global captions and local captions, to 1.03M."
+    ],
+    "checkpoint": "PSI2_8B_RGBCFDT_bvd2_TPUv5e_vision_text/model_01030000"
   },
   {
     "id": "psi0.6-vlm",
     "name": "psi0.6-vlm",
-    "step": 1300000,
+    "step": 1200000,
     "stage": "mid",
     "row": 0,
-    "status": "training",
-    "modalities": "RGBCFD",
+    "status": "done",
+    "modalities": "RGBCFDT",
     "parent": "psi0.6",
-    "summary": "A VLM-focused psi0.6 branch trained with learning-rate dropping and context extension.",
+    "summary": "The vision-language branch of psi0.6, mid-trained on captions, VQA, counterfactuals and spatial chain-of-thought.",
     "recipe": [
-      "Train for 30k steps on VLM datasets with learning-rate dropping.",
-      "Run the final 20k steps at 32k context length and batch size 64."
-    ]
+      "Mid-train for 70k steps on an eleven-group VLM mix: vision 0.2, text 0.2, global caption-counterfactuals 0.2, local caption-counterfactuals 0.15, image and global captions with VQA, text-to-camera-depth, and spatial chain-of-thought. Context 4096, batch size 512.",
+      "Continue for 100k steps with global VQA raised from 0.05 to 0.15 and spatial chain-of-thought consolidated into a single group, to 1.2M."
+    ],
+    "checkpoint": "PSI2_8B_RGBCFDT_VL_Instruct_v2/model_01200000"
   },
   {
     "id": "psi0.6-r",
