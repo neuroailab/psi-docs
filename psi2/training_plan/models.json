@@ -129,6 +129,56 @@
       "Continually pre-train for 200k steps on a 50/50 mix of bvd2 vision and fineweb-edu text, at 4096 context and batch size 512.",
       "Continue for 130k steps on a four-way mix of vision, text, global captions and local captions, to 1.03M."
     ],
+    "wandb": [
+      {
+        "label": "fineweb 700k→718k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/eg49nc4u"
+      },
+      {
+        "label": "fineweb 718k→728k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/ldnvfqam"
+      },
+      {
+        "label": "fineweb 728k→758k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/n21f3ziy"
+      },
+      {
+        "label": "fineweb 758k→764k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/01krbqyk"
+      },
+      {
+        "label": "fineweb 764k→785k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/2c91zstz"
+      },
+      {
+        "label": "fineweb 785k→876k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/4zbqeyoq"
+      },
+      {
+        "label": "fineweb 876k→900k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/ou1ljigs"
+      },
+      {
+        "label": "vision_text 900k→928k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/z6immopx"
+      },
+      {
+        "label": "vision_text 928k→956k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/wu1n1n9s"
+      },
+      {
+        "label": "vision_text 956k→977k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/j7vdynxu"
+      },
+      {
+        "label": "vision_text 977k→990k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/g4lpt3ol"
+      },
+      {
+        "label": "vision_text 990k→1030k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/wbqzpeal"
+      }
+    ],
     "checkpoint": "PSI2_8B_RGBCFDT_bvd2_TPUv5e_vision_text/model_01030000"
   },
   {
@@ -144,6 +194,36 @@
     "recipe": [
       "Mid-train for 70k steps on an eleven-group VLM mix: vision 0.2, text 0.2, global caption-counterfactuals 0.2, local caption-counterfactuals 0.15, image and global captions with VQA, text-to-camera-depth, and spatial chain-of-thought. Context 4096, batch size 512.",
       "Continue for 100k steps with global VQA raised from 0.05 to 0.15 and spatial chain-of-thought consolidated into a single group, to 1.2M."
+    ],
+    "wandb": [
+      {
+        "label": "VL_Instruct 1030k→1031k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/wux69ebd"
+      },
+      {
+        "label": "VL_Instruct 1031k→1041k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/psms43rn"
+      },
+      {
+        "label": "VL_Instruct 1041k→1168k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/gsbnd1ln"
+      },
+      {
+        "label": "VL_Instruct 1168k→1173k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/6jrrbxoi"
+      },
+      {
+        "label": "VL_Instruct 1173k→1200k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/jjiwoljl"
+      },
+      {
+        "label": "v2 1100k→1105k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/2oken2lz"
+      },
+      {
+        "label": "v2 1105k→1200k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/f68t9y6n"
+      }
     ],
     "checkpoint": "PSI2_8B_RGBCFDT_VL_Instruct_v2/model_01200000"
   },

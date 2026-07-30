@@ -639,6 +639,34 @@ function setExternalLink(element, url) {
   }
 }
 
+function linkEntries(value) {
+  if (!value) {
+    return [];
+  }
+  return (Array.isArray(value) ? value : [value])
+    .map((item) => (typeof item === "string" ? { url: item } : item))
+    .filter((item) => item && item.url);
+}
+
+function setExternalLinkList(container, value, singleLabel) {
+  const entries = linkEntries(value);
+  container.classList.toggle("is-compact", entries.length > 3);
+  container.replaceChildren(
+    ...entries.map((entry) => {
+      const link = document.createElement("a");
+      link.className = "detail-link";
+      link.href = entry.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      const arrow = document.createElement("span");
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "↗";
+      link.append(entry.label ?? singleLabel, arrow);
+      return link;
+    }),
+  );
+}
+
 function openModel(id) {
   const model = modelById.get(id);
   if (!model) {
@@ -677,9 +705,10 @@ function openModel(id) {
     }),
   );
 
-  setExternalLink(
-    document.querySelector("#detail-wandb-link"),
+  setExternalLinkList(
+    document.querySelector("#detail-wandb-links"),
     model.wandb,
+    "View W&B run",
   );
   setExternalLink(
     document.querySelector("#detail-hf-link"),

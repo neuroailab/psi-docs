@@ -712,6 +712,24 @@ h2 {
   gap: 22px;
 }
 
+.detail-link-list {
+  display: contents;
+}
+
+.detail-link-list.is-compact {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.detail-link-list.is-compact .detail-link {
+  gap: 8px;
+  padding-bottom: 3px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
 .detail-link {
   display: inline-flex;
   width: fit-content;
