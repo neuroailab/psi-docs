@@ -80,9 +80,30 @@
     "recipe": [
       "500k steps of RGBC pre-training.",
       "200k steps of RGBCFD pre-training.",
-      "80k steps of robotics-data pre-training.",
-      "20k steps of robot-data context extension at 32k context and batch size 64."
-    ]
+      "80k steps of robotics-data pre-training at 4096 context and batch size 512, to 780k.",
+      "10k steps of robot-data context extension at 32k context, context parallel 4, and batch size 64, to 790k.",
+      "7k steps with the new robot sequence mix at 32k context, to 797k.",
+      "3k robot-only finishing steps with delta-to-frame and delta-jump notations, to 800k. The LIBERO branch forks from model_00799000."
+    ],
+    "wandb": [
+      {
+        "label": "robot 700k→780k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/3hua3p75"
+      },
+      {
+        "label": "ctx32k 780k→790k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/ybcys61u"
+      },
+      {
+        "label": "ctx32k newseq 790k→797k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/8v9692k2"
+      },
+      {
+        "label": "ctx32k robotonly 797k→800k",
+        "url": "https://wandb.ai/long-range-prediction/psi2/runs/cfy49c7r"
+      }
+    ],
+    "checkpoint": "PSI2_8B_RGBCFD_Robot_ctx32768_robotonly_d2f_djump_cp4_bs64_from797001_plus3k/model_00800000"
   },
   {
     "id": "psi0.5-r-libero",
