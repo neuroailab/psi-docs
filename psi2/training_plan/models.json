@@ -289,8 +289,15 @@
     "parent": "psi0.6",
     "summary": "The point-track PSI checkpoint, extending psi0.6 with point supervision.",
     "recipe": [
-      "Pre-train for 200k steps on point tracks and RGBCFDT data, using the full RGBCFDTP modality set."
-    ]
+      "Resumed from the VL_Instruct_v5 checkpoint at step 1.25M.",
+      "Pre-train for 200k steps (1.25M→1.45M) on a twelve-group points/text/robot mixture — points, vision, text, and global counterfactuals each at 0.2, global captions at 0.08, global VQA at 0.056, plus smaller image-caption, image/local VQA, text-to-camera-depth, and spatial chain-of-thought groups, with robot demonstration data folded into the global captions/counterfactuals groups. Full RGBCFDTP modality set, context 4096, batch size 512, LR 3e-4."
+    ],
+    "wandb": [
+      {"label": "start, 1.25M→1.28M", "url": "https://wandb.ai/long-range-prediction/psi2/runs/e27xtovs"},
+      {"label": "resume, 1.28M→1.42M", "url": "https://wandb.ai/long-range-prediction/psi2/runs/1i14ndxm"},
+      {"label": "finish, 1.42M→1.45M", "url": "https://wandb.ai/long-range-prediction/psi2/runs/lmm2k8xo"}
+    ],
+    "checkpoint": "PSI2_8B_RGBCFDTP_points_text_robot_mixture/model_01450000"
   },
   {
     "id": "psi0.7-poking",
