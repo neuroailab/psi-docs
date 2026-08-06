@@ -1,7 +1,13 @@
-const LANG_ORDER = ["fizz", "blip", "morsel", "burble", "drawl", "rumble", "glint", "cascade", "rasp"];
+const LANG_ORDER = ["fizz", "blip", "morsel", "burble", "drawl", "rumble", "glint", "cascade",
+                    "rasp", "murmur", "growl", "smudge10", "smudge25", "smudge40", "hiccup", "saga"];
 const LANG_VAR = {
   fizz: "--l8", blip: "--l1", morsel: "--l2", burble: "--l3",
   drawl: "--l4", rumble: "--l6", glint: "--l5", cascade: "--l7", rasp: "--l9",
+};
+// noise-round languages: fixed hexes (theme-neutral mid-tones)
+const LANG_HEX = {
+  murmur: "#a06718", growl: "#4a3f8f", smudge10: "#d1a13d", smudge25: "#b07a20",
+  smudge40: "#8a5a10", hiccup: "#3a8a99", saga: "#7a4a9e",
 };
 const REFRESH_MS = 60_000;
 
@@ -12,7 +18,10 @@ function cssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-function langColor(lang) { return cssVar(LANG_VAR[lang] || "--l8"); }
+function langColor(lang) {
+  if (LANG_HEX[lang]) return LANG_HEX[lang];
+  return cssVar(LANG_VAR[lang] || "--l8");
+}
 
 function baseLayout(overrides = {}) {
   const ink = cssVar("--ink");
@@ -219,17 +228,19 @@ function renderTuning() {
       ["word", cssVar("--faint"), "word id (pooled)"],
       ["word_tok", langColor(lang), "word id (1-token)"],
     ];
-    if (lang === "glint") tasks.push(["shimmer", cssVar("--aqua"), "shimmer"]);
+    if (["glint", "rasp"].includes(lang)) tasks.push(["shimmer", cssVar("--aqua"), "shimmer"]);
     if (lang === "cascade") {
       tasks.push(["phrase", cssVar("--violet"), "phrase id (pooled)"]);
       tasks.push(["phrase_tok", cssVar("--violet"), "phrase id (1-token)"]);
     }
+    if (lang === "saga") tasks.push(["topic", cssVar("--violet"), "topic id"]);
     tasks.push(["boundary", cssVar("--gold"), "boundary AUC"]);
     tasks.push(["position", cssVar("--aqua"), "position-in-word"]);
     const traces = [];
     for (const [task, color, label] of tasks) {
       const { ns, vals } = curve(runs, lang, task);
       if (!ns.length) continue;
+      if (Math.min(...vals) >= 0.99) continue; // saturated flat line = clutter
       traces.push({
         x: ns, y: vals, name: label, mode: "lines+markers",
         line: { color, width: 2.4, shape: "spline", smoothing: 0.6 },
