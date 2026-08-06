@@ -73,8 +73,11 @@
             <strong>Live finding:</strong> the registered pooled-span word probe saturates at
             100% on these noiseless lexicons (a mean-pooled span is a bag of letters, which
             already identifies an exact-sequence word), so these plots use the sensitive
-            <em>single-token</em> word probe. So far the peak only emerges where the stream
-            carries unpredictable fast structure (glint) — see the tuning curves below.
+            <em>single-token</em> word probe. Peaks land at n ≈ L̄ for short/medium words
+            (blip, morsel, burble, glint) and vanish for long words (drawl, rumble) at every
+            model size. The follow-up language <em>rasp</em> (rumble + shimmer) shows channel
+            noise is <em>inert</em> — its curves match rumble's — so the speech analogy needs
+            content-entangled (allophonic) noise, up next.
           </p>
           <div class="plot-row">
             <div class="plot-card"><div id="plot-horizon" class="plot"></div></div>
@@ -94,10 +97,11 @@
             <em>n</em> (log axis), seeds averaged. Dotted line = predicted n*. The faded
             “pooled” line is the registered probe (saturated ≈1.0 everywhere); the colored
             “1-token” line decodes the word from a <em>single</em> within-word hidden state
-            — the sensitive readout. Glint adds a fast “shimmer” probe (prefers n=1) and is
-            the one language where word/boundary/position readouts clearly <em>improve</em>
-            with longer horizons — the AuriStream situation in miniature. Position-in-word
-            probes improve with n in every language (“unit identity + phase”).
+            — the sensitive readout. Comparing the shimmer pairs (glint vs morsel, rasp vs
+            rumble): the noisy twin’s curves match the noiseless twin’s almost exactly — an
+            independent fast channel is factorized away at the embedding and creates no
+            horizon pressure. Position-in-word probes improve with n in every language
+            (“unit identity + phase”).
           </p>
           <div class="plot-grid" id="tuning-grid"></div>
         </section>
