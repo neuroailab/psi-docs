@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Dotling Languages — a toy universe for the MTP tuning-window hypothesis</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:         #f9f9f7;
+    --surface-1:    #fcfcfb;
+    --text-primary: #0b0b0b;
+    --text-secondary:#52514e;
+    --muted:        #898781;
+    --grid:         #e1e0d9;
+    --baseline:     #c3c2b7;
+    --border:       rgba(11,11,11,0.10);
+    --accent:       #2a78d6;
+    /* letter palette — documented categorical order, light steps */
+    --l1:#2a78d6; --l2:#eb6834; --l3:#1baf7a; --l4:#eda100;
+    --l5:#e87ba4; --l6:#008300; --l7:#4a3aa7; --l8:#e34948;
+    --band-a: rgba(42,120,214,0.10);
+    --band-b: rgba(235,104,52,0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface-1:#1a1a19;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+      --accent:#3987e5;
+      --l1:#3987e5; --l2:#d95926; --l3:#199e70; --l4:#c98500;
+      --l5:#d55181; --l6:#008300; --l7:#9085e9; --l8:#e66767;
+      --band-a: rgba(57,135,229,0.16);
+      --band-b: rgba(217,89,38,0.16);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface-1:#1a1a19;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+    --accent:#3987e5;
+    --l1:#3987e5; --l2:#d95926; --l3:#199e70; --l4:#c98500;
+    --l5:#d55181; --l6:#008300; --l7:#9085e9; --l8:#e66767;
+    --band-a: rgba(57,135,229,0.16);
+    --band-b: rgba(217,89,38,0.16);
+  }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55;
+    font-size: 15px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 80px; }
+  header.hero { padding: 26px 0 6px; }
+  header.hero h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.02em; }
+  header.hero .sub { color: var(--text-secondary); max-width: 62ch; margin: 0; }
+  .theme-toggle {
+    float: right; margin-top: 6px; border: 1px solid var(--border);
+    background: var(--surface-1); color: var(--text-secondary);
+    border-radius: 8px; padding: 5px 12px; cursor: pointer; font-size: 13px;
+  }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px; margin-top: 18px;
+  }
+  .hyp { display:flex; gap:16px; align-items:flex-start; }
+  .hyp .tag {
+    flex:none; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--accent); border-radius:99px;
+    padding:2px 10px; margin-top:3px;
+  }
+  .hyp p { margin: 0; color: var(--text-secondary); }
+  .hyp b { color: var(--text-primary); }
+
+  .langgrid { display:grid; grid-template-columns: repeat(4, 1fr); gap:10px; margin-top:18px; }
+  @media (max-width: 900px) { .langgrid { grid-template-columns: repeat(2,1fr); } }
+  .langcard {
+    background: var(--surface-1); border:1px solid var(--border); border-radius:12px;
+    padding:12px 14px; cursor:pointer; transition: border-color .12s, transform .12s;
+  }
+  .langcard:hover { transform: translateY(-1px); }
+  .langcard.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .langcard h3 { margin:0 0 2px; font-size:16px; }
+  .langcard .role { font-size:12px; color:var(--muted); margin-bottom:8px; }
+  .chiprow { display:flex; flex-wrap:wrap; gap:4px; }
+  .chip {
+    font-size:11px; color:var(--text-secondary); border:1px solid var(--border);
+    border-radius:6px; padding:1px 6px; font-variant-numeric: tabular-nums;
+  }
+  .chip.nstar { color: var(--accent); border-color: var(--accent); font-weight:600; }
+  .minidots { display:flex; gap:3px; margin:6px 0 8px; }
+  .minidots span { width:9px; height:9px; border-radius:50%; display:inline-block; }
+
+  .panel h2 { font-size:19px; margin: 4px 0 4px; }
+  .panel .desc { color: var(--text-secondary); margin: 0 0 12px; max-width: 78ch; }
+  .controls { display:flex; flex-wrap:wrap; gap:14px 22px; align-items:center; padding: 8px 0 12px; }
+  .controls label { font-size:13px; color:var(--text-secondary); display:flex; align-items:center; gap:8px; }
+  .controls input[type="range"] { width: 190px; accent-color: var(--accent); }
+  .controls button {
+    border:1px solid var(--border); background:transparent; color:var(--text-secondary);
+    border-radius:8px; padding:4px 12px; cursor:pointer; font-size:13px;
+  }
+  .controls .nreadout { font-variant-numeric: tabular-nums; color: var(--text-primary); font-weight:600; }
+  .switch { position:relative; width:34px; height:19px; flex:none; }
+  .switch input { opacity:0; width:0; height:0; }
+  .switch .tr {
+    position:absolute; inset:0; border-radius:99px; background:var(--baseline);
+    transition:.15s; cursor:pointer;
+  }
+  .switch .tr::before {
+    content:""; position:absolute; width:15px; height:15px; border-radius:50%;
+    background:var(--surface-1); top:2px; left:2px; transition:.15s;
+  }
+  .switch input:checked + .tr { background: var(--accent); }
+  .switch input:checked + .tr::before { transform: translateX(15px); }
+  #streamwrap { position:relative; }
+  #stream { width:100%; display:block; border-radius:10px; }
+  .capline { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .capline b { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+
+  .chartrow { display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-top:18px; }
+  @media (max-width: 900px) { .chartrow { grid-template-columns: 1fr; } }
+  .chartcard h2 { font-size:16px; margin:0 0 2px; }
+  .chartcard .sub { font-size:12.5px; color:var(--muted); margin:0 0 10px; }
+  .chartcard svg { width:100%; height:auto; display:block; }
+  .tip {
+    position:absolute; pointer-events:none; background:var(--surface-1);
+    border:1px solid var(--border); border-radius:8px; padding:6px 9px;
+    font-size:12px; color:var(--text-secondary); box-shadow: 0 4px 14px rgba(0,0,0,.10);
+    white-space:nowrap; z-index:5; display:none;
+  }
+  .tip b { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+
+  .prose h2 { font-size:19px; margin: 6px 0 8px; }
+  .prose h3 { font-size:15px; margin: 18px 0 4px; }
+  .prose p { color: var(--text-secondary); margin: 6px 0; max-width: 82ch; }
+  .prose b, .prose strong { color: var(--text-primary); }
+  table.spec { border-collapse: collapse; width:100%; font-size:13.5px; margin: 10px 0 4px; }
+  table.spec th {
+    text-align:left; color:var(--muted); font-weight:600; font-size:12px;
+    letter-spacing:.04em; text-transform:uppercase; padding:6px 10px 6px 0;
+    border-bottom:1px solid var(--grid);
+  }
+  table.spec td {
+    padding:7px 10px 7px 0; border-bottom:1px solid var(--grid);
+    color:var(--text-secondary); font-variant-numeric: tabular-nums; vertical-align: top;
+  }
+  table.spec td:first-child, table.spec th:first-child { padding-left: 2px; }
+  table.spec td b { color:var(--text-primary); font-weight:600; }
+  .pred { margin: 8px 0; padding-left: 0; list-style:none; }
+  .pred li { margin: 7px 0; color: var(--text-secondary); max-width: 84ch; }
+  .pred li b.pn { color: var(--accent); font-weight:700; margin-right:6px; }
+  footer { margin-top: 26px; color: var(--muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <button class="theme-toggle" id="themeToggle">◐ theme</button>
+  <h1>The Dotling Languages</h1>
+  <p class="sub">A family of synthetic token streams for testing whether the optimal multi-token-prediction
+  horizon <i>n</i>* tracks the temporal grain of the data — dots are tokens, runs of dots are words,
+  and every language dials one structural knob.</p>
+</header>
+
+<div class="card hyp">
+  <span class="tag">Hypothesis</span>
+  <p><b>MTP is a tuning window.</b> The cheapest way for a model to satisfy <i>n</i> parallel future-token losses
+  is to represent the latent unit that spans roughly <i>n</i> tokens. When <i>n</i> matches the natural unit length
+  (a word), the residual stream is forced to encode <b>unit identity + phase</b> — exactly what a linear probe reads out.
+  Push <i>n</i> past the unit boundary and the far heads mostly see irreducible cross-unit entropy: gradient noise.
+  <b>AuriStream</b>: 5&#8202;ms cochlear tokens, word decoding peaks at <i>n</i>&#8202;=&#8202;40 ≈ 200&#8202;ms ≈ one spoken word;
+  pitch (a fast local feature) prefers <i>n</i>&#8202;=&#8202;1. If the hypothesis is right, each Dotling language below has a
+  predictable <i>n</i>* — readable off its mutual-information decay curve <em>before training anything</em>.</p>
+</div>
+
+<div class="langgrid" id="langgrid"></div>
+
+<div class="card panel">
+  <h2 id="streamTitle">Stream</h2>
+  <p class="desc" id="streamDesc"></p>
+  <div class="controls">
+    <label><span class="switch"><input type="checkbox" id="revealToggle"><span class="tr"></span></span>
+      reveal word structure</label>
+    <label>MTP horizon <i>n</i>
+      <input type="range" id="nSlider" min="0" max="13" step="1" value="6">
+      <span class="nreadout" id="nReadout">n = 12</span></label>
+    <button id="regen">↻ regenerate</button>
+  </div>
+  <div id="streamwrap">
+    <canvas id="stream"></canvas>
+    <div class="tip" id="dotTip"></div>
+  </div>
+  <p class="capline" id="windowCaption"></p>
+</div>
+
+<div class="chartrow">
+  <div class="card chartcard" style="position:relative">
+    <h2>Mutual information between dots, by lag</h2>
+    <p class="sub">I(x<sub>t</sub>; x<sub>t+k</sub>) computed live from a 60k-dot sample of the selected language (Miller–Madow corrected, log scale). The knee is the measurable structure scale — the claim is that <i>n</i>* sits at it.</p>
+    <div id="miChart"></div>
+    <div class="tip" id="miTip"></div>
+  </div>
+  <div class="card chartcard">
+    <h2>Predicted probe accuracy vs horizon</h2>
+    <p class="sub">Schematic predictions, not measurements — dashed on purpose. Registered before any training run.</p>
+    <div id="predChart"></div>
+  </div>
+</div>
+
+<div class="card prose" id="designNotes"></div>
+
+<footer>
+  The Dotling languages · toy setting for the MTP tuning-window hypothesis · AuriStream companion ·
+  colors follow the documented categorical palette (validated light &amp; dark); word bands and brackets carry
+  structure redundantly with color.
+</footer>
+
+</div>
+<script>
+//==CORE==
+"use strict";
+/* ---------- seeded RNG ---------- */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+function zipfCdf(N,s){const w=new Float64Array(N);let tot=0;for(let i=0;i<N;i++){w[i]=1/Math.pow(i+1,s);tot+=w[i];}let c=0;for(let i=0;i<N;i++){c+=w[i]/tot;w[i]=c;}return w;}
+function sampleCdf(cdf,r){let lo=0,hi=cdf.length-1;while(lo<hi){const m=(lo+hi)>>1;if(cdf[m]<r)lo=m+1;else hi=m;}return lo;}
+function randInt(rng,a,b){return a+Math.floor(rng()*(b-a+1));}
+
+/* ---------- lexicon + stream generation ----------
+   token = { c: letter index (color), w: word occurrence id, wid: word type id,
+             pos: position in word, len: word length, ph: phrase occurrence id (or -1),
+             pid: phrase type id, b: brightness level (or -1) }                       */
+function makeLexicon(W,A,lenLo,lenHi,rng){
+  const lex=[];const seen=new Set();
+  while(lex.length<W){
+    const L=randInt(rng,lenLo,lenHi);const w=[];
+    for(let i=0;i<L;i++)w.push(Math.floor(rng()*A));
+    const key=w.join(",");
+    if(!seen.has(key)){seen.add(key);lex.push(w);}
+  }
+  return lex;
+}
+function genWordStream(cfg,nTok,seed){
+  const rng=mulberry32(seed);
+  const lex=makeLexicon(cfg.W,cfg.A,cfg.lenLo,cfg.lenHi,mulberry32(cfg.lexSeed));
+  const cdf=zipfCdf(cfg.W,cfg.zipf??1.0);
+  // optional word-bigram grammar: each word gets K preferred successors
+  let succ=null;
+  if(cfg.bigram){
+    const g=mulberry32(cfg.lexSeed+7);succ=[];
+    for(let i=0;i<cfg.W;i++){const s=[];for(let k=0;k<cfg.bigram;k++)s.push(sampleCdf(cdf,g()));succ.push(s);}
+  }
+  const out=[];let wOcc=0;let prev=-1;
+  while(out.length<nTok){
+    let wid;
+    if(succ&&prev>=0&&rng()<0.8){const s=succ[prev];wid=s[Math.floor(rng()*s.length)];}
+    else wid=sampleCdf(cdf,rng());
+    const w=lex[wid];
+    for(let p=0;p<w.length;p++)
+      out.push({c:w[p],w:wOcc,wid,pos:p,len:w.length,ph:-1,pid:-1,b:-1});
+    prev=wid;wOcc++;
+  }
+  return out.slice(0,nTok);
+}
+function genFizz(cfg,nTok,seed){
+  const rng=mulberry32(seed);const out=[];
+  for(let i=0;i<nTok;i++)out.push({c:Math.floor(rng()*cfg.A),w:i,wid:-1,pos:0,len:1,ph:-1,pid:-1,b:-1});
+  return out;
+}
+function genGlint(cfg,nTok,seed){
+  const toks=genWordStream(cfg,nTok,seed);
+  const rng=mulberry32(seed+99);let b=Math.floor(rng()*3);
+  for(const t of toks){ if(rng()<0.45){ b=(b+1+Math.floor(rng()*2))%3; } t.b=b; }
+  return toks;
+}
+function genCascade(cfg,nTok,seed){
+  const rng=mulberry32(seed);
+  const lex=makeLexicon(cfg.W,cfg.A,cfg.lenLo,cfg.lenHi,mulberry32(cfg.lexSeed));
+  const pg=mulberry32(cfg.lexSeed+13);
+  const phrases=[];const wcdf=zipfCdf(cfg.W,1.0);
+  for(let i=0;i<cfg.P;i++){const ph=[];for(let k=0;k<cfg.phLen;k++)ph.push(sampleCdf(wcdf,pg()));phrases.push(ph);}
+  const pcdf=zipfCdf(cfg.P,cfg.zipf??1.0);
+  const out=[];let wOcc=0,phOcc=0;
+  while(out.length<nTok){
+    const pid=sampleCdf(pcdf,rng());const ph=phrases[pid];
+    for(const wid of ph){const w=lex[wid];
+      for(let p=0;p<w.length;p++)out.push({c:w[p],w:wOcc,wid,pos:p,len:w.length,ph:phOcc,pid,b:-1});
+      wOcc++;}
+    phOcc++;
+  }
+  return out.slice(0,nTok);
+}
+
+/* ---------- the language family ---------- */
+const LANGS=[
+ {key:"fizz",name:"Fizz",role:"the null control — pure static",A:8,W:0,lbar:1,nstar:1,
+  gen:g=>genFizz({A:8},g.n,g.seed),
+  chips:["A = 8","no lexicon","i.i.d. dots"],
+  desc:"Independent dots with no latent structure at all. Nothing to look ahead to: every MTP head past the first sees pure entropy. Predicted n* = 1, and any n > 1 should only add gradient noise. If a peak shows up here, the pipeline is broken — that is what a null control is for.",
+  spec:{lenLo:1,lenHi:1}},
+ {key:"blip",name:"Blip",role:"tiny fixed words",A:6,W:48,lbar:3,nstar:3,
+  gen:g=>genWordStream({A:6,W:48,lenLo:3,lenHi:3,lexSeed:11,zipf:1.0},g.n,g.seed),
+  chips:["A = 6","W = 48","L = 3 fixed"],
+  desc:"48 three-dot words over six colors, Zipf-sampled. The smallest possible word structure: within a word the next dots are near-deterministic, across the boundary they are not. Predicted n* ≈ 3, and the peak should be sharp because every word has exactly the same length.",
+  spec:{lenLo:3,lenHi:3}},
+ {key:"morsel",name:"Morsel",role:"short words, variable length",A:8,W:512,lbar:6.5,nstar:6,
+  gen:g=>genWordStream({A:8,W:512,lenLo:4,lenHi:9,lexSeed:21,zipf:1.0},g.n,g.seed),
+  chips:["A = 8","W = 512","L = 4–9 (6.5)"],
+  desc:"512 words of four to nine dots. Length spread is the manipulation: the tuning-window story predicts the probe-vs-n peak sits at the mean length (~6) but is broader than Blip's — smeared by the length distribution, just as natural speech words smear 200 ms.",
+  spec:{lenLo:4,lenHi:9}},
+ {key:"burble",name:"Burble",role:"medium words + word grammar",A:8,W:2048,lbar:12,nstar:12,
+  gen:g=>genWordStream({A:8,W:2048,lenLo:10,lenHi:14,lexSeed:31,zipf:1.05,bigram:20},g.n,g.seed),
+  chips:["A = 8","W = 2048","L = 10–14","bigram grammar"],
+  desc:"2,048 words of ten to fourteen dots, and each word prefers ~20 successors — a word-level bigram grammar. The grammar leaves some mutual information beyond the word boundary, so the MI curve has a knee, not a cliff. Predicted n* ≈ 12, with a gentler post-peak decline than Blip.",
+  spec:{lenLo:10,lenHi:14}},
+ {key:"drawl",name:"Drawl",role:"long slow words",A:8,W:4096,lbar:24,nstar:24,
+  gen:g=>genWordStream({A:8,W:4096,lenLo:20,lenHi:28,lexSeed:41,zipf:1.0},g.n,g.seed),
+  chips:["A = 8","W = 4096","L = 20–28"],
+  desc:"4,096 words of twenty to twenty-eight dots. Words disambiguate early (the uniqueness point is ~4 dots since 4096 = 8⁴) yet the hypothesis says n* tracks the word LENGTH, not the uniqueness point — because heads up to the boundary keep rewarding a clean word-identity code. Drawl vs Rumble separates those two accounts.",
+  spec:{lenLo:20,lenHi:28}},
+ {key:"rumble",name:"Rumble",role:"the AuriStream analog",A:8,W:8192,lbar:48,nstar:48,
+  gen:g=>genWordStream({A:8,W:8192,lenLo:40,lenHi:56,lexSeed:51,zipf:1.0},g.n,g.seed),
+  chips:["A = 8","W = 8192","L = 40–56"],
+  desc:"8,192 words of forty to fifty-six dots — the direct analog of speech at 5 ms tokens, where a word is ~40 tokens and AuriStream's decoding peaks at n = 40. Predicted n* ≈ 48. This is also where a small model with the right n should embarrass a big model with n = 1.",
+  spec:{lenLo:40,lenHi:56}},
+ {key:"glint",name:"Glint",role:"words + a fast shimmer channel",A:8,W:512,lbar:6.5,nstar:6,
+  gen:g=>genGlint({A:8,W:512,lenLo:4,lenHi:9,lexSeed:21,zipf:1.0},g.n,g.seed),
+  chips:["A = 8","W = 512","L = 4–9","+3 shimmer levels"],
+  desc:"Morsel's lexicon with a second, fast channel: each dot carries one of three shimmer levels following its own quick Markov chain, independent of the words (rendered as the halo). This is the pitch analog. Prediction: the word probe still peaks at n ≈ 6, while the shimmer probe is best at n = 1 and only degrades as n grows — one stream, two tasks, two opposite horizon preferences.",
+  spec:{lenLo:4,lenHi:9}},
+ {key:"cascade",name:"Cascade",role:"two nested scales",A:6,W:64,lbar:3,nstar:3,nstar2:12,
+  gen:g=>genCascade({A:6,W:64,lenLo:3,lenHi:3,lexSeed:61,P:256,phLen:4,zipf:1.0},g.n,g.seed),
+  chips:["A = 6","W = 64","L = 3","256 phrases × 4 words"],
+  desc:"Blip-sized words assembled into 256 fixed four-word phrases (~12 dots each). Two latent scales, so two predictions at once: a word probe peaking at n ≈ 3 and a phrase probe peaking at n ≈ 12, with a double knee in the MI curve. The cleanest test that different TASKS peak at the n matching THEIR structural scale.",
+  spec:{lenLo:3,lenHi:3}},
+];
+
+/* ---------- stream rendering ---------- */
+const LETTER_VARS=["--l1","--l2","--l3","--l4","--l5","--l6","--l7","--l8"];
+const N_STOPS=[1,2,3,4,6,8,12,16,24,32,48,64,96,128];
+const state={lang:LANGS[5],seed:1,reveal:false,nIdx:6,anchor:40,tokens:[]};
+
+function cssVar(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim();}
+function letterColors(){return LETTER_VARS.map(cssVar);}
+
+const canvas=document.getElementById("stream");
+const ctx=canvas.getContext("2d");
+const CELL=17,R=5.2,PADX=14,PADY=16,ROWH=26;
+
+function layout(){
+  const wrapW=canvas.parentElement.clientWidth;
+  const perRow=Math.max(20,Math.floor((wrapW-2*PADX)/CELL));
+  const rows=8;
+  return {wrapW,perRow,rows,nTok:perRow*rows};
+}
+function regen(){
+  const {nTok}=layout();
+  state.tokens=state.lang.gen({n:nTok,seed:state.seed});
+  draw();
+}
+function dotXY(i,perRow){
+  const r=Math.floor(i/perRow),c=i%perRow;
+  return [PADX+c*CELL+CELL/2, PADY+r*ROWH+ROWH/2];
+}
+function draw(){
+  const {wrapW,perRow,rows}=layout();
+  const H=2*PADY+rows*ROWH;
+  const dpr=window.devicePixelRatio||1;
+  canvas.width=wrapW*dpr;canvas.height=H*dpr;
+  canvas.style.height=H+"px";
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,wrapW,H);
+  const cols=letterColors();
+  const toks=state.tokens;
+  const n=N_STOPS[state.nIdx];
+  const bandA=cssVar("--band-a"),bandB=cssVar("--band-b");
+  const baseline=cssVar("--baseline"),accent=cssVar("--accent");
+  const isDark=matchMedia("(prefers-color-scheme: dark)").matches
+    ? document.documentElement.dataset.theme!=="light"
+    : document.documentElement.dataset.theme==="dark";
+
+  // word / phrase bands
+  if(state.reveal&&state.lang.key!=="fizz"){
+    for(let i=0;i<toks.length;i++){
+      const t=toks[i];
+      const wash=(state.lang.key==="cascade" ? (t.ph%2===0) : (t.w%2===0))?bandA:bandB;
+      const [x,y]=dotXY(i,perRow);
+      ctx.fillStyle=wash;
+      const first=(t.pos===0)||(i%perRow===0);
+      const last=(t.pos===t.len-1)||(i%perRow===perRow-1);
+      const x0=x-CELL/2+(first&&t.pos===0?1.5:0);
+      const x1=x+CELL/2-(last&&t.pos===t.len-1?1.5:0);
+      roundRect(ctx,x0,y-10,x1-x0,20,first&&last?6:(first?[6,0,0,6]:(last?[0,6,6,0]:0)));
+      ctx.fill();
+    }
+    // phrase underlines for cascade
+    if(state.lang.key==="cascade"){
+      ctx.strokeStyle=accent;ctx.lineWidth=2;ctx.globalAlpha=.65;
+      let i=0;
+      while(i<toks.length){
+        const ph=toks[i].ph;let j=i;
+        while(j<toks.length&&toks[j].ph===ph)j++;
+        for(let s=i;s<j;){
+          const rowEnd=Math.min(j,(Math.floor(s/perRow)+1)*perRow);
+          const [xa,ya]=dotXY(s,perRow),[xb]=dotXY(rowEnd-1,perRow);
+          ctx.beginPath();ctx.moveTo(xa-6,ya+13);ctx.lineTo(xb+6,ya+13);ctx.stroke();
+          s=rowEnd;
+        }
+        i=j;
+      }
+      ctx.globalAlpha=1;
+    }
+  }
+  // dots
+  for(let i=0;i<toks.length;i++){
+    const t=toks[i];const [x,y]=dotXY(i,perRow);
+    if(t.b>=0){ // glint halo
+      ctx.beginPath();ctx.arc(x,y,R+3.2,0,7);
+      ctx.strokeStyle=isDark?"rgba(255,255,255,"+(0.10+0.28*t.b)+")":"rgba(11,11,11,"+(0.08+0.22*t.b)+")";
+      ctx.lineWidth=2;ctx.stroke();
+    }
+    ctx.beginPath();ctx.arc(x,y,R,0,7);
+    ctx.fillStyle=cols[t.c%8];ctx.fill();
+  }
+  // MTP window
+  const a=Math.min(state.anchor,toks.length-1);
+  const end=Math.min(a+n,toks.length);
+  ctx.strokeStyle=accent;ctx.lineWidth=1.6;
+  for(let s=a;s<end;){
+    const rowEnd=Math.min(end,(Math.floor(s/perRow)+1)*perRow);
+    const [xa,ya]=dotXY(s,perRow),[xb]=dotXY(rowEnd-1,perRow);
+    roundRect(ctx,xa-8,ya-11.5,(xb-xa)+16,23,9);
+    ctx.stroke();
+    s=rowEnd;
+  }
+  // anchor marker
+  const [ax,ay]=dotXY(a,perRow);
+  ctx.beginPath();ctx.arc(ax,ay,R+2.4,0,7);ctx.strokeStyle=accent;ctx.lineWidth=2;ctx.stroke();
+
+  updateCaption(n);
+}
+function roundRect(c,x,y,w,h,r){
+  if(typeof r==="number")r=[r,r,r,r];
+  c.beginPath();
+  c.moveTo(x+r[0],y);c.lineTo(x+w-r[1],y);c.arcTo(x+w,y,x+w,y+r[1],r[1]);
+  c.lineTo(x+w,y+h-r[2]);c.arcTo(x+w,y+h,x+w-r[2],y+h,r[2]);
+  c.lineTo(x+r[3],y+h);c.arcTo(x,y+h,x,y+h-r[3],r[3]);
+  c.lineTo(x,y+r[0]);c.arcTo(x,y,x+r[0],y,r[0]);c.closePath();
+}
+function updateCaption(n){
+  const L=state.lang;
+  const words=(n/L.lbar);
+  let msg="The outlined window is what the "+n+" prediction heads must explain from the anchor dot. ";
+  if(L.key==="fizz") msg+="In Fizz there is no structure to cover — every head past the first is guessing.";
+  else if(Math.abs(n-L.lbar)<=Math.max(1,L.lbar*.25)) msg+="<b>n ≈ one word ("+fmt(words)+"×)</b> — the sweet spot the hypothesis predicts: the window rewards encoding exactly the current word's identity.";
+  else if(n<L.lbar) msg+="n covers <b>"+fmt(words)+"</b> of a word — local continuation suffices; word identity is only partially needed.";
+  else msg+="n spans <b>"+fmt(words)+" words</b> — the far heads face fresh word choices the model cannot know; their gradients are mostly noise.";
+  document.getElementById("windowCaption").innerHTML=msg+" &nbsp;·&nbsp; hover any dot to move the anchor.";
+}
+function fmt(x){return (Math.round(x*10)/10).toString();}
+//==VIZ==
+/* ---------- mutual information by lag ---------- */
+function tokenIds(toks,lang){
+  if(lang.key==="glint")return toks.map(t=>t.c*3+t.b); // 24 states
+  return toks.map(t=>t.c);
+}
+function miByLag(lang,maxLag){
+  const N=60000;
+  const toks=lang.gen({n:N,seed:777});
+  const ids=tokenIds(toks,lang);
+  const S=lang.key==="glint"?24:lang.A;
+  const out=[];
+  for(let k=1;k<=maxLag;k++){
+    const joint=new Float64Array(S*S);
+    const pa=new Float64Array(S),pb=new Float64Array(S);
+    const M=N-k;
+    for(let i=0;i<M;i++){const a=ids[i],b=ids[i+k];joint[a*S+b]++;pa[a]++;pb[b]++;}
+    let mi=0;
+    for(let a=0;a<S;a++)for(let b=0;b<S;b++){
+      const p=joint[a*S+b]/M;if(p>0)mi+=p*Math.log2(p/((pa[a]/M)*(pb[b]/M)));
+    }
+    mi-=((S-1)*(S-1))/(2*M*Math.LN2); // Miller–Madow bias correction (bits)
+    out.push(Math.max(mi,1e-4));
+  }
+  return out;
+}
+
+/* ---------- charts (inline SVG) ---------- */
+const CW=470,CH=280,ML=52,MR=14,MT=14,MB=40;
+function sx(v,x0,x1){return ML+(v-x0)/(x1-x0)*(CW-ML-MR);}
+function niceSvgOpen(){return '<svg viewBox="0 0 '+CW+' '+CH+'" role="img">';}
+function axisText(x,y,t,anchor,cls){return '<text x="'+x+'" y="'+y+'" text-anchor="'+(anchor||"middle")+'" font-size="11" fill="var(--muted)" style="font-variant-numeric:tabular-nums">'+t+'</text>';}
+
+let miData=null,miMaxLag=64;
+function drawMiChart(){
+  const lang=state.lang;
+  miData=miByLag(lang,miMaxLag);
+  const y0=Math.log10(1e-4),y1=Math.log10(Math.max(2,Math.max(...miData)*1.4));
+  const sy=v=>MT+(y1-Math.log10(Math.max(v,1e-4)))/(y1-y0)*(CH-MT-MB);
+  const x0=1,x1=miMaxLag;
+  let s=niceSvgOpen();
+  // gridlines at decades
+  for(let e=-4;e<=Math.ceil(y1);e++){
+    const y=sy(Math.pow(10,e));if(y<MT-2||y>CH-MB)continue;
+    s+='<line x1="'+ML+'" x2="'+(CW-MR)+'" y1="'+y+'" y2="'+y+'" stroke="var(--grid)" stroke-width="1"/>';
+    s+=axisText(ML-8,y+3,e===0?"1":"10"+sup(e),"end");
+  }
+  for(const k of [1,2,4,8,16,32,64]){
+    const x=sx(Math.log2(k),0,Math.log2(x1));
+    s+=axisText(x,CH-MB+16,k,"middle");
+  }
+  s+='<line x1="'+ML+'" x2="'+(CW-MR)+'" y1="'+(CH-MB)+'" y2="'+(CH-MB)+'" stroke="var(--baseline)" stroke-width="1"/>';
+  s+=axisText((ML+CW-MR)/2,CH-8,"lag k between dots (log scale)","middle");
+  s+='<text x="13" y="'+((MT+CH-MB)/2)+'" transform="rotate(-90 13 '+((MT+CH-MB)/2)+')" text-anchor="middle" font-size="11" fill="var(--muted)">MI (bits, log)</text>';
+  // knee markers
+  const marks=[[state.lang.lbar,"mean word ("+state.lang.lbar+")"]];
+  if(lang.nstar2)marks.push([lang.nstar2,"phrase ("+lang.nstar2+")"]);
+  if(lang.key!=="fizz")for(const [v,lab] of marks){
+    const x=sx(Math.log2(v),0,Math.log2(x1));
+    s+='<line x1="'+x+'" x2="'+x+'" y1="'+MT+'" y2="'+(CH-MB)+'" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4"/>';
+    const rt=x>0.62*CW;
+    s+='<text x="'+(rt?x-4:x+4)+'" y="'+(MT+11)+'" text-anchor="'+(rt?"end":"start")+'" font-size="10.5" fill="var(--text-secondary)">'+lab+'</text>';
+  }
+  // the MI line
+  let d="";
+  for(let k=1;k<=miMaxLag;k++){
+    const x=sx(Math.log2(k),0,Math.log2(x1)),y=sy(miData[k-1]);
+    d+=(k===1?"M":"L")+x.toFixed(1)+" "+y.toFixed(1)+" ";
+  }
+  s+='<path d="'+d+'" fill="none" stroke="var(--l1)" stroke-width="2" stroke-linejoin="round"/>';
+  s+='<rect id="miHit" x="'+ML+'" y="'+MT+'" width="'+(CW-ML-MR)+'" height="'+(CH-MT-MB)+'" fill="transparent"/>';
+  s+='<line id="miCross" x1="0" x2="0" y1="'+MT+'" y2="'+(CH-MB)+'" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>';
+  s+='<circle id="miPt" r="4" fill="var(--l1)" stroke="var(--surface-1)" stroke-width="2" visibility="hidden"/>';
+  s+='</svg>';
+  const el=document.getElementById("miChart");
+  el.innerHTML=s;
+  hookMiHover(el,x1,sy);
+}
+function sup(e){const m={"-":"⁻","0":"⁰","1":"¹","2":"²","3":"³","4":"⁴"};return String(e).split("").map(c=>m[c]||c).join("");}
+function hookMiHover(el,x1,sy){
+  const svg=el.querySelector("svg"),hit=el.querySelector("#miHit");
+  const cross=el.querySelector("#miCross"),pt=el.querySelector("#miPt");
+  const tip=document.getElementById("miTip");
+  hit.addEventListener("mousemove",ev=>{
+    const r=svg.getBoundingClientRect();
+    const px=(ev.clientX-r.left)*(CW/r.width);
+    const frac=(px-ML)/(CW-ML-MR);
+    let k=Math.round(Math.pow(2,frac*Math.log2(x1)));k=Math.max(1,Math.min(miMaxLag,k));
+    const x=sx(Math.log2(k),0,Math.log2(x1)),y=sy(miData[k-1]);
+    cross.setAttribute("x1",x);cross.setAttribute("x2",x);cross.setAttribute("visibility","visible");
+    pt.setAttribute("cx",x);pt.setAttribute("cy",y);pt.setAttribute("visibility","visible");
+    tip.style.display="block";
+    const card=tip.parentElement.getBoundingClientRect();
+    tip.style.left=(ev.clientX-card.left+14)+"px";tip.style.top=(ev.clientY-card.top-10)+"px";
+    tip.innerHTML="lag <b>"+k+"</b> · MI <b>"+miData[k-1].toPrecision(3)+"</b> bits";
+  });
+  hit.addEventListener("mouseleave",()=>{cross.setAttribute("visibility","hidden");pt.setAttribute("visibility","hidden");tip.style.display="none";});
+}
+
+/* predicted probe curves — schematic on purpose */
+function bump(n,peak,width,amp,base){
+  const z=Math.log(n/peak)/width;
+  return base+amp*Math.exp(-z*z/2);
+}
+function predCurves(lang){
+  const xs=[];for(let n=1;n<=96;n*=1.22)xs.push(n);xs.push(96);
+  const series=[];
+  if(lang.key==="fizz"){
+    series.push({name:"letter probe (only task left)",col:"var(--l1)",f:n=>0.62-0.05*Math.log2(n)/7});
+  }else{
+    series.push({name:"word-identity probe",col:"var(--l1)",
+      f:n=>bump(n,lang.nstar,0.85,0.42,0.38-0.08*Math.max(0,Math.log2(n/lang.nstar))/3)});
+    if(lang.key==="glint")series.push({name:"shimmer probe (local)",col:"var(--l2)",f:n=>0.86-0.30*(Math.log2(n)/Math.log2(96))});
+    if(lang.nstar2)series.push({name:"phrase probe",col:"var(--l3)",f:n=>bump(n,lang.nstar2,0.8,0.34,0.30)});
+  }
+  return {xs,series};
+}
+function drawPredChart(){
+  const lang=state.lang;
+  const {xs,series}=predCurves(lang);
+  const x1=96;
+  const sy=v=>MT+(1-v)*(CH-MT-MB);
+  let s=niceSvgOpen();
+  for(const g of [0,0.25,0.5,0.75,1]){
+    const y=sy(g);
+    s+='<line x1="'+ML+'" x2="'+(CW-MR)+'" y1="'+y+'" y2="'+y+'" stroke="var(--grid)" stroke-width="1"/>';
+    s+=axisText(ML-8,y+3,Math.round(g*100)+"%","end");
+  }
+  for(const k of [1,2,4,8,16,32,64]){
+    s+=axisText(sx(Math.log2(k),0,Math.log2(x1)),CH-MB+16,k,"middle");
+  }
+  s+='<line x1="'+ML+'" x2="'+(CW-MR)+'" y1="'+(CH-MB)+'" y2="'+(CH-MB)+'" stroke="var(--baseline)" stroke-width="1"/>';
+  s+=axisText((ML+CW-MR)/2,CH-8,"MTP horizon n (log scale)","middle");
+  if(lang.key!=="fizz"){
+    const x=sx(Math.log2(lang.nstar),0,Math.log2(x1));
+    s+='<line x1="'+x+'" x2="'+x+'" y1="'+MT+'" y2="'+(CH-MB)+'" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4"/>';
+    const rt=x>0.62*CW;
+    s+='<text x="'+(rt?x-4:x+4)+'" y="'+(MT+11)+'" text-anchor="'+(rt?"end":"start")+'" font-size="10.5" fill="var(--text-secondary)">predicted n* = '+lang.nstar+'</text>';
+  }
+  for(const ser of series){
+    let d="";
+    xs.forEach((n,i)=>{
+      const x=sx(Math.log2(n),0,Math.log2(x1)),y=sy(Math.max(0.02,Math.min(0.98,ser.f(n))));
+      d+=(i===0?"M":"L")+x.toFixed(1)+" "+y.toFixed(1)+" ";
+    });
+    s+='<path d="'+d+'" fill="none" stroke="'+ser.col+'" stroke-width="2" stroke-dasharray="6 5" stroke-linejoin="round"/>';
+  }
+  // legend (direct labels)
+  let ly=MT+30;
+  for(const ser of series){
+    s+='<line x1="'+(CW-MR-150)+'" x2="'+(CW-MR-128)+'" y1="'+ly+'" y2="'+ly+'" stroke="'+ser.col+'" stroke-width="2" stroke-dasharray="6 5"/>';
+    s+='<text x="'+(CW-MR-122)+'" y="'+(ly+3.5)+'" font-size="11" fill="var(--text-secondary)">'+ser.name+'</text>';
+    ly+=16;
+  }
+  s+='</svg>';
+  document.getElementById("predChart").innerHTML=s;
+}
+
+/* ---------- language cards + selection ---------- */
+function buildCards(){
+  const grid=document.getElementById("langgrid");
+  grid.innerHTML="";
+  for(const L of LANGS){
+    const el=document.createElement("div");
+    el.className="langcard"+(L.key===state.lang.key?" active":"");
+    const dots=L.gen({n:9,seed:5}).map(t=>'<span style="background:var(--l'+((t.c%8)+1)+')"></span>').join("");
+    const chips=L.chips.map(c=>'<span class="chip">'+c+'</span>').join("")
+      +'<span class="chip nstar">n* ≈ '+L.nstar+(L.nstar2?(" & "+L.nstar2):"")+'</span>';
+    el.innerHTML='<h3>'+L.name+'</h3><div class="role">'+L.role+'</div><div class="minidots">'+dots+'</div><div class="chiprow">'+chips+'</div>';
+    el.addEventListener("click",()=>selectLang(L.key));
+    grid.appendChild(el);
+  }
+}
+function selectLang(key){
+  state.lang=LANGS.find(l=>l.key===key);
+  document.querySelectorAll(".langcard").forEach((el,i)=>el.classList.toggle("active",LANGS[i].key===key));
+  document.getElementById("streamTitle").textContent=state.lang.name+" — "+state.lang.role;
+  document.getElementById("streamDesc").textContent=state.lang.desc;
+  const near=N_STOPS.reduce((b,v,i)=>Math.abs(v-state.lang.nstar)<Math.abs(N_STOPS[b]-state.lang.nstar)?i:b,0);
+  state.nIdx=near;
+  document.getElementById("nSlider").value=near;
+  document.getElementById("nReadout").textContent="n = "+N_STOPS[near];
+  regen();drawMiChart();drawPredChart();
+}
+
+/* ---------- dot hover ---------- */
+canvas.addEventListener("mousemove",ev=>{
+  const {perRow}=layout();
+  const r=canvas.getBoundingClientRect();
+  const x=ev.clientX-r.left,y=ev.clientY-r.top;
+  const col=Math.floor((x-PADX)/CELL),row=Math.floor((y-PADY+ (ROWH-20)/2)/ROWH);
+  const i=row*perRow+col;
+  const tip=document.getElementById("dotTip");
+  if(i>=0&&i<state.tokens.length&&col>=0&&col<perRow){
+    if(state.anchor!==i){state.anchor=i;draw();}
+    const t=state.tokens[i];
+    let txt="dot <b>#"+i+"</b> · color "+(t.c+1);
+    if(t.wid>=0)txt+=" · word <b>"+state.lang.name.toLowerCase()+"-"+t.wid+"</b> ("+(t.pos+1)+"/"+t.len+")";
+    if(t.pid>=0)txt+=" · phrase "+t.pid;
+    if(t.b>=0)txt+=" · shimmer "+["low","mid","high"][t.b];
+    tip.innerHTML=txt;tip.style.display="block";
+    tip.style.left=(x+16)+"px";tip.style.top=(y-8)+"px";
+  }else tip.style.display="none";
+});
+canvas.addEventListener("mouseleave",()=>{document.getElementById("dotTip").style.display="none";});
+
+/* ---------- controls ---------- */
+document.getElementById("revealToggle").addEventListener("change",e=>{state.reveal=e.target.checked;draw();});
+document.getElementById("nSlider").addEventListener("input",e=>{
+  state.nIdx=+e.target.value;
+  document.getElementById("nReadout").textContent="n = "+N_STOPS[state.nIdx];
+  draw();
+});
+document.getElementById("regen").addEventListener("click",()=>{state.seed=(state.seed*16807)%2147483647;regen();});
+document.getElementById("themeToggle").addEventListener("click",()=>{
+  const cur=document.documentElement.dataset.theme;
+  const osDark=matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.dataset.theme=cur?(cur==="dark"?"light":"dark"):(osDark?"light":"dark");
+  draw();drawMiChart();drawPredChart();buildCards();
+});
+let rsz;window.addEventListener("resize",()=>{clearTimeout(rsz);rsz=setTimeout(regen,150);});
+
+/* ---------- design notes ---------- */
+document.getElementById("designNotes").innerHTML=`
+<h2>The experiment, in full</h2>
+<p><b>Setup mirrors AuriStream exactly, minus the audio.</b> GPT-style decoder-only transformers trained
+purely autoregressively on Dotling streams, with <i>n</i> parallel prediction heads that are plain linear maps
+from the final embedding — head <i>k</i> predicts token <i>t</i>+<i>k</i>. Sweep <i>n</i>, freeze the model, crop the
+embeddings over a ground-truth word span (the TIMIT protocol), mean-pool, and fit a linear probe.</p>
+
+<h3>Why these knobs and not others</h3>
+<p><b>Mean word length L̄</b> is the central manipulation (3 → 48 dots across Blip → Rumble): the hypothesis is a
+line through the origin in the plot of optimal <i>n</i>* against L̄. <b>Lexicon size W vs alphabet A</b> sets the
+uniqueness point — a word over alphabet A disambiguates after about log<sub>A</sub>W dots (48 three-dot Blip words over
+6 colors: ~2 dots; 8,192 Rumble words over 8 colors: ~4.3 dots). Keeping A fixed at 6–8 while W grows with L̄ keeps
+words confusable enough that identity is not readable from the first dot, and it cleanly separates two rival accounts:
+if <i>n</i>* tracks the <em>uniqueness point</em>, Drawl and Rumble should peak near n = 4; if it tracks the
+<em>unit length</em>, they peak at 24 and 48. <b>Length spread</b> (fixed in Blip, 4–9 in Morsel) predicts peak
+width, not location. <b>Word-level grammar</b> (Burble's bigram successors) leaves residual MI beyond the boundary
+and should soften the post-peak decline. <b>Glint</b> adds a task whose structure lives at lag ~1, predicting the
+opposite monotonic trend for the same trained models — the Philharmonia-pitch analog. <b>Cascade</b> nests two scales
+so two probes disagree about <i>n</i>* within one language.</p>
+
+<h3>Tiny models are enough — that is the point</h3>
+<table class="spec">
+<tr><th>model</th><th>layers × d</th><th>params</th><th>context</th><th>role</th></tr>
+<tr><td><b>minnow</b></td><td>2 × 64</td><td>~0.15 M</td><td>512</td><td>can it show the peak at all?</td></tr>
+<tr><td><b>trout</b></td><td>4 × 128</td><td>~1 M</td><td>512</td><td>main workhorse across the grid</td></tr>
+<tr><td><b>heron</b></td><td>8 × 256</td><td>~8 M</td><td>1024</td><td>capacity-substitution test vs minnow/trout</td></tr>
+</table>
+<p>Vocabularies are 6–24 symbols, so embeddings are negligible and heads are cheap (n × d × A). Budget:
+20–100 M tokens per run, minutes per run for minnow/trout on one A100. The primary grid —
+8 languages × n ∈ {1, 2, 3, 6, 12, 24, 48, 96} × 3 sizes × 2 seeds ≈ 384 runs — is roughly 2–3 GPU-days total.
+Streams are generated on the fly, so data is free and exactly controlled.</p>
+
+<h3>Probes and evaluations</h3>
+<table class="spec">
+<tr><th>probe / eval</th><th>reads out</th><th>AuriStream analog</th></tr>
+<tr><td><b>word identity</b></td><td>W-way linear probe on mean-pooled word span</td><td>TIMIT word decoding</td></tr>
+<tr><td><b>position-in-word</b></td><td>phase within the unit</td><td>—</td></tr>
+<tr><td><b>boundary detector</b></td><td>is a word ending here?</td><td>lexical segmentation tasks</td></tr>
+<tr><td><b>phrase identity</b> (Cascade)</td><td>256-way probe on phrase span</td><td>supra-lexical structure</td></tr>
+<tr><td><b>shimmer level</b> (Glint)</td><td>fast local channel</td><td>Philharmonia pitch</td></tr>
+<tr><td><b>head-1 generation</b></td><td>sample with head 1 only; parse against the lexicon; word-sequence perplexity under the <em>true</em> word LM</td><td>generations sound better + LLM transcript PPL — but here the judge is an oracle, because we wrote the language</td></tr>
+</table>
+
+<h3>Controls (the boring part that makes it believable)</h3>
+<p>(1) <b>Loss normalization</b> — mean over heads vs sum, so total gradient magnitude does not confound horizon.
+(2) <b>Shuffled-future control</b> — predict the same n future tokens as an unordered bag; if the peak survives,
+it is head-count regularization, not temporal structure. (3) <b>Past-prediction control</b> — n heads predicting
+<em>past</em> tokens; same head count, no lookahead. (4) <b>Compute-matched n = 1</b> — train the baseline longer to
+match total FLOPs. (5) <b>Fizz</b> — the null language where every account predicts nothing.</p>
+
+<h3>Registered predictions</h3>
+<ul class="pred">
+<li><b class="pn">P1</b> Optimal n* for the word probe scales linearly with L̄ across Blip → Rumble (slope ≈ 1, not with the uniqueness point log<sub>A</sub>W).</li>
+<li><b class="pn">P2</b> Length spread widens the peak without moving it (Morsel vs Blip).</li>
+<li><b class="pn">P3</b> The shimmer probe in Glint degrades monotonically with n while the word probe peaks — same model, opposite trends.</li>
+<li><b class="pn">P4</b> Cascade's word and phrase probes peak at ~3 and ~12 respectively; its MI curve shows a double knee.</li>
+<li><b class="pn">P5</b> Head-1 training loss is <em>worse</em> at n = n* than at n = 1, yet head-1-only generations parse into valid words at a higher rate and have lower oracle word-LM perplexity — the trunk learned the larger pattern even though decoding never uses the extra heads.</li>
+<li><b class="pn">P6</b> minnow at n* rivals heron at n = 1 on word decoding (the 100M-vs-7B effect in miniature).</li>
+<li><b class="pn">P7</b> <b>The money plot:</b> across all languages, argmax-n of the word probe against the MI-knee lag of the raw stream falls on the identity line — and AuriStream's (≈40 tokens, 200 ms) point lands on the same line. One measurable, label-free quantity of the data predicts the best training horizon.</li>
+</ul>
+
+<h3>Extensions once the core holds</h3>
+<p>Allophonic noise (per-occurrence dot substitutions at rate ε — a "slurred" Morsel) to test robustness of the peak;
+sweeping the uniqueness-point ratio log<sub>A</sub>W / L̄ at fixed L̄ to isolate the cohort-model account; discounted
+head weights γ<sup>k</sup> to turn n into a continuous effective-horizon knob; and a curriculum that grows n during
+training, which the induction-circuit story predicts should beat any fixed n.</p>
+`;
+
+/* ---------- init ---------- */
+buildCards();
+selectLang("rumble");
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta
+      name="description"
+      content="Dotling: does the optimal multi-token-prediction horizon track the temporal grain of the data? Live results."
+    />
+    <link rel="canonical" href="https://neuroailab.github.io/psi-docs/psi2/dotling/" />
+    <title>Dotling — MTP tuning windows, live</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("dotling-theme");
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
+        document.documentElement.dataset.theme = savedTheme ?? preferredTheme;
+      })();
+    </script>
+    <script>
+      (() => {
+        const version = Date.now().toString(36);
+        window.DOTLING_ASSET_VERSION = version;
+        const stylesheet = document.createElement("link");
+        stylesheet.rel = "stylesheet";
+        stylesheet.href = `styles.css?v=${version}`;
+        document.head.append(stylesheet);
+      })();
+    </script>
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme"></button>
+          <div class="hero-dots" id="hero-dots" aria-hidden="true"></div>
+          <h1 id="page-title">Dotling <span>MTP tuning windows</span></h1>
+          <p class="hero-copy">
+            AuriStream predicts 40 future speech tokens (≈200&nbsp;ms ≈ one word) and its
+            embeddings become word-decodable. Is that a coincidence, or does the optimal
+            multi-token-prediction horizon <em>n*</em> track the temporal grain of the data?
+            Eight synthetic dot languages, every structural knob controlled, ~200 GPT+MTP
+            models — results stream in below as the 8×A40 sweep runs.
+          </p>
+          <div class="status-strip" id="status-strip">
+            <span class="status-chip live" id="status-live"><i></i>connecting…</span>
+            <span class="status-chip" id="status-phase1">phase 1 —</span>
+            <span class="status-chip" id="status-phase2">phase 2 —</span>
+            <span class="status-chip" id="status-phase3">phase 3 —</span>
+            <span class="status-chip" id="status-updated">updated —</span>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="money-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The headline result, live</p>
+              <h2 id="money-title">Prediction horizon vs temporal grain</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            Left: the optimal horizon <em>n*</em> (argmax of word-probe accuracy over
+            <em>n</em>) against mean word length <em>L̄</em>. Right: the registered “money
+            plot” — <em>n*</em> against the model-free mutual-information knee of the raw
+            token stream, with AuriStream’s (40, 40) point for scale. If the tuning-window
+            hypothesis is right, points land on the identity line.
+          </p>
+          <div class="plot-row">
+            <div class="plot-card"><div id="plot-horizon" class="plot"></div></div>
+            <div class="plot-card"><div id="plot-money" class="plot"></div></div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="tuning-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Per-language tuning curves</p>
+              <h2 id="tuning-title">Probe accuracy vs MTP horizon n</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            Each panel: linear-probe accuracy on frozen embeddings vs the training horizon
+            <em>n</em> (log axis), seeds averaged. Dotted line = predicted n*. Glint adds a
+            fast “shimmer” channel probe (should prefer n=1); cascade adds a phrase probe
+            (should prefer n≈12).
+          </p>
+          <div class="plot-grid" id="tuning-grid"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="p5-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The loss-vs-quality dissociation</p>
+              <h2 id="p5-title">P5 — head-1 loss worsens, generations improve</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            Training with more heads makes the next-token loss <em>worse</em> — yet head-1-only
+            generations parse better against the true lexicon and score lower oracle
+            perplexity under the true language model.
+          </p>
+          <div class="plot-row three" id="p5-row"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="mi-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Model-free structure</p>
+              <h2 id="mi-title">Mutual information by lag</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            Plug-in MI (Miller–Madow corrected) between tokens k apart, computed from 1M raw
+            tokens per language before any model is trained. The knee is the x-axis of the
+            money plot.
+          </p>
+          <div class="plot-card wide"><div id="plot-mi" class="plot tall"></div></div>
+        </section>
+
+        <section class="panel" aria-labelledby="extra-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Capacity &amp; controls</p>
+              <h2 id="extra-title">Phases 2–3 — substitution and ablations</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            Capacity substitution (P6): a 0.1M model at n* should rival a 6M model at n=1 on
+            word decoding. Controls (P0): shuffling the target offsets or predicting the past
+            should kill the peak.
+          </p>
+          <div class="plot-row" id="extra-row">
+            <div class="plot-card"><div id="plot-capacity" class="plot"></div></div>
+            <div class="plot-card"><div id="plot-controls" class="plot"></div></div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="pred-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Registered predictions</p>
+              <h2 id="pred-title">P0–P7 scoreboard</h2>
+            </div>
+          </div>
+          <div class="pred-table" id="pred-table"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="demo-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Meet the languages</p>
+              <h2 id="demo-title">Interactive explainer</h2>
+            </div>
+          </div>
+          <p class="section-copy">
+            The original interactive design document: stream the eight dot languages, reveal
+            their hidden word boundaries, and see the registered predictions.
+            <a href="dotling-languages.html" target="_blank" rel="noopener">Open full-screen ↗</a>
+          </p>
+          <div class="demo-frame">
+            <iframe
+              src="dotling-languages.html"
+              title="Dotling languages interactive explainer"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="runs-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Every run</p>
+              <h2 id="runs-title">Run table</h2>
+            </div>
+            <span class="status-chip" id="runs-count"></span>
+          </div>
+          <details>
+            <summary>Show all completed runs</summary>
+            <div class="run-table-wrap"><table id="run-table"></table></div>
+          </details>
+        </section>
+
+        <footer class="site-footer">
+          <p>
+            Dotling · AuriStream tuning-window experiment · live from an 8×A40 node ·
+            <a href="https://neuroailab.github.io/psi-docs/psi2/training_plan/">PSI training roadmap</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+    <script>
+      (() => {
+        const s = document.createElement("script");
+        s.src = `app.js?v=${window.DOTLING_ASSET_VERSION}`;
+        s.defer = true;
+        document.body.append(s);
+      })();
+    </script>
+  </body>
+</html>
