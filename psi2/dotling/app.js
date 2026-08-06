@@ -45,10 +45,17 @@ function probeVal(run, task) {
 }
 
 function runVal(run, task) {
-  if (["word", "position", "boundary", "phrase", "shimmer", "letter"].includes(task)) {
+  if (["word", "word_tok", "position", "boundary", "phrase", "phrase_tok",
+       "shimmer", "letter"].includes(task)) {
     return probeVal(run, task);
   }
   return run[task] ?? null;
+}
+
+// The registered pooled-span word probe saturates at 100% on these noiseless
+// lexicons; the single-token probe is the sensitive word-decodability readout.
+function pickWordTask(runs, lang, opts) {
+  return curve(runs, lang, "word_tok", opts).ns.length ? "word_tok" : "word";
 }
 
 function curve(runs, lang, task, { size = "trout", control = "none", agg = "mean" } = {}) {
@@ -129,7 +136,7 @@ function renderHorizon() {
   const pts = [];
   for (const lang of LANG_ORDER) {
     const info = DATA.langs[lang];
-    const n = argmaxN(runs, lang, "word");
+    const n = argmaxN(runs, lang, pickWordTask(runs, lang));
     if (n !== null && info) pts.push({ lang, x: info.mean_len, y: n });
   }
   if (!pts.length) return empty("plot-horizon", "waiting for the first trained models…");
@@ -156,10 +163,11 @@ function renderMoney() {
   for (const lang of LANG_ORDER) {
     if (!mi[lang]) continue;
     const knee = mi[lang].knee;
-    const nWord = argmaxN(runs, lang, "word");
+    const nWord = argmaxN(runs, lang, pickWordTask(runs, lang));
     if (nWord !== null) pts.push({ lang, task: "word", x: knee, y: nWord, sym: "circle" });
     if (lang === "cascade") {
-      const nPh = argmaxN(runs, lang, "phrase");
+      const phTask = curve(runs, lang, "phrase_tok", {}).ns.length ? "phrase_tok" : "phrase";
+      const nPh = argmaxN(runs, lang, phTask);
       if (nPh !== null) pts.push({ lang, task: "phrase", x: knee, y: nPh, sym: "square" });
     }
     if (lang === "glint") {
@@ -207,10 +215,17 @@ function renderTuning() {
     div.id = `tuning-${lang}`;
     card.append(div);
     grid.append(card);
-    const tasks = [["word", langColor(lang), "word id"]];
+    const tasks = [
+      ["word", cssVar("--faint"), "word id (pooled)"],
+      ["word_tok", langColor(lang), "word id (1-token)"],
+    ];
     if (lang === "glint") tasks.push(["shimmer", cssVar("--aqua"), "shimmer"]);
-    if (lang === "cascade") tasks.push(["phrase", cssVar("--violet"), "phrase id"]);
+    if (lang === "cascade") {
+      tasks.push(["phrase", cssVar("--violet"), "phrase id (pooled)"]);
+      tasks.push(["phrase_tok", cssVar("--violet"), "phrase id (1-token)"]);
+    }
     tasks.push(["boundary", cssVar("--gold"), "boundary AUC"]);
+    tasks.push(["position", cssVar("--aqua"), "position-in-word"]);
     const traces = [];
     for (const [task, color, label] of tasks) {
       const { ns, vals } = curve(runs, lang, task);
@@ -324,7 +339,7 @@ function renderCapacity() {
   for (const size of sizes) {
     const at1 = [], atStar = [];
     for (const lang of langs) {
-      const { ns, vals } = curve(runs, lang, "word", { size });
+      const { ns, vals } = curve(runs, lang, pickWordTask(runs, lang, { size }), { size });
       const d = new Map(ns.map((n, i) => [n, vals[i]]));
       at1.push(d.get(1) ?? null);
       const star = DATA.langs[lang]?.pred_nstar;
@@ -398,12 +413,13 @@ function renderRunTable() {
   const table = document.getElementById("run-table");
   const runs = [...(DATA.runs || [])].sort((a, b) => a.run.localeCompare(b.run));
   const cols = ["run", "lang", "size", "n", "seed", "control", "loss_agg",
-                "word", "boundary", "phrase", "shimmer", "parse_rate", "oracle_ppl", "head1_eval_loss"];
+                "word", "word_tok", "boundary", "phrase", "shimmer",
+                "parse_rate", "oracle_ppl", "head1_eval_loss"];
   const fmt = (v) => (v === null || v === undefined ? "·" : typeof v === "number" ? (Number.isInteger(v) ? v : v.toFixed(3)) : v);
   table.innerHTML =
     `<thead><tr>${cols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>` +
     runs.map((r) => `<tr>${cols.map((c) => {
-      let v = ["word", "boundary", "phrase", "shimmer"].includes(c) ? probeVal(r, c) : r[c];
+      let v = ["word", "word_tok", "boundary", "phrase", "shimmer"].includes(c) ? probeVal(r, c) : r[c];
       return `<td>${fmt(v)}</td>`;
     }).join("")}</tr>`).join("") + "</tbody>";
 }

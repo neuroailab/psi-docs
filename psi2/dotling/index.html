@@ -65,11 +65,16 @@
             </div>
           </div>
           <p class="section-copy">
-            Left: the optimal horizon <em>n*</em> (argmax of word-probe accuracy over
+            Left: the optimal horizon <em>n*</em> (argmax of word decodability over
             <em>n</em>) against mean word length <em>L̄</em>. Right: the registered “money
             plot” — <em>n*</em> against the model-free mutual-information knee of the raw
             token stream, with AuriStream’s (40, 40) point for scale. If the tuning-window
             hypothesis is right, points land on the identity line.
+            <strong>Live finding:</strong> the registered pooled-span word probe saturates at
+            100% on these noiseless lexicons (a mean-pooled span is a bag of letters, which
+            already identifies an exact-sequence word), so these plots use the sensitive
+            <em>single-token</em> word probe. So far the peak only emerges where the stream
+            carries unpredictable fast structure (glint) — see the tuning curves below.
           </p>
           <div class="plot-row">
             <div class="plot-card"><div id="plot-horizon" class="plot"></div></div>
@@ -86,9 +91,13 @@
           </div>
           <p class="section-copy">
             Each panel: linear-probe accuracy on frozen embeddings vs the training horizon
-            <em>n</em> (log axis), seeds averaged. Dotted line = predicted n*. Glint adds a
-            fast “shimmer” channel probe (should prefer n=1); cascade adds a phrase probe
-            (should prefer n≈12).
+            <em>n</em> (log axis), seeds averaged. Dotted line = predicted n*. The faded
+            “pooled” line is the registered probe (saturated ≈1.0 everywhere); the colored
+            “1-token” line decodes the word from a <em>single</em> within-word hidden state
+            — the sensitive readout. Glint adds a fast “shimmer” probe (prefers n=1) and is
+            the one language where word/boundary/position readouts clearly <em>improve</em>
+            with longer horizons — the AuriStream situation in miniature. Position-in-word
+            probes improve with n in every language (“unit identity + phase”).
           </p>
           <div class="plot-grid" id="tuning-grid"></div>
         </section>
