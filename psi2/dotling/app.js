@@ -1,7 +1,7 @@
-const LANG_ORDER = ["fizz", "blip", "morsel", "burble", "drawl", "rumble", "glint", "cascade"];
+const LANG_ORDER = ["fizz", "blip", "morsel", "burble", "drawl", "rumble", "glint", "cascade", "rasp"];
 const LANG_VAR = {
   fizz: "--l8", blip: "--l1", morsel: "--l2", burble: "--l3",
-  drawl: "--l4", rumble: "--l6", glint: "--l5", cascade: "--l7",
+  drawl: "--l4", rumble: "--l6", glint: "--l5", cascade: "--l7", rasp: "--l9",
 };
 const REFRESH_MS = 60_000;
 

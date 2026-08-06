@@ -21,6 +21,7 @@
   --pending: #8c919c;
   --l1: #ff7657; --l2: #e8b45a; --l3: #a6d75b; --l4: #88dfcb;
   --l5: #6db1ff; --l6: #9589ff; --l7: #e07ec4; --l8: #9aa0a8;
+  --l9: #d9856f;
   --font-display: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --font-body: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -48,6 +49,7 @@
   --pending: #777c84;
   --l1: #db583f; --l2: #c98a1e; --l3: #5f9e34; --l4: #168d79;
   --l5: #2f7fc1; --l6: #6b5bb5; --l7: #c0507e; --l8: #6a6f78;
+  --l9: #8b3a2e;
 }
 
 * { box-sizing: border-box; }
