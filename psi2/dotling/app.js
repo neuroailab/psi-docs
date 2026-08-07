@@ -69,10 +69,11 @@ function pickWordTask(runs, lang, opts) {
   return curve(runs, lang, "word_tok", opts).ns.length ? "word_tok" : "word";
 }
 
-function curve(runs, lang, task, { size = "trout", control = "none", agg = "mean" } = {}) {
+function curve(runs, lang, task, { size = "trout", control = "none", agg = "mean", tokens = 100e6 } = {}) {
   const byN = new Map();
   for (const r of runs) {
     if (r.lang !== lang || r.size !== size || r.control !== control || r.loss_agg !== agg) continue;
+    if ((r.tokens ?? 100e6) !== tokens) continue;
     const v = runVal(r, task);
     if (v === null || v === undefined) continue;
     if (!byN.has(r.n)) byN.set(r.n, []);
