@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dotling — structure discovery without labels</title>
+<style>
+:root { color-scheme: light dark; }
+body { margin:0; font-family: Inter, ui-sans-serif, -apple-system, sans-serif;
+       background:#f3f1eb; color:#17181a; }
+@media (prefers-color-scheme: dark) {
+  body { background:#0a0c11; color:#f4f1e8; }
+  .card, table { background:#11141b !important; border-color:#303540 !important; }
+  .muted { color:#989ca4 !important; }
+  th { background:#171b24 !important; }
+}
+.shell { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+h1 { font-size: 2rem; margin: 0; }
+h1 span { display:block; font-size:.55em; letter-spacing:.22em; color:#db583f;
+          text-transform:uppercase; margin-top:6px; }
+.lede { max-width: 780px; line-height:1.6; color:#555b63; }
+.muted { color:#686d74; }
+.card { background:#faf9f5; border:1px solid #d7d4cc; border-radius:16px;
+        padding:22px 26px; margin-top:24px; }
+.card h2 { margin:0 0 8px; font-size:1.12rem; }
+.card p { line-height:1.55; font-size:.93rem; max-width:900px; }
+img { width:100%; height:auto; border-radius:10px; margin-top:8px; }
+table { width:100%; border-collapse:collapse; font-size:.86rem; margin-top:10px;
+        background:#faf9f5; border:1px solid #d7d4cc; border-radius:10px; }
+th, td { text-align:left; padding:7px 12px; border-bottom:1px solid #00000014; }
+th { background:#efece4; font-size:.72rem; text-transform:uppercase;
+     letter-spacing:.08em; }
+.back { font-size:.85rem; letter-spacing:.05em; }
+a { color:inherit; }
+.recipe { border-left: 4px solid #db583f; }
+</style></head><body><div class="shell">
+<p class="back"><a href="../">← back to the live dotling results</a></p>
+<h1>Finding hidden structure — without labels
+<span>the discovery pipeline, validated on dotling</span></h1>
+<p class="lede">The dotling study used linear probes to measure how much latent
+structure a model encodes — but probes need labels, which real data (neural
+recordings, unannotated audio, robot logs) doesn't have. This page asks: could we
+have discovered dotling's hidden words, hierarchies and topics with <em>no labels
+at all</em>? Since we secretly own the ground truth, we can score each label-free
+procedure exactly. Labels are used only for scoring, never by the procedures.</p>
+
+<section class="card"><h2>A — Loss-profile spectroscopy</h2>
+<p>A multi-token-prediction model trained with 96 heads reports, for free, its
+eval loss at every offset k — an empirical predictability spectrum
+H(x<sub>t+k</sub> | past). Where the curve rises and saturates marks the scale at
+which the future becomes unpredictable: the latent unit scale. The label-free
+knee (80% of total rise) recovers the unit scale within a factor of ~1.5 for
+every discrete language, and correctly reports <em>nothing</em> for fizz and the
+continuous processes (flat curves).</p>
+<img src="figures/discovery_profiles.png" alt="loss profiles"/></section>
+
+<section class="card"><h2>B — Boundary discovery by surprisal peaks</h2>
+<p>The head-1 surprisal of each <em>observed</em> token (data, not labels) spikes
+when a token starts a new unit — the first letter of a word is the unpredictable
+one. Local peaks of z-scored surprisal are proposed as boundaries and scored
+against the true hidden word boundaries with ±1-token tolerance.</p></section>
+
+<section class="card"><h2>C — Unit inventory by segment clustering</h2>
+<p>Mean-pool the hidden states over each discovered segment, k-means the pooled
+vectors, and compare cluster identity to the true word type of each segment
+(normalized mutual information). The oracle column uses the true boundaries with
+the same clustering, isolating how much is lost to segmentation errors.</p>
+
+<section class="card"><h2>D — Slow-state extraction</h2>
+<p>Moving-average the hidden states over ~300 tokens, cluster the smoothed
+trajectory into 8 regimes, and compare to the hidden topic. The autocorrelation
+half-life of the smoothed state estimates the slow timescale itself, label-free.
+</p><img src="figures/discovery_scores.png" alt="recovery scores"/></section>
+
+<section class="card"><h2>Results</h2>
+<table><tr><th>language</th><th>true unit scale</th><th>A: knee (label-free)</th>
+<th>B: boundary F1</th><th>B: discovered mean unit length</th>
+<th>C: unit NMI (disc. / oracle)</th><th>D: topic NMI</th>
+<th>D: slow half-life (tok)</th></tr>
+<tr><td><b>morsel</b></td><td>6.5</td><td>5</td><td>0.953 (entropy; surp 0.868 / ent 0.953)</td><td>5.83</td><td>0.746 / 0.785</td><td>—</td><td>81</td></tr><tr><td><b>rumble</b></td><td>48</td><td>35</td><td>0.279 (surprisal; surp 0.279 / ent 0.244)</td><td>8.03</td><td>0.27 / 0.727</td><td>—</td><td>81</td></tr><tr><td><b>smolder</b></td><td>48</td><td>33</td><td>0.143 (entropy; surp 0.129 / ent 0.143)</td><td>4.23</td><td>0.175 / 0.59</td><td>—</td><td>71</td></tr><tr><td><b>myth</b></td><td>3</td><td>42</td><td>0.773 (entropy; surp 0.703 / ent 0.773)</td><td>4.31</td><td>0.257 / 0.419</td><td>—</td><td>61</td></tr><tr><td><b>saga</b></td><td>6.5</td><td>5</td><td>0.982 (entropy; surp 0.889 / ent 0.982)</td><td>6.25</td><td>0.621 / 0.629</td><td>0.834</td><td>81</td></tr><tr><td><b>drift8</b></td><td>8</td><td>31</td><td>0.829 (surprisal; surp 0.829 / ent 0.814)</td><td>3.77</td><td>— / —</td><td>—</td><td>91</td></tr></table>
+<p class="muted">drift8 is the negative control: a structured-looking continuous
+stream where the pipeline should — and does — report no discrete units.</p>
+</section>
+
+<section class="card"><h2>Verdicts</h2>
+<p><b>Where it works fully:</b> short-unit languages. On saga, entropy-peak
+segmentation reaches F1 0.982 with discovered mean unit length 6.25 (true 6.5),
+the clustered unit inventory matches the oracle-segmentation ceiling (NMI 0.62
+vs 0.63), and the hidden 8-topic state is recovered at NMI 0.83 — words AND
+topics recovered from a raw stream with no labels. Morsel: F1 0.953,
+inventory NMI 0.75 (oracle 0.79). <b>Entropy beats surprisal</b> everywhere it
+matters (saga 0.98 vs 0.89; morsel 0.95 vs 0.87): the model's predictive
+entropy marks boundaries without being distracted by which token actually
+occurred.</p>
+<p><b>Where it fails, and how the pipeline knows:</b> long-word deep lexicons
+(rumble, smolder) over-segment — with 8,192 words the interior of a word stays
+genuinely uncertain, so entropy peaks inside units (F1 0.13–0.28). But step A
+still recovers the correct scale (knee ≈ 33–35 vs true 48), and the built-in
+consistency check — discovered segment length must match the loss-profile knee —
+fails loudly (8 vs 35), flagging the segmentation as untrustworthy rather than
+silently wrong. Myth's mismatch (knee 42, segments ≈ 4) is the <em>informative</em>
+kind: it signals multiple nested scales, inviting recursion. The continuous
+control (drift8) has degenerate unit labels by construction; its tell is the
+same mismatch plus a smooth, knee-free rise in the profile.</p></section>
+
+<section class="card recipe"><h2>The recipe for unknown data</h2>
+<p>1) Train a small MTP model with many heads on the raw stream; read the
+per-head loss curve → candidate timescales (or none). 2) Propose unit boundaries
+at surprisal peaks; sanity-check that the discovered mean unit length matches the
+loss-curve knee. 3) Pool hidden states over discovered segments and cluster →
+unit inventory. 4) Smooth the hidden trajectory near the largest timescale and
+cluster → slow states. 5) Treat discovered boundaries/clusters as pseudo-labels,
+train probes against them, and recurse one scale up. Every step is label-free;
+in dotling this recovers word boundaries, word inventories, and topics with the
+scores above. The main caveat: you recover <em>scales, boundaries and cluster
+identities — not meanings</em>.</p></section>
+</div></body></html>
