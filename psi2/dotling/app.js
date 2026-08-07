@@ -1,6 +1,6 @@
 const LANG_ORDER = ["fizz", "blip", "morsel", "burble", "drawl", "rumble", "glint", "cascade",
                     "rasp", "murmur", "growl", "smudge10", "smudge25", "smudge40", "hiccup",
-                    "saga", "saga95", "saga90", "smolder"];
+                    "saga", "saga95", "saga90", "smolder", "thicket"];
 const LANG_VAR = {
   fizz: "--l8", blip: "--l1", morsel: "--l2", burble: "--l3",
   drawl: "--l4", rumble: "--l6", glint: "--l5", cascade: "--l7", rasp: "--l9",
@@ -9,8 +9,10 @@ const LANG_VAR = {
 const LANG_HEX = {
   murmur: "#a06718", growl: "#4a3f8f", smudge10: "#d1a13d", smudge25: "#b07a20",
   smudge40: "#8a5a10", hiccup: "#3a8a99", saga: "#7a4a9e",
-  saga95: "#9a6ab8", saga90: "#b98ad0", smolder: "#7d4536",
+  saga95: "#9a6ab8", saga90: "#b98ad0", smolder: "#7d4536", thicket: "#3d5c1f",
 };
+// languages whose runs use a non-default size/budget
+const LANG_OPTS = { thicket: { size: "pike", tokens: 300e6 } };
 const REFRESH_MS = 60_000;
 
 const themeToggle = document.querySelector("#theme-toggle");
@@ -241,7 +243,7 @@ function renderTuning() {
     tasks.push(["position", cssVar("--aqua"), "position-in-word"]);
     const traces = [];
     for (const [task, color, label] of tasks) {
-      const { ns, vals } = curve(runs, lang, task);
+      const { ns, vals } = curve(runs, lang, task, LANG_OPTS[lang] || {});
       if (!ns.length) continue;
       if (Math.min(...vals) >= 0.99) continue; // saturated flat line = clutter
       traces.push({
