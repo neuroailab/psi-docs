@@ -1,0 +1,91 @@
+{
+ "model": "TuKoResearch/AuriStream7BDeep_40Pred_BigAudioDataset_500k",
+ "n_utts": 150,
+ "k": 100,
+ "layers": {
+  "8": {
+   "discovered": {
+    "purity": 0.155,
+    "nmi": 0.14,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.193,
+    "nmi": 0.269,
+    "n_segments": 5291
+   }
+  },
+  "16": {
+   "discovered": {
+    "purity": 0.187,
+    "nmi": 0.187,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.225,
+    "nmi": 0.319,
+    "n_segments": 5291
+   }
+  },
+  "32": {
+   "discovered": {
+    "purity": 0.246,
+    "nmi": 0.267,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.263,
+    "nmi": 0.351,
+    "n_segments": 5291
+   }
+  },
+  "48": {
+   "discovered": {
+    "purity": 0.33,
+    "nmi": 0.34,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.361,
+    "nmi": 0.431,
+    "n_segments": 5291
+   }
+  },
+  "64": {
+   "discovered": {
+    "purity": 0.255,
+    "nmi": 0.278,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.214,
+    "nmi": 0.298,
+    "n_segments": 5291
+   }
+  },
+  "80": {
+   "discovered": {
+    "purity": 0.321,
+    "nmi": 0.343,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.32,
+    "nmi": 0.402,
+    "n_segments": 5291
+   }
+  },
+  "96": {
+   "discovered": {
+    "purity": 0.17,
+    "nmi": 0.169,
+    "n_segments": 14282
+   },
+   "oracle": {
+    "purity": 0.147,
+    "nmi": 0.208,
+    "n_segments": 5291
+   }
+  }
+ }
+}

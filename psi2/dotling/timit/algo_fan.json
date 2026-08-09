@@ -1,0 +1,261 @@
+{
+ "model": "TuKoResearch/AuriStream100M_40Pred_BigAudioDataset_500k",
+ "mode": "causal",
+ "n_utts": 200,
+ "n_heads": 40,
+ "tol": 4,
+ "signals": {
+  "ent1_head1_baseline": {
+   "phone": {
+    "f1": 0.639,
+    "precision": 0.59,
+    "recall": 0.698,
+    "r_value": 0.652,
+    "token_f1": 0.491,
+    "z": 0.75,
+    "smooth": 1,
+    "min_dist": 5,
+    "lag": 3,
+    "tol": 4,
+    "f1_tol2": 0.498
+   },
+   "word": {
+    "f1": 0.321,
+    "precision": 0.233,
+    "recall": 0.518,
+    "r_value": -0.263,
+    "token_f1": 0.251,
+    "z": 1.0,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 3,
+    "tol": 4,
+    "f1_tol2": 0.224
+   }
+  },
+  "sup_mean_all_k1_40": {
+   "phone": {
+    "f1": 0.625,
+    "precision": 0.531,
+    "recall": 0.76,
+    "r_value": 0.515,
+    "token_f1": 0.575,
+    "z": 0.25,
+    "smooth": 3,
+    "min_dist": 5,
+    "lag": 5,
+    "tol": 4,
+    "f1_tol2": 0.463
+   },
+   "word": {
+    "f1": 0.289,
+    "precision": 0.193,
+    "recall": 0.579,
+    "r_value": -0.881,
+    "token_f1": 0.337,
+    "z": 0.75,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 6,
+    "tol": 4,
+    "f1_tol2": 0.182
+   }
+  },
+  "sup_mean_mid_k4_16": {
+   "phone": {
+    "f1": 0.629,
+    "precision": 0.533,
+    "recall": 0.766,
+    "r_value": 0.515,
+    "token_f1": 0.582,
+    "z": 0.25,
+    "smooth": 3,
+    "min_dist": 5,
+    "lag": 4,
+    "tol": 4,
+    "f1_tol2": 0.459
+   },
+   "word": {
+    "f1": 0.297,
+    "precision": 0.206,
+    "recall": 0.535,
+    "r_value": -0.562,
+    "token_f1": 0.277,
+    "z": 1.0,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 6,
+    "tol": 4,
+    "f1_tol2": 0.191
+   }
+  },
+  "sup_slope_neg": {
+   "phone": {
+    "f1": 0.587,
+    "precision": 0.497,
+    "recall": 0.716,
+    "r_value": 0.481,
+    "token_f1": 0.531,
+    "z": 0.25,
+    "smooth": 3,
+    "min_dist": 5,
+    "lag": 3,
+    "tol": 4,
+    "f1_tol2": 0.419
+   },
+   "word": {
+    "f1": 0.242,
+    "precision": 0.17,
+    "recall": 0.418,
+    "r_value": -0.51,
+    "token_f1": 0.204,
+    "z": 0.5,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 3,
+    "tol": 4,
+    "f1_tol2": 0.152
+   }
+  },
+  "sup_slope_pos": {
+   "phone": {
+    "f1": 0.533,
+    "precision": 0.402,
+    "recall": 0.79,
+    "r_value": 0.091,
+    "token_f1": 0.621,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "lag": -2,
+    "tol": 4,
+    "f1_tol2": 0.381
+   },
+   "word": {
+    "f1": 0.214,
+    "precision": 0.126,
+    "recall": 0.703,
+    "r_value": -3.01,
+    "token_f1": 0.491,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 8,
+    "lag": -2,
+    "tol": 4,
+    "f1_tol2": 0.128
+   }
+  },
+  "fan_horizon_low": {
+   "phone": {
+    "f1": 0.606,
+    "precision": 0.493,
+    "recall": 0.787,
+    "r_value": 0.396,
+    "token_f1": 0.66,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "lag": 0,
+    "tol": 4,
+    "f1_tol2": 0.431
+   },
+   "word": {
+    "f1": 0.314,
+    "precision": 0.214,
+    "recall": 0.592,
+    "r_value": -0.672,
+    "token_f1": 0.363,
+    "z": 0.5,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 3,
+    "tol": 4,
+    "f1_tol2": 0.198
+   }
+  },
+  "fan_collapse_drop": {
+   "phone": {
+    "f1": 0.568,
+    "precision": 0.428,
+    "recall": 0.843,
+    "r_value": 0.112,
+    "token_f1": 0.704,
+    "z": 0.25,
+    "smooth": 3,
+    "min_dist": 5,
+    "lag": -2,
+    "tol": 4,
+    "f1_tol2": 0.396
+   },
+   "word": {
+    "f1": 0.24,
+    "precision": 0.177,
+    "recall": 0.375,
+    "r_value": -0.26,
+    "token_f1": 0.108,
+    "z": 1.5,
+    "smooth": 3,
+    "min_dist": 8,
+    "lag": 1,
+    "tol": 4,
+    "f1_tol2": 0.153
+   }
+  },
+  "igain_sum": {
+   "phone": {
+    "f1": 0.548,
+    "precision": 0.409,
+    "recall": 0.831,
+    "r_value": 0.052,
+    "token_f1": 0.708,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "lag": 5,
+    "tol": 4,
+    "f1_tol2": 0.39
+   },
+   "word": {
+    "f1": 0.22,
+    "precision": 0.129,
+    "recall": 0.724,
+    "r_value": -3.025,
+    "token_f1": 0.511,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 8,
+    "lag": 1,
+    "tol": 4,
+    "f1_tol2": 0.129
+   }
+  },
+  "igain_mean": {
+   "phone": {
+    "f1": 0.535,
+    "precision": 0.401,
+    "recall": 0.802,
+    "r_value": 0.068,
+    "token_f1": 0.667,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "lag": 5,
+    "tol": 4,
+    "f1_tol2": 0.376
+   },
+   "word": {
+    "f1": 0.212,
+    "precision": 0.141,
+    "recall": 0.424,
+    "r_value": -0.946,
+    "token_f1": 0.165,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 16,
+    "lag": 1,
+    "tol": 4,
+    "f1_tol2": 0.124
+   }
+  }
+ }
+}
