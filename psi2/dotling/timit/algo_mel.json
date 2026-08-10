@@ -1,0 +1,241 @@
+{
+ "model": "log-Mel (no model)",
+ "n_utts": 200,
+ "tol": 4,
+ "methods": {
+  "dmel_peaks": {
+   "phone": {
+    "f1": 0.675,
+    "precision": 0.678,
+    "recall": 0.672,
+    "r_value": 0.723,
+    "token_f1": 0.464,
+    "lag": 2,
+    "z": 0.5,
+    "smooth": 1,
+    "min_dist": 5,
+    "rate_hz": 11.433
+   },
+   "word": {
+    "f1": 0.329,
+    "precision": 0.236,
+    "recall": 0.546,
+    "r_value": -0.322,
+    "token_f1": 0.268,
+    "lag": 0,
+    "z": 0.75,
+    "smooth": 3,
+    "min_dist": 8,
+    "rate_hz": 6.472
+   }
+  },
+  "dpdp_eucl": {
+   "phone": {
+    "f1": 0.775,
+    "precision": 0.743,
+    "recall": 0.81,
+    "r_value": 0.796,
+    "token_f1": 0.65,
+    "lag": 1,
+    "lam": 1.5,
+    "rate_hz": 12.58
+   },
+   "word": {
+    "f1": 0.326,
+    "precision": 0.217,
+    "recall": 0.661,
+    "r_value": -0.885,
+    "token_f1": 0.416,
+    "lag": 0,
+    "lam": 4.0,
+    "rate_hz": 8.53
+   },
+   "sweep": [
+    {
+     "lam": 0.25,
+     "rate_hz": 34.17,
+     "phone_f1": 0.499,
+     "phone_rval": -0.68,
+     "word_f1": 0.15,
+     "word_rval": -8.585
+    },
+    {
+     "lam": 0.5,
+     "rate_hz": 23.07,
+     "phone_f1": 0.634,
+     "phone_rval": 0.128,
+     "word_f1": 0.207,
+     "word_rval": -5.209
+    },
+    {
+     "lam": 1.0,
+     "rate_hz": 15.66,
+     "phone_f1": 0.747,
+     "phone_rval": 0.642,
+     "word_f1": 0.271,
+     "word_rval": -2.968
+    },
+    {
+     "lam": 1.5,
+     "rate_hz": 12.58,
+     "phone_f1": 0.775,
+     "phone_rval": 0.796,
+     "word_f1": 0.301,
+     "word_rval": -2.051
+    },
+    {
+     "lam": 2.0,
+     "rate_hz": 11.05,
+     "phone_f1": 0.773,
+     "phone_rval": 0.805,
+     "word_f1": 0.315,
+     "word_rval": -1.603
+    },
+    {
+     "lam": 3.0,
+     "rate_hz": 9.43,
+     "phone_f1": 0.744,
+     "phone_rval": 0.764,
+     "word_f1": 0.324,
+     "word_rval": -1.138
+    },
+    {
+     "lam": 4.0,
+     "rate_hz": 8.53,
+     "phone_f1": 0.714,
+     "phone_rval": 0.728,
+     "word_f1": 0.326,
+     "word_rval": -0.885
+    },
+    {
+     "lam": 6.0,
+     "rate_hz": 7.62,
+     "phone_f1": 0.666,
+     "phone_rval": 0.681,
+     "word_f1": 0.322,
+     "word_rval": -0.637
+    },
+    {
+     "lam": 8.0,
+     "rate_hz": 7.09,
+     "phone_f1": 0.631,
+     "phone_rval": 0.651,
+     "word_f1": 0.314,
+     "word_rval": -0.502
+    },
+    {
+     "lam": 12.0,
+     "rate_hz": 6.38,
+     "phone_f1": 0.571,
+     "phone_rval": 0.605,
+     "word_f1": 0.293,
+     "word_rval": -0.329
+    }
+   ]
+  },
+  "dpdp_cos": {
+   "phone": {
+    "f1": 0.787,
+    "precision": 0.746,
+    "recall": 0.833,
+    "r_value": 0.798,
+    "token_f1": 0.692,
+    "lag": 1,
+    "lam": 1.0,
+    "rate_hz": 12.87
+   },
+   "word": {
+    "f1": 0.332,
+    "precision": 0.217,
+    "recall": 0.708,
+    "r_value": -1.045,
+    "token_f1": 0.485,
+    "lag": 1,
+    "lam": 2.5,
+    "rate_hz": 9.12
+   },
+   "sweep": [
+    {
+     "lam": 0.05,
+     "rate_hz": 66.51,
+     "phone_f1": 0.295,
+     "phone_rval": -3.071,
+     "word_f1": 0.081,
+     "word_rval": -18.463
+    },
+    {
+     "lam": 0.1,
+     "rate_hz": 45.7,
+     "phone_f1": 0.401,
+     "phone_rval": -1.531,
+     "word_f1": 0.115,
+     "word_rval": -12.106
+    },
+    {
+     "lam": 0.2,
+     "rate_hz": 31.06,
+     "phone_f1": 0.529,
+     "phone_rval": -0.454,
+     "word_f1": 0.161,
+     "word_rval": -7.643
+    },
+    {
+     "lam": 0.35,
+     "rate_hz": 22.69,
+     "phone_f1": 0.639,
+     "phone_rval": 0.155,
+     "word_f1": 0.208,
+     "word_rval": -5.096
+    },
+    {
+     "lam": 0.5,
+     "rate_hz": 18.53,
+     "phone_f1": 0.706,
+     "phone_rval": 0.451,
+     "word_f1": 0.242,
+     "word_rval": -3.834
+    },
+    {
+     "lam": 0.75,
+     "rate_hz": 14.8,
+     "phone_f1": 0.765,
+     "phone_rval": 0.7,
+     "word_f1": 0.283,
+     "word_rval": -2.705
+    },
+    {
+     "lam": 1.0,
+     "rate_hz": 12.87,
+     "phone_f1": 0.787,
+     "phone_rval": 0.798,
+     "word_f1": 0.307,
+     "word_rval": -2.128
+    },
+    {
+     "lam": 1.5,
+     "rate_hz": 10.89,
+     "phone_f1": 0.787,
+     "phone_rval": 0.816,
+     "word_f1": 0.328,
+     "word_rval": -1.546
+    },
+    {
+     "lam": 2.5,
+     "rate_hz": 9.12,
+     "phone_f1": 0.748,
+     "phone_rval": 0.762,
+     "word_f1": 0.332,
+     "word_rval": -1.045
+    },
+    {
+     "lam": 4.0,
+     "rate_hz": 7.9,
+     "phone_f1": 0.687,
+     "phone_rval": 0.699,
+     "word_f1": 0.319,
+     "word_rval": -0.716
+    }
+   ]
+  }
+ }
+}

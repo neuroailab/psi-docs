@@ -134,6 +134,17 @@ away the surface boundaries. Boundary information is a property of
 <em>early-training, mid-depth, shortest-offset</em> computation — the same
 "perception before prediction" locality seen throughout the synthetic
 program.</p>
+<p><b>The limit of the gradient: the spectrogram itself.</b> Extrapolating
+"less prediction &rarr; better boundaries" to its endpoint: DPDP over plain
+<em>log-Mel frames</em> — no model at all — scores <b>0.787 / R 0.816</b> in
+the identical strict harness, beating every checkpoint of every model. Phone
+boundary placement is ultimately an acoustic edge-detection problem, and every
+layer of learned prediction blurs the edges (the literature agrees: log-Mel
+peak-picking beats HuBERT/wav2vec2 features too). The model's contribution is
+<em>identity</em>, not placement: oracle-span cluster purity is 0.278 for
+log-Mel vs 0.477 for mid-layer AuriStream — so the final recipe is Mel-scale
+features (or an early checkpoint) for <em>where</em>, trained mid-layers for
+<em>what</em>.</p>
 <figure><img src="../figures/ladder.png" alt="segmentation vs training step">
 <figcaption>TIMIT phone-boundary F1 (strict, 20 ms) vs training step. Dashed:
 entropy peaks; solid: DPDP-cosine over mid-layer states. Every family peaks
