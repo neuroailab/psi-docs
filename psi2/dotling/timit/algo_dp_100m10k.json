@@ -1,0 +1,322 @@
+{
+ "model": "TuKoResearch/AuriStream100M_40Pred_BigAudioDataset_10k",
+ "mode": "causal",
+ "n_utts": 200,
+ "layer": 8,
+ "maxlen": 40,
+ "tol": 4,
+ "methods": {
+  "entropy_peaks": {
+   "phone": {
+    "f1": 0.668,
+    "precision": 0.611,
+    "recall": 0.737,
+    "r_value": 0.668,
+    "token_f1": 0.538,
+    "lag": 3,
+    "z": 0.25,
+    "smooth": 3,
+    "min_dist": 5,
+    "rate_hz": 13.917
+   },
+   "word": {
+    "f1": 0.317,
+    "precision": 0.219,
+    "recall": 0.574,
+    "r_value": -0.557,
+    "token_f1": 0.311,
+    "lag": 5,
+    "z": 0.75,
+    "smooth": 3,
+    "min_dist": 8,
+    "rate_hz": 7.319
+   }
+  },
+  "jsd_peaks": {
+   "phone": {
+    "f1": 0.544,
+    "precision": 0.393,
+    "recall": 0.885,
+    "r_value": -0.111,
+    "token_f1": 0.781,
+    "lag": -1,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "rate_hz": 25.997
+   },
+   "word": {
+    "f1": 0.216,
+    "precision": 0.125,
+    "recall": 0.771,
+    "r_value": -3.48,
+    "token_f1": 0.598,
+    "lag": 1,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 8,
+    "rate_hz": 17.215
+   }
+  },
+  "ce_asym_peaks": {
+   "phone": {
+    "f1": 0.59,
+    "precision": 0.46,
+    "recall": 0.824,
+    "r_value": 0.252,
+    "token_f1": 0.664,
+    "lag": 0,
+    "z": 0.5,
+    "smooth": 3,
+    "min_dist": 5,
+    "rate_hz": 20.695
+   },
+   "word": {
+    "f1": 0.259,
+    "precision": 0.171,
+    "recall": 0.529,
+    "r_value": -0.977,
+    "token_f1": 0.272,
+    "lag": 1,
+    "z": 1.0,
+    "smooth": 3,
+    "min_dist": 12,
+    "rate_hz": 8.651
+   }
+  },
+  "ce_asym_abs_peaks": {
+   "phone": {
+    "f1": 0.554,
+    "precision": 0.404,
+    "recall": 0.876,
+    "r_value": -0.043,
+    "token_f1": 0.767,
+    "lag": 6,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 5,
+    "rate_hz": 25.025
+   },
+   "word": {
+    "f1": 0.216,
+    "precision": 0.126,
+    "recall": 0.756,
+    "r_value": -3.35,
+    "token_f1": 0.58,
+    "lag": 2,
+    "z": 0.0,
+    "smooth": 1,
+    "min_dist": 8,
+    "rate_hz": 16.771
+   }
+  },
+  "dpdp_eucl": {
+   "phone": {
+    "f1": 0.708,
+    "precision": 0.646,
+    "recall": 0.782,
+    "r_value": 0.697,
+    "token_f1": 0.602,
+    "lag": 5,
+    "lam": 3.0,
+    "rate_hz": 13.98
+   },
+   "word": {
+    "f1": 0.292,
+    "precision": 0.185,
+    "recall": 0.69,
+    "r_value": -1.449,
+    "token_f1": 0.473,
+    "lag": 5,
+    "lam": 4.0,
+    "rate_hz": 10.44
+   },
+   "sweep": [
+    {
+     "lam": 0.25,
+     "rate_hz": 151.78,
+     "phone_f1": 0.141,
+     "phone_rval": -9.364,
+     "word_f1": 0.036,
+     "word_rval": -44.432
+    },
+    {
+     "lam": 0.5,
+     "rate_hz": 51.52,
+     "phone_f1": 0.366,
+     "phone_rval": -1.955,
+     "word_f1": 0.103,
+     "word_rval": -13.859
+    },
+    {
+     "lam": 1.0,
+     "rate_hz": 30.94,
+     "phone_f1": 0.536,
+     "phone_rval": -0.439,
+     "word_f1": 0.164,
+     "word_rval": -7.587
+    },
+    {
+     "lam": 1.5,
+     "rate_hz": 23.55,
+     "phone_f1": 0.628,
+     "phone_rval": 0.096,
+     "word_f1": 0.206,
+     "word_rval": -5.341
+    },
+    {
+     "lam": 2.0,
+     "rate_hz": 19.3,
+     "phone_f1": 0.677,
+     "phone_rval": 0.39,
+     "word_f1": 0.237,
+     "word_rval": -4.055
+    },
+    {
+     "lam": 3.0,
+     "rate_hz": 13.98,
+     "phone_f1": 0.708,
+     "phone_rval": 0.697,
+     "word_f1": 0.275,
+     "word_rval": -2.473
+    },
+    {
+     "lam": 4.0,
+     "rate_hz": 10.44,
+     "phone_f1": 0.679,
+     "phone_rval": 0.726,
+     "word_f1": 0.292,
+     "word_rval": -1.449
+    },
+    {
+     "lam": 6.0,
+     "rate_hz": 7.27,
+     "phone_f1": 0.579,
+     "phone_rval": 0.622,
+     "word_f1": 0.266,
+     "word_rval": -0.59
+    },
+    {
+     "lam": 8.0,
+     "rate_hz": 6.19,
+     "phone_f1": 0.512,
+     "phone_rval": 0.567,
+     "word_f1": 0.248,
+     "word_rval": -0.317
+    },
+    {
+     "lam": 12.0,
+     "rate_hz": 5.12,
+     "phone_f1": 0.433,
+     "phone_rval": 0.511,
+     "word_f1": 0.223,
+     "word_rval": -0.073
+    }
+   ]
+  },
+  "dpdp_cos": {
+   "phone": {
+    "f1": 0.737,
+    "precision": 0.682,
+    "recall": 0.801,
+    "r_value": 0.736,
+    "token_f1": 0.631,
+    "lag": 4,
+    "lam": 1.5,
+    "rate_hz": 13.56
+   },
+   "word": {
+    "f1": 0.305,
+    "precision": 0.202,
+    "recall": 0.629,
+    "r_value": -0.957,
+    "token_f1": 0.385,
+    "lag": 5,
+    "lam": 2.5,
+    "rate_hz": 8.74
+   },
+   "sweep": [
+    {
+     "lam": 0.05,
+     "rate_hz": 198.72,
+     "phone_f1": 0.11,
+     "phone_rval": -12.833,
+     "word_f1": 0.028,
+     "word_rval": -58.746
+    },
+    {
+     "lam": 0.1,
+     "rate_hz": 157.57,
+     "phone_f1": 0.137,
+     "phone_rval": -9.792,
+     "word_f1": 0.035,
+     "word_rval": -46.197
+    },
+    {
+     "lam": 0.2,
+     "rate_hz": 55.91,
+     "phone_f1": 0.342,
+     "phone_rval": -2.278,
+     "word_f1": 0.095,
+     "word_rval": -15.195
+    },
+    {
+     "lam": 0.35,
+     "rate_hz": 36.33,
+     "phone_f1": 0.48,
+     "phone_rval": -0.833,
+     "word_f1": 0.142,
+     "word_rval": -9.226
+    },
+    {
+     "lam": 0.5,
+     "rate_hz": 28.76,
+     "phone_f1": 0.562,
+     "phone_rval": -0.279,
+     "word_f1": 0.175,
+     "word_rval": -6.921
+    },
+    {
+     "lam": 0.75,
+     "rate_hz": 22.13,
+     "phone_f1": 0.649,
+     "phone_rval": 0.198,
+     "word_f1": 0.216,
+     "word_rval": -4.909
+    },
+    {
+     "lam": 1.0,
+     "rate_hz": 18.14,
+     "phone_f1": 0.702,
+     "phone_rval": 0.475,
+     "word_f1": 0.249,
+     "word_rval": -3.702
+    },
+    {
+     "lam": 1.5,
+     "rate_hz": 13.56,
+     "phone_f1": 0.737,
+     "phone_rval": 0.736,
+     "word_f1": 0.285,
+     "word_rval": -2.343
+    },
+    {
+     "lam": 2.5,
+     "rate_hz": 8.74,
+     "phone_f1": 0.683,
+     "phone_rval": 0.71,
+     "word_f1": 0.305,
+     "word_rval": -0.957
+    },
+    {
+     "lam": 4.0,
+     "rate_hz": 6.32,
+     "phone_f1": 0.566,
+     "phone_rval": 0.601,
+     "word_f1": 0.275,
+     "word_rval": -0.327
+    }
+   ]
+  }
+ }
+}

@@ -105,8 +105,8 @@ same mismatch plus a smooth, knee-free rise in the profile.</p></section>
 <p><b>Headline: a frozen AuriStream segments real speech zero-shot.</b> Feeding
 TIMIT through the pretrained models (WavCoch tokens → head-1 entropy / mid-layer
 states; no training, no tuning on TIMIT; strict one-to-one scoring at 20&nbsp;ms
-tolerance) recovers <b>phone boundaries at F1 0.71 / R-value 0.72</b> — about
-85% of what dedicated unsupervised segmentation systems achieve (~0.84), from a
+tolerance) recovers <b>phone boundaries at F1 0.74 / R-value 0.75</b> — about
+88% of what dedicated unsupervised segmentation systems achieve (~0.84), from a
 model never built for the task. The best method is duration-penalized dynamic
 programming over <em>layer-8</em> hidden states (peak-picking on entropy: 0.64;
 Meta's BLT global-threshold rule ties it; BLT's byte-mode entropy-jump rule
@@ -116,13 +116,28 @@ cue that synthetic words carry is muted — word discovery must lean on the
 embedding-clustering side.</p>
 <p>Three synthetic-to-real transfers were confirmed quantitatively: (1) the
 <b>depth law</b> — phone cluster purity peaks mid-network (layer 8/12 in the
-100M, 48/96 in the 7B) and collapses at the final layer; (2) <b>small beats
-big at segmentation</b> — the 100M model out-segments the 7B on every metric,
-because better LMs anticipate upcoming words and smooth away the boundary
-surprise; (3) <b>boundary information lives at the shortest prediction
-offset</b> — no combination of the 40 future heads beats head-1 for boundary
-placement (the far heads encode unit interiors and duration instead). Raw
-results in <a href="../timit/">timit/</a>.</p></section>
+100M, 48/96 in the 7B) and collapses at the final layer; (2) <b>early beats
+late at segmentation</b> — see the training-step ladder below; (3) <b>boundary
+information lives at the shortest prediction offset</b> — no combination of the
+40 future heads beats head-1 for boundary placement (the far heads encode unit
+interiors and duration instead). Raw results in
+<a href="../timit/">timit/</a>.</p>
+<p><b>The training-step ladder.</b> Sweeping checkpoints across training
+(100M: 10k/20k/50k/500k; 1B: 10k/500k; 7B-deep: 20k/70k/500k), <em>undertrained
+checkpoints out-segment fully trained ones in every family</em>: 100M-10k
+reaches DPDP phone F1 0.737 vs 0.707 at 500k, and 7B-20k sets the overall
+record at <b>0.738 / R 0.751</b> — a statistical tie with the 70&times;-smaller
+100M-10k. Scale does not buy segmentation, and training past ~20k steps
+actively erodes it (the 7B dips to 0.613 at 70k before partially recovering):
+as the LM learns to anticipate long-range structure, mid-layer states smooth
+away the surface boundaries. Boundary information is a property of
+<em>early-training, mid-depth, shortest-offset</em> computation — the same
+"perception before prediction" locality seen throughout the synthetic
+program.</p>
+<figure><img src="../figures/ladder.png" alt="segmentation vs training step">
+<figcaption>TIMIT phone-boundary F1 (strict, 20 ms) vs training step. Dashed:
+entropy peaks; solid: DPDP-cosine over mid-layer states. Every family peaks
+early in training.</figcaption></figure></section>
 
 <section class="card recipe"><h2>The recipe for unknown data</h2>
 <p>1) Train a small MTP model with many heads on the raw stream; read the

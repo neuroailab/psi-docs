@@ -1,0 +1,42 @@
+{
+ "silence": {
+  "precision": 0.52,
+  "coverage_of_true_sil": 0.456,
+  "flagged_frac": 0.12,
+  "n_ids": 72
+ },
+ "word": {
+  "f1": 0.326,
+  "precision": 0.226,
+  "recall": 0.583,
+  "r_value": -0.523,
+  "token_f1": 0.327,
+  "lag": 4,
+  "tol": 4,
+  "signal": "entropy",
+  "z": 0.75,
+  "variant": "peaks_only",
+  "smooth": 3,
+  "min_dist": 8,
+  "f1_tol2": 0.217
+ },
+ "phone": {
+  "f1": 0.652,
+  "precision": 0.602,
+  "recall": 0.711,
+  "r_value": 0.663,
+  "token_f1": 0.506,
+  "lag": 3,
+  "tol": 4,
+  "signal": "entropy",
+  "z": 0.25,
+  "variant": "peaks_only",
+  "smooth": 3,
+  "min_dist": 5,
+  "f1_tol2": 0.513
+ },
+ "tag": "AuriStream7BDeep_40Pred_BigAudioDataset_20k__causal",
+ "model": "TuKoResearch/AuriStream7BDeep_40Pred_BigAudioDataset_20k",
+ "mode": "causal",
+ "n_utts": 200
+}

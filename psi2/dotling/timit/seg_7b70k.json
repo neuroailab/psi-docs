@@ -1,0 +1,42 @@
+{
+ "silence": {
+  "precision": 0.52,
+  "coverage_of_true_sil": 0.456,
+  "flagged_frac": 0.12,
+  "n_ids": 72
+ },
+ "word": {
+  "f1": 0.228,
+  "precision": 0.137,
+  "recall": 0.678,
+  "r_value": -2.5,
+  "token_f1": 0.467,
+  "lag": 2,
+  "tol": 4,
+  "signal": "surprisal",
+  "z": 0.5,
+  "variant": "peaks_only",
+  "smooth": 3,
+  "min_dist": 8,
+  "f1_tol2": 0.135
+ },
+ "phone": {
+  "f1": 0.576,
+  "precision": 0.432,
+  "recall": 0.864,
+  "r_value": 0.093,
+  "token_f1": 0.74,
+  "lag": 3,
+  "tol": 4,
+  "signal": "surprisal",
+  "z": 0.0,
+  "variant": "peaks_only",
+  "smooth": 3,
+  "min_dist": 5,
+  "f1_tol2": 0.416
+ },
+ "tag": "AuriStream7BDeep_70k__causal",
+ "model": "TuKoResearch/AuriStream7BDeep_70k",
+ "mode": "causal",
+ "n_utts": 200
+}
