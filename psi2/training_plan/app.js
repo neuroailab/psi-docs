@@ -139,7 +139,7 @@ const fallbackModels = [
     stage: "post",
     y: 680,
     labelPosition: "left",
-    status: "training",
+    status: "done",
     modalities: "RGBCFD",
     parent: "psi0.5-r",
     summary:
@@ -154,11 +154,11 @@ const fallbackModels = [
     step: 850_000,
     stage: "post",
     y: 760,
-    status: "planned",
+    status: "training",
     modalities: "RGBCFD",
     parent: "psi0.5-r",
     summary:
-      "The planned ABC-specialized branch of the psi0.5 robotics checkpoint.",
+      "An ABC-specialized post-training branch of the psi0.5 robotics checkpoint.",
     recipe: [
       "Run 45k steps of ABC post-training with RGBCFD.",
       "Finish with 5k steps of ABC context extension at 32k context.",
@@ -215,9 +215,9 @@ const fallbackModels = [
     y: 680,
     status: "planned",
     modalities: "RGBCFDT",
-    parent: "psi0.6",
+    parent: "psi0.6-r",
     summary:
-      "A planned ABC post-training branch of psi0.6 using the expanded text-conditioned modality set.",
+      "A planned ABC post-training branch of psi0.6-r using the expanded text-conditioned modality set.",
     recipe: [
       "Run 45k steps of ABC post-training with RGBCFDT.",
       "Finish with 5k steps of ABC context extension using RGBCFDT at 32k context.",
@@ -490,18 +490,6 @@ function drawConnector(parent, child) {
       `${parentX + 47} ${child.y - 40}`,
       `C ${parentX + 87} ${child.y - 8},`,
       `${childX - 54} ${child.y},`,
-      `${childX} ${child.y}`,
-    ].join(" ");
-  }
-
-  if (child.id === "psi0.6-r-abc") {
-    path = [
-      `M ${parentX} ${parent.y}`,
-      `C ${parentX} ${parent.y + 114},`,
-      `${parentX + 7} ${child.y - 160},`,
-      `${parentX + 77} ${child.y - 90}`,
-      `C ${parentX + 137} ${child.y - 30},`,
-      `${childX - 59} ${child.y},`,
       `${childX} ${child.y}`,
     ].join(" ");
   }

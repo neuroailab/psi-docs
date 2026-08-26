@@ -112,7 +112,7 @@
     "stage": "post",
     "row": 0,
     "labelPosition": "left",
-    "status": "training",
+    "status": "done",
     "modalities": "RGBCFD",
     "parent": "psi0.5-r",
     "summary": "A LIBERO-specialized post-trained robotics checkpoint built from psi0.5-r.",
@@ -126,10 +126,10 @@
     "step": 850000,
     "stage": "post",
     "row": 1,
-    "status": "planned",
+    "status": "training",
     "modalities": "RGBCFD",
     "parent": "psi0.5-r",
-    "summary": "The planned ABC-specialized branch of the psi0.5 robotics checkpoint.",
+    "summary": "An ABC-specialized post-training branch of the psi0.5 robotics checkpoint.",
     "recipe": [
       "Run 45k steps of ABC post-training with RGBCFD.",
       "Finish with 5k steps of ABC context extension at 32k context."
@@ -270,8 +270,8 @@
     "row": 0,
     "status": "planned",
     "modalities": "RGBCFDT",
-    "parent": "psi0.6",
-    "summary": "A planned ABC post-training branch of psi0.6 using the expanded text-conditioned modality set.",
+    "parent": "psi0.6-r",
+    "summary": "A planned ABC post-training branch of psi0.6-r using the expanded text-conditioned modality set.",
     "recipe": [
       "Run 45k steps of ABC post-training with RGBCFDT.",
       "Finish with 5k steps of ABC context extension using RGBCFDT at 32k context."
@@ -305,7 +305,7 @@
     "step": 1500000,
     "stage": "mid",
     "row": 0,
-    "status": "training",
+    "status": "done",
     "modalities": "RGBCFDTP",
     "parent": "psi0.7",
     "summary": "A dropped, high-resolution continuation of psi0.7 for point-track poking data.",
