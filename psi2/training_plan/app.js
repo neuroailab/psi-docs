@@ -5,6 +5,12 @@ const detailClose = document.querySelector("#detail-close");
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
 const checkpointCopy = document.querySelector("#checkpoint-copy");
+const dashboardTabs = [
+  ...document.querySelectorAll("[data-dashboard-tab]"),
+];
+const dashboardPanels = [
+  ...document.querySelectorAll("[data-dashboard-panel]"),
+];
 
 const chart = {
   minStep: 450_000,
@@ -863,6 +869,47 @@ function checkRoadmapLayout() {
     leftBendingConnectors,
   };
 }
+
+function activateDashboardTab(nextTab, { focus = false } = {}) {
+  const panelId = nextTab.getAttribute("aria-controls");
+
+  dashboardTabs.forEach((tab) => {
+    const isActive = tab === nextTab;
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+    tab.tabIndex = isActive ? 0 : -1;
+  });
+
+  dashboardPanels.forEach((panel) => {
+    panel.hidden = panel.id !== panelId;
+  });
+
+  if (focus) {
+    nextTab.focus();
+  }
+}
+
+dashboardTabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => activateDashboardTab(tab));
+  tab.addEventListener("keydown", (event) => {
+    let nextIndex;
+
+    if (event.key === "ArrowRight") {
+      nextIndex = (index + 1) % dashboardTabs.length;
+    } else if (event.key === "ArrowLeft") {
+      nextIndex = (index - 1 + dashboardTabs.length) % dashboardTabs.length;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = dashboardTabs.length - 1;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    activateDashboardTab(dashboardTabs[nextIndex], { focus: true });
+  });
+});
 
 detailClose.addEventListener("click", closeDetails);
 document.addEventListener("keydown", (event) => {

@@ -118,12 +118,36 @@
     "summary": "A LIBERO-specialized post-trained robotics checkpoint built from psi0.5-r.",
     "recipe": [
       "Run 10k steps of LIBERO post-training with RGBCFD, batch size 64, and sequence length 4,096."
+    ],
+    "wandb": {
+      "label": "random-IK stitched, 799k→809k",
+      "url": "https://wandb.ai/long-range-prediction/psi2/runs/mnkkfjbs"
+    },
+    "developmentHistory": [
+      {
+        "version": "Baseline",
+        "name": "Action interpolation",
+        "summary": "All-sequence LIBERO continuation, completed at 803k.",
+        "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/emglq3kg"
+      },
+      {
+        "version": "Goal action",
+        "name": "Goal-conditioned actions",
+        "summary": "Short-context goal-conditioned action iteration, completed at 803k.",
+        "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/udv02f5p"
+      },
+      {
+        "version": "Stitched",
+        "name": "Stitched goal-action",
+        "summary": "Stitched wrist- and agent-view goal-conditioned iteration, completed at 805k.",
+        "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/b96p86ef"
+      }
     ]
   },
   {
     "id": "psi0.5-r-abc",
     "name": "psi0.5-r-abc",
-    "step": 850000,
+    "step": 900000,
     "stage": "post",
     "row": 1,
     "status": "training",
@@ -131,9 +155,13 @@
     "parent": "psi0.5-r",
     "summary": "An ABC-specialized post-training branch of the psi0.5 robotics checkpoint.",
     "recipe": [
-      "Run 45k steps of ABC post-training with RGBCFD.",
-      "Finish with 5k steps of ABC context extension at 32k context."
-    ]
+      "Continue ABC post-training with the RGB-only recipe toward 900k steps.",
+      "Finish with an ABC context-extension phase at 32k context."
+    ],
+    "wandb": {
+      "label": "ABC RGB-only, 853k→900k",
+      "url": "https://wandb.ai/long-range-prediction/psi2/runs/tuer24fl"
+    }
   },
   {
     "id": "psi0.6",
@@ -247,6 +275,53 @@
       }
     ],
     "checkpoint": "PSI2_8B_RGBCFDT_VL_Instruct_v2/model_01200000"
+  },
+  {
+    "id": "psi0.6-vlm-sft",
+    "name": "psi0.6-vlm-sft",
+    "step": 1210000,
+    "stage": "post",
+    "row": 0,
+    "status": "done",
+    "modalities": "RGBCFDT",
+    "parent": "psi0.6-vlm",
+    "summary": "The completed supervised fine-tuning branch of psi0.6-vlm, including counterfactual imagination training.",
+    "recipe": [
+      "Supervised fine-tune psi0.6-vlm with the CIT v1 data mixture, resuming from the V2 checkpoint at 1.18M."
+    ],
+    "wandb": {
+      "label": "Current SFT — CIT v1",
+      "url": "https://wandb.ai/long-range-prediction/psi2/runs/ccgjwkjq/logs?nw=nwuserklemenk"
+    },
+    "checkpoint": "PSI2_8B_RGBCFDT_VL_Instruct_v2_CIT_v1/model_01200000",
+    "developmentHistory": [
+      {
+        "version": "V1",
+        "name": "PSI2 8B VL Instruct",
+        "summary": "The original finished VLM instruction-tuning run, reaching 1.2M steps.",
+        "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/jjiwoljl"
+      },
+      {
+        "version": "V2",
+        "name": "PSI2 8B VL Instruct v2",
+        "summary": "The revised finished VLM instruction-tuning run, reaching 1.2M steps.",
+        "wandb": "https://wandb.ai/long-range-prediction/psi2/runs/f68t9y6n"
+      }
+    ]
+  },
+  {
+    "id": "psi0.6-vlm-rl",
+    "name": "psi0.6-vlm-rl",
+    "step": 1211000,
+    "stage": "post",
+    "row": 1,
+    "status": "planned",
+    "modalities": "RGBCFDT",
+    "parent": "psi0.6-vlm-sft",
+    "summary": "The planned reinforcement-learning continuation of psi0.6-vlm-sft.",
+    "recipe": [
+      "Continue the supervised fine-tuned checkpoint with reinforcement-learning post-training."
+    ]
   },
   {
     "id": "psi0.6-r",

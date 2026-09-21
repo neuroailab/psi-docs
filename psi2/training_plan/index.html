@@ -11,13 +11,13 @@
     <meta http-equiv="Expires" content="0" />
     <meta
       name="description"
-      content="A visual training roadmap for the PSI model family."
+      content="An interactive dashboard for PSI model lineage and research projects."
     />
     <link
       rel="canonical"
       href="https://neuroailab.github.io/psi-docs/psi2/training_plan/"
     />
-    <title>PSI — Training plans</title>
+    <title>PSI — Dashboard</title>
     <script>
       (() => {
         const savedTheme = localStorage.getItem("psi-training-theme");
@@ -38,7 +38,18 @@
         document.head.append(stylesheet);
       })();
     </script>
-    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+    <noscript>
+      <link rel="stylesheet" href="styles.css" />
+      <style>
+        .dashboard-tabs {
+          display: none;
+        }
+
+        .dashboard-panel[hidden] {
+          display: block;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <div class="page-shell">
@@ -47,18 +58,54 @@
           <button class="theme-toggle" id="theme-toggle" type="button">
             <span class="visually-hidden" id="theme-label">Light mode</span>
           </button>
-          <h1 id="page-title">PSI Training <span>Roadmap</span></h1>
+          <h1 id="page-title">PSI <span>Dashboard</span></h1>
           <p class="hero-copy">
-            A living map of base checkpoints and the specialist models that
-            branch from them.
+            A shared view of the model family and the research directions
+            growing around it.
           </p>
         </section>
 
-        <section class="timeline-section" aria-labelledby="timeline-title">
+        <nav class="dashboard-tabs" aria-label="Dashboard sections">
+          <div class="tab-list" role="tablist" aria-label="Dashboard views">
+            <button
+              class="dashboard-tab is-active"
+              id="tab-lineage"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-lineage"
+              data-dashboard-tab="lineage"
+            >
+              <span class="tab-index" aria-hidden="true">01</span>
+              <span>Model Lineage</span>
+            </button>
+            <button
+              class="dashboard-tab"
+              id="tab-projects"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-projects"
+              tabindex="-1"
+              data-dashboard-tab="projects"
+            >
+              <span class="tab-index" aria-hidden="true">02</span>
+              <span>Projects</span>
+            </button>
+          </div>
+        </nav>
+
+        <section
+          class="dashboard-panel timeline-section"
+          id="panel-lineage"
+          role="tabpanel"
+          aria-labelledby="tab-lineage"
+          data-dashboard-panel="lineage"
+        >
           <div class="section-heading">
             <div>
               <p class="eyebrow">Training roadmap</p>
-              <h2 id="timeline-title">Checkpoint lineage</h2>
+              <h2 id="timeline-title">Model lineage</h2>
             </div>
             <div class="timeline-meta">
               <div class="step-range" aria-label="Training step range">
@@ -182,6 +229,42 @@
               Every dot is positioned at its exact training step. Select one
               for details.
             </p>
+          </div>
+        </section>
+
+        <section
+          class="dashboard-panel projects-section"
+          id="panel-projects"
+          role="tabpanel"
+          aria-labelledby="tab-projects"
+          tabindex="0"
+          data-dashboard-panel="projects"
+          hidden
+        >
+          <div class="section-heading projects-heading">
+            <div>
+              <p class="eyebrow">Research portfolio</p>
+              <h2>Projects</h2>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <span class="project-index" aria-hidden="true">01</span>
+              <h3>Stream of Thought Models for End to End Cross Modal RL</h3>
+            </article>
+            <article class="project-card">
+              <span class="project-index" aria-hidden="true">02</span>
+              <h3>Cross-Task Robotics Generalization with PSI</h3>
+            </article>
+            <article class="project-card">
+              <span class="project-index" aria-hidden="true">03</span>
+              <h3>Image + Label = RL Environment</h3>
+            </article>
+            <article class="project-card">
+              <span class="project-index" aria-hidden="true">04</span>
+              <h3>Curiosity Driven Exploration in Autoregressive World Models</h3>
+            </article>
           </div>
         </section>
       </main>
