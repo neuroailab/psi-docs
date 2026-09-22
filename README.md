@@ -6,6 +6,7 @@ Public documentation and interactive visualizations for PSI models.
 
 - [PSI dashboard](https://neuroailab.github.io/psi-docs/psi2/training_plan/)
 - [SNAIL — ccn2 onboarding](https://neuroailab.github.io/psi-docs/snail/onboarding/)
+- [SNAIL — lab directory](https://neuroailab.github.io/psi-docs/snail/directory/)
 
 The dashboard files under `psi2/training_plan/` are generated from the private
 `neuroailab/ccwm` repository. Update the canonical source there; its publishing
@@ -28,3 +29,11 @@ with the cluster administrators before changing operational guidance.
 For a local preview, serve this repository with `python3 -m http.server` and
 open `/snail/onboarding/`. Publish only the intended website files; `scratch/`
 contains local review material and is not part of the site.
+
+## SNAIL directory
+
+The interactive lab map lives in `snail/directory/`. Edit `people.js` for names,
+verified profile sources, portraits, research tags, and schematic desk positions;
+`scene.js` contains the code-built room. The map is not surveyed or a live
+occupancy tracker. RENE is a robot station, not a person. Unconfirmed profiles
+remain explicit placeholders. See the directory's README for maintenance notes.

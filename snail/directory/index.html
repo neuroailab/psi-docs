@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find your way around SNAIL. An interactive lab map and directory of the people working on intelligence, brains, and world models."
+    />
+    <title>Directory — SNAIL</title>
+    <link rel="icon" href="../onboarding/snail.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      { "imports": { "three": "./vendor/three.module.min.js" } }
+    </script>
+    <script src="./app.js" type="module"></script>
+    <noscript
+      ><style>
+        .workspace,
+        .search,
+        #filters {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <a class="skip-link" href="#people">Skip to people</a>
+    <header class="site-header">
+      <a class="brand" href="./"
+        ><img src="../onboarding/snail.svg" width="36" height="36" alt="" />
+        SNAIL <span>/ directory</span></a
+      >
+      <nav aria-label="SNAIL pages">
+        <a href="../onboarding/">Onboarding</a
+        ><a href="./" aria-current="page">Directory</a
+        ><a href="https://neuroailab.stanford.edu/">The lab ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">
+            Stanford NeuroAI Lab <span>People &amp; places</span>
+          </p>
+          <h1>Find your people.</h1>
+          <p>
+            A little map of the lab. A window into what everyone is working on.
+          </p>
+        </div>
+        <div class="intro-meta">
+          <span class="tiny-dot"></span
+          ><span
+            >A shared space for<br /><strong
+              >brains, models &amp; big ideas.</strong
+            ></span
+          >
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Interactive lab directory">
+        <div class="map-card">
+          <div class="map-toolbar">
+            <div class="map-title">
+              <span class="eyebrow">Explore the space</span>
+              <h2>The lab, in miniature.</h2>
+            </div>
+            <div class="view-switch" role="group" aria-label="Map view">
+              <button id="view-3d" type="button" aria-pressed="true">
+                3D view</button
+              ><button id="view-top" type="button" aria-pressed="false">
+                Top-down
+              </button>
+            </div>
+          </div>
+          <div
+            id="scene"
+            class="scene"
+            aria-label="Schematic lab map. Choose a named desk, or use the people list below."
+          >
+            <div
+              id="map-fallback"
+              class="map-fallback"
+              aria-hidden="true"
+            ></div>
+            <div
+              id="pins"
+              class="pins"
+              role="group"
+              aria-label="People at desks"
+            ></div>
+            <div class="map-badge">
+              <span class="tiny-dot"></span> From the lab sketch
+            </div>
+            <div class="map-controls" role="group" aria-label="Camera controls">
+              <button
+                type="button"
+                id="rotate-left"
+                aria-label="Rotate lab left"
+                title="Rotate left"
+              >
+                ↶</button
+              ><button
+                type="button"
+                id="rotate-right"
+                aria-label="Rotate lab right"
+                title="Rotate right"
+              >
+                ↷</button
+              ><span></span
+              ><button
+                type="button"
+                id="zoom-out"
+                aria-label="Zoom out"
+                title="Zoom out"
+              >
+                −</button
+              ><button
+                type="button"
+                id="zoom-in"
+                aria-label="Zoom in"
+                title="Zoom in"
+              >
+                +</button
+              ><button
+                type="button"
+                id="reset-view"
+                aria-label="Reset map view"
+                title="Reset view"
+              >
+                ⌂
+              </button>
+            </div>
+            <p id="scene-hint" class="scene-hint">
+              Select a desk to meet its person
+            </p>
+          </div>
+          <div class="map-footer">
+            <div class="legend">
+              <span><i class="legend-person"></i> Directory desk</span
+              ><span><i class="legend-other"></i> Robot / unlabeled</span>
+            </div>
+            <span>Schematic · not to scale</span>
+          </div>
+        </div>
+        <aside
+          id="profile"
+          class="profile"
+          aria-labelledby="profile-name"
+          aria-live="polite"
+        >
+          <div class="profile-placeholder">
+            <span class="eyebrow">Meet the lab</span>
+            <h2 id="profile-name">A desk is just<br />the beginning.</h2>
+            <p>
+              Select someone on the map or in the directory to see what they
+              work on.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section
+        class="people-section"
+        id="people"
+        aria-labelledby="people-title"
+      >
+        <div class="people-heading">
+          <div>
+            <p class="eyebrow">The people behind the work</p>
+            <h2 id="people-title">
+              Meet your neighbors. <span id="people-count"></span>
+            </h2>
+          </div>
+          <label class="search"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" /></svg
+            ><span class="sr-only">Search people or research</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search a name or an idea…"
+              autocomplete="off"
+          /></label>
+        </div>
+        <div
+          id="filters"
+          class="filters"
+          role="group"
+          aria-label="Filter by research area"
+        ></div>
+        <p id="search-status" class="sr-only" role="status"></p>
+        <div id="people-grid" class="people-grid"></div>
+        <p id="empty-state" class="empty-state" hidden>
+          No matches yet. Try another name or research topic.
+        </p>
+        <noscript
+          ><div class="noscript-directory">
+            <p>
+              The interactive map needs JavaScript. You can still visit these
+              public profiles:
+            </p>
+            <ul>
+              <li><a href="https://stanford.edu/~yamins/">Dan Yamins</a></li>
+              <li><a href="https://klemenkotar.github.io/">Klemen Kotar</a></li>
+              <li>
+                <a href="https://rahulvenkk.github.io/">Rahul Venkatesh</a>
+              </li>
+              <li>
+                <a href="https://akazemian.github.io/personal_profile/"
+                  >Atlas Kazemian</a
+                >
+              </li>
+              <li>Yifan — profile pending</li>
+              <li>Baihan Zhang — profile pending</li>
+              <li><a href="https://giaancone.com/">Gia Ancone</a></li>
+              <li><a href="https://imranthobani.com/">Imran Thobani</a></li>
+              <li>
+                <a
+                  href="https://psychology.stanford.edu/people/cliona-o-doherty"
+                  >Clíona O’Doherty</a
+                >
+              </li>
+              <li><a href="https://slee20512.github.io/">Seojin Lee</a></li>
+              <li><a href="https://ynshah3.github.io/">Yash Shah</a></li>
+              <li>
+                <a href="https://web.stanford.edu/~lilianch/"
+                  >Lilian Naing Chen</a
+                >
+              </li>
+              <li>
+                <a href="https://agbrothers.github.io/">Greyson Brothers</a>
+              </li>
+              <li>
+                <a href="https://arjunchandra2.github.io/">Arjun Chandra</a>
+              </li>
+              <li><a href="https://awwkl.github.io/">Khai Loong Aw</a></li>
+              <li>
+                <a href="https://kristinezheng.github.io/">Kristine Zheng</a>
+              </li>
+            </ul>
+          </div></noscript
+        >
+      </section>
+      <details class="about-map">
+        <summary>
+          About this map &amp; the profile sources <span>+</span>
+        </summary>
+        <div>
+          <p>
+            The room is a hand-built digital interpretation of the lab’s
+            whiteboard seating sketch and reference photos. Furniture, scale,
+            and wall placement are approximate. Desk labels indicate assigned
+            places in the sketch—not live presence or availability.
+          </p>
+          <p>
+            Each completed biography links to its public source. Portraits are
+            reused from Klemen’s collaborator directory or the person’s public
+            profile; credits are available in each card. Unverified profiles use
+            initials. The two unlabeled desks stay unlabeled; RENE is the YAM
+            robot station, not a person. Research filters are broad groupings,
+            not an exhaustive account of anyone’s work.
+          </p>
+          <p>
+            Want to correct a seat or add a portrait? Let Klemen know. Profile
+            sources checked September 21, 2026.
+          </p>
+        </div>
+      </details>
+    </main>
+    <footer>
+      <a class="brand" href="./"
+        ><img src="../onboarding/snail.svg" width="28" height="28" alt="" />
+        SNAIL</a
+      ><span>Intelligence is a team effort.</span
+      ><a href="../onboarding/">New here? Start with onboarding ↗</a>
+    </footer>
+    <div id="directory-status" class="sr-only" role="status"></div>
+  </body>
+</html>

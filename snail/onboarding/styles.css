@@ -106,6 +106,10 @@ main,
   text-decoration: none;
   white-space: nowrap;
 }
+.header-links {
+  display: flex;
+  gap: 24px;
+}
 .header-link span {
   margin-left: 12px;
 }
@@ -685,6 +689,11 @@ kbd {
   }
   .header-link {
     font-size: 11px;
+  }
+  .header-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
   }
   .header-link span {
     margin-left: 1px;
