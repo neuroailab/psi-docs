@@ -83,8 +83,9 @@
         <span class="note-label">Our house rule</span>
         <p>
           <strong>Use only the GPUs you need.</strong> ccn2 is a shared
-          resource. Start small, coordinate with others, and release resources
-          when your work is done.
+          resource. Our policy is to use only as many nodes as you need. If you
+          need a lot of nodes, talk to Klemen or Dan first. Start small,
+          coordinate with others, and release resources when your work is done.
         </p>
       </aside>
 
@@ -241,6 +242,16 @@ pwd</code></pre>
           <section class="chapter" id="nodes" aria-labelledby="nodes-title">
             <p class="section-number">03 / Finding your way around</p>
             <h2 id="nodes-title">A node is an SSH destination.</h2>
+            <aside class="callout">
+              <strong>Pick a home node for your agents.</strong>
+              <p>
+                Choose a permitted node—such as node5, node6, or node7—as your
+                usual home node. Run your Claude and Codex agent sessions there,
+                and SSH to other nodes only when your work needs them. A home
+                node is a convenient starting point, not an exclusive
+                reservation.
+              </p>
+            </aside>
             <p>
               The hostname pattern is
               <code>nodeN-ccn2cluster.stanford.edu</code>. Use a full hostname
