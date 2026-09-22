@@ -29,6 +29,7 @@ jobs:
             --archive \
             --exclude=".git/" \
             --exclude=".github/" \
+            --exclude="backend/" \
             --exclude="README.md" \
             ./ \
             _site/

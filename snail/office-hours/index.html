@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A little time to think together. Book SNAIL office hours with Dan, Klemen, or both."
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>Office hours — SNAIL</title>
+    <link rel="icon" href="../onboarding/snail.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#booking">Skip to booking</a>
+    <header class="site-header">
+      <a class="brand" href="./"
+        ><img src="../onboarding/snail.svg" width="36" height="36" alt="" />
+        SNAIL <span>/ office hours</span></a
+      >
+      <nav aria-label="SNAIL pages">
+        <a href="../onboarding/">Onboarding</a
+        ><a href="../directory/">Directory</a
+        ><a href="./" aria-current="page">Office hours</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">
+            The lab, in conversation <span>03 / Office hours</span>
+          </p>
+          <h1>A little time.<br /><em>A bigger idea.</em></h1>
+          <p>
+            Bring a question, an experiment, or something you’re still figuring
+            out.<br class="desktop-break" />
+            Find a time to think it through together.
+          </p>
+        </div>
+        <aside class="hours-note">
+          <span class="orbit" aria-hidden="true">↗</span>
+          <p class="eyebrow">Same place in the week</p>
+          <strong>Mon · Tue · Thu · Fri</strong>
+          <p>12–2 pm <span>Pacific time</span></p>
+          <small
+            >30 minutes or an hour.<br />One host, or both in the room.</small
+          >
+        </aside>
+      </section>
+      <div id="notice" class="notice" role="status" aria-live="polite">
+        Checking calendar connections…
+      </div>
+      <section
+        class="booking-layout"
+        id="booking"
+        aria-label="Book office hours"
+      >
+        <aside class="choices panel">
+          <p class="eyebrow">01 / Your conversation</p>
+          <h2>Who’s joining?</h2>
+          <fieldset class="host-choices">
+            <legend class="sr-only">Choose your host</legend>
+            <label class="host-card"
+              ><input type="radio" name="host" value="dan" checked /><span
+                class="avatar"
+                >DY</span
+              ><span
+                ><strong>Dan Yamins</strong
+                ><small>Office hours with Dan</small></span
+              ><span class="radio-mark" aria-hidden="true"></span
+            ></label>
+            <label class="host-card"
+              ><input type="radio" name="host" value="klemen" /><span
+                class="avatar second"
+                >KK</span
+              ><span
+                ><strong>Klemen Kotar</strong
+                ><small>Office hours with Klemen</small></span
+              ><span class="radio-mark" aria-hidden="true"></span
+            ></label>
+            <label class="host-card"
+              ><input type="radio" name="host" value="both" /><span
+                class="avatar both"
+                >D+K</span
+              ><span
+                ><strong>Dan + Klemen</strong
+                ><small>A time that works for both</small></span
+              ><span class="radio-mark" aria-hidden="true"></span
+            ></label>
+          </fieldset>
+          <h3>How much time?</h3>
+          <fieldset class="duration">
+            <legend class="sr-only">Meeting length</legend>
+            <label
+              ><input type="radio" name="duration" value="30" checked /><span
+                >30 minutes</span
+              ></label
+            ><label
+              ><input type="radio" name="duration" value="60" /><span
+                >1 hour</span
+              ></label
+            >
+          </fieldset>
+          <div class="sign-in" id="identity">
+            <p>Use your Stanford account to book.</p>
+            <button class="button secondary" data-login="google">
+              Sign in with Google</button
+            ><button class="button secondary" data-login="microsoft">
+              Sign in with Microsoft
+            </button>
+          </div>
+          <div id="signed-in" class="sign-in" hidden>
+            <small>Signed in as</small><strong id="email"></strong
+            ><button class="text-button" id="logout">Sign out</button>
+          </div>
+          <p class="small-note">
+            Only free/busy availability is shown here. Your hosts’ event names
+            and calendar details stay private.
+          </p>
+        </aside>
+        <section class="calendar-panel panel" aria-labelledby="calendar-title">
+          <div class="calendar-heading">
+            <div>
+              <p class="eyebrow">02 / Find a moment</p>
+              <h2 id="calendar-title">Your next conversation.</h2>
+            </div>
+            <span class="zone">America/Los_Angeles</span>
+          </div>
+          <div class="week-nav">
+            <h3 id="week-label"></h3>
+            <div>
+              <button
+                id="previous"
+                class="icon-button"
+                aria-label="Previous week"
+              >
+                ←</button
+              ><button id="next" class="icon-button" aria-label="Next week">
+                →</button
+              ><button id="refresh" class="text-button">Refresh</button>
+            </div>
+          </div>
+          <div class="availability-key">
+            <span><i class="key-dot"></i> Available</span
+            ><span><i class="key-dot closed"></i> Unavailable</span
+            ><span id="checked">Checking calendars</span>
+          </div>
+          <div id="days" class="days" aria-busy="true"></div>
+          <div id="confirmation" class="confirmation" hidden>
+            <div>
+              <p class="eyebrow">Your selected time</p>
+              <strong id="selection"></strong>
+              <p id="selection-detail"></p>
+            </div>
+            <button id="book" class="button">Confirm booking ↗</button>
+          </div>
+          <p class="calendar-footnote">
+            Availability refreshes every 30 seconds while this page is open, and
+            is checked again before booking. Times follow Pacific daylight
+            saving time.
+          </p>
+        </section>
+      </section>
+      <section class="panel bookings-panel" id="my-bookings" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Keep track</p>
+            <h2 id="bookings-title">Your upcoming conversations.</h2>
+          </div>
+          <button id="refresh-bookings" class="text-button">
+            Refresh bookings
+          </button>
+        </div>
+        <div id="booking-list"></div>
+        <p class="small-note">
+          Need a different time? Cancel here, then book another slot. For a
+          confirmed meeting that later conflicts with another event, coordinate
+          with your host; it won’t be cancelled automatically.
+        </p>
+      </section>
+      <section class="panel host-panel" id="host-panel" hidden>
+        <p class="eyebrow">For hosts only</p>
+        <h2>Your calendar, connected.</h2>
+        <p>
+          Connect Google or Outlook. Choose every calendar that should block a
+          time, plus one calendar to receive bookings. Reconnecting the same
+          account keeps your choices.
+        </p>
+        <div class="button-row">
+          <button class="button secondary" data-connect="google">
+            Connect Google Calendar</button
+          ><button class="button secondary" data-connect="microsoft">
+            Connect Outlook
+          </button>
+        </div>
+        <div id="calendar-settings"></div>
+        <p class="small-note">
+          Connecting a different account or changing the booking calendar
+          requires clearing your upcoming bookings first. For a meeting with
+          both hosts, each calendar gets a hold; the guest receives one
+          invitation.
+        </p>
+      </section>
+      <section class="how-it-works">
+        <div>
+          <p class="eyebrow">A shared little ritual</p>
+          <h2>Room for the<br />unfinished thought.</h2>
+        </div>
+        <div>
+          <h3>Choose a conversation.</h3>
+          <p>
+            Book Dan, Klemen, or both. We only offer a joint slot when both
+            hosts are free.
+          </p>
+        </div>
+        <div>
+          <h3>It goes on the calendar.</h3>
+          <p>
+            Once confirmed, your invitation comes from a host’s calendar. Accept
+            it to add the meeting to your own.
+          </p>
+        </div>
+        <div>
+          <h3>Plans change. That’s okay.</h3>
+          <p>
+            Cancel here so someone else can use the time. Please keep your
+            reservations to what you need.
+          </p>
+        </div>
+      </section>
+      <noscript
+        ><p class="notice">
+          Booking requires JavaScript and a Stanford sign-in. Contact your host
+          directly if you cannot use this page.
+        </p></noscript
+      >
+    </main>
+    <footer>
+      <span>SNAIL / Stanford NeuroAI Lab</span>
+      <div>
+        <a href="./privacy.html">Privacy &amp; terms</a
+        ><a href="../directory/">Find your people ↗</a>
+      </div>
+    </footer>
+  </body>
+</html>

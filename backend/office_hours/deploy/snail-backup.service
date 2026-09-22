@@ -1,0 +1,14 @@
+[Unit]
+Description=Encrypted local SNAIL database backup
+
+[Service]
+Type=oneshot
+User=snail
+Group=snail
+EnvironmentFile=/etc/snail/office-hours.env
+ExecStart=/opt/snail/venv/bin/python /opt/snail/office-hours/deploy/backup.py
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/snail

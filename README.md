@@ -7,6 +7,7 @@ Public documentation and interactive visualizations for PSI models.
 - [PSI dashboard](https://neuroailab.github.io/psi-docs/psi2/training_plan/)
 - [SNAIL — ccn2 onboarding](https://neuroailab.github.io/psi-docs/snail/onboarding/)
 - [SNAIL — lab directory](https://neuroailab.github.io/psi-docs/snail/directory/)
+- [SNAIL — office hours](https://neuroailab.github.io/psi-docs/snail/office-hours/)
 
 The dashboard files under `psi2/training_plan/` are generated from the private
 `neuroailab/ccwm` repository. Update the canonical source there; its publishing
@@ -37,3 +38,13 @@ verified profile sources, portraits, research tags, and schematic desk positions
 `scene.js` contains the code-built room. The map is not surveyed or a live
 occupancy tracker. RENE is a robot station, not a person. Unconfirmed profiles
 remain explicit placeholders. See the directory's README for maintenance notes.
+
+## SNAIL office hours
+
+The static booking page lives in `snail/office-hours/`; its persistent HTTPS API
+lives on the dedicated `snail-services` Google Cloud VM. See
+[backend/office_hours/SETUP.md](backend/office_hours/SETUP.md) for the one-time
+Google/Microsoft app registrations and host calendar authorization. Until those
+are complete, the page explicitly keeps sign-in/booking unavailable. Secrets,
+tokens, databases, and virtual environments must never be committed. Backend
+source is excluded from the Pages artifact.

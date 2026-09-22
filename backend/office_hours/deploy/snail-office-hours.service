@@ -1,0 +1,32 @@
+[Unit]
+Description=SNAIL office hours API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=snail
+Group=snail
+WorkingDirectory=/opt/snail/office-hours
+EnvironmentFile=/etc/snail/office-hours.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/snail/venv/bin/uvicorn app:create_app --factory --host 127.0.0.1 --port 8081 --workers 1 --no-access-log --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=on-failure
+RestartSec=5
+StateDirectory=snail
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/snail
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=210M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

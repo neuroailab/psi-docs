@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily encrypted SNAIL database backup
+
+[Timer]
+OnCalendar=*-*-* 04:10:00 UTC
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

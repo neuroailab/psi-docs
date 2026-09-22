@@ -1,0 +1,22 @@
+{
+    email klemenk@stanford.edu
+    admin localhost:2019
+}
+
+snail-api.35.206.117.162.sslip.io {
+    encode gzip
+    request_body {
+        max_size 16KB
+    }
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        X-Content-Type-Options nosniff
+        Referrer-Policy no-referrer
+        -Server
+    }
+    route {
+        reverse_proxy /healthz 127.0.0.1:8081
+        reverse_proxy /v1/* 127.0.0.1:8081
+        respond "SNAIL services" 200
+    }
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy &amp; terms — SNAIL office hours</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./">SNAIL <span>/ office hours</span></a
+      ><a href="./">Back to booking</a>
+    </header>
+    <main>
+      <article class="prose">
+        <p class="eyebrow">Privacy &amp; use · September 2026</p>
+        <h1>A calendar, not a window into your life.</h1>
+        <h2>What we collect</h2>
+        <p>
+          When you sign in, the scheduler verifies your Stanford identity and
+          stores your email, a temporary session, and your bookings. Ordinary
+          visitors do not grant calendar access. Only Dan and Klemen can connect
+          host calendars. Host authorization tokens are encrypted on the
+          backend; they are never sent to the public website.
+        </p>
+        <h2>Calendar access</h2>
+        <p>
+          The scheduler uses selected host calendars to calculate busy periods,
+          create office-hours events, and cancel events it created. Google
+          supplies free/busy periods. For Outlook, the scheduler requests event
+          timing and availability fields, not subjects or descriptions, to
+          calculate availability. It does not publish or retain the contents of
+          hosts’ other events. Calendar access is used only to provide
+          scheduling, not advertising, analytics, or model training.
+        </p>
+        <p>
+          Use of information received from Google APIs follows the
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            >Google API Services User Data Policy</a
+          >, including the Limited Use requirements.
+        </p>
+        <h2>Who can see a booking</h2>
+        <p>
+          A booking’s email, time, and hosts are visible to the person who
+          booked and their selected hosts. The public page shows available times
+          only. Calendar providers process invitations under their own policies.
+          No advertising or third-party analytics scripts are used.
+        </p>
+        <h2>Storage and deletion</h2>
+        <p>
+          Booking data lives on the lab’s Google Cloud backend. Sessions expire
+          after 12 hours. Completed and cancelled booking history is removed
+          from the live database after 90 days; encrypted operational backups
+          may retain it for up to another 14 days. Unfinished calendar
+          operations remain until resolved. Disconnecting removes the host’s
+          stored calendar tokens, once upcoming bookings are cleared. You can
+          also revoke access directly in Google or Microsoft account settings.
+        </p>
+        <p>
+          For access or deletion requests, contact
+          <a href="mailto:klemenk@stanford.edu">klemenk@stanford.edu</a>.
+          Cancelling through this site removes the associated calendar events.
+          Signing out clears this tab’s session. Your provider may retain its
+          own event and invitation history.
+        </p>
+        <h2>Using office hours</h2>
+        <p>
+          This is a lab scheduling tool for people with a verified Stanford
+          account, not a university-wide service. Reserve only the time you
+          need, and cancel when plans change. You may hold up to four upcoming
+          bookings. Times are Pacific, with a 30-minute lead time and a 28-day
+          booking window.
+        </p>
+        <p>
+          A booking is confirmed only when the website says “confirmed.” Pending
+          bookings or cancellations are retried automatically; contact a host if
+          a pending state does not clear. New calendar events remove free times
+          on the next refresh, but a later conflict does not silently cancel an
+          already confirmed meeting. Please coordinate changes with the people
+          involved. To reschedule, cancel here and book another time; moving or
+          deleting a provider event alone does not update the scheduler’s
+          reservation.
+        </p>
+        <p>
+          The service is provided for lab coordination without an availability
+          guarantee. If it is unavailable, contact your host directly. Slack
+          booking is not part of this version.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

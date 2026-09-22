@@ -1,0 +1,25 @@
+name: Test SNAIL office hours
+
+on:
+  push:
+    paths:
+      - "backend/office_hours/**"
+      - ".github/workflows/test-office-hours.yml"
+  pull_request:
+    paths:
+      - "backend/office_hours/**"
+      - ".github/workflows/test-office-hours.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -r backend/office_hours/requirements.txt pytest
+      - run: python -m pytest backend/office_hours/tests -q
