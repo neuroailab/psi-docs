@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The SNAIL field guide to ccn2: SSH access, shared home directories, consistent caches, and considerate GPU use."
+    />
+    <title>SNAIL — ccn2 onboarding</title>
+    <link rel="icon" href="./snail.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the manual</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SNAIL onboarding home"
+        ><img src="./snail.svg" width="38" height="38" alt="" /> SNAIL
+        <span>/ onboarding</span></a
+      >
+      <a
+        class="header-link"
+        href="https://neuroailab.github.io/psi-docs/psi2/training_plan/"
+        >PSI dashboard <span aria-hidden="true">↗</span></a
+      >
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">The lab field guide <span>01 / Compute</span></p>
+          <h1>A good start<br />on <span>ccn2.</span></h1>
+          <p class="hero-copy">
+            Your first connection, your shared home, your first GPU job. A
+            practical manual for working comfortably—and considerately—on the
+            cluster.
+          </p>
+          <a class="primary-link" href="#access"
+            >Let’s get you connected <span aria-hidden="true">↗</span></a
+          >
+          <p class="edition">
+            Linux / Bash examples · Updated September 21, 2026
+          </p>
+        </div>
+        <aside class="cluster-map" aria-label="Cluster overview">
+          <div class="map-heading">
+            <span class="status-dot" aria-hidden="true"></span> One workspace.
+            Different machines.
+          </div>
+          <div class="map-laptop">
+            <span class="map-tag">01 / YOUR LAPTOP</span
+            ><strong>Terminal + SSH</strong>
+          </div>
+          <div class="map-connector" aria-hidden="true">
+            ↓ <span>secure connection</span>
+          </div>
+          <div class="map-nodes">
+            <div>
+              <span class="map-tag">02 / A COMPUTE NODE</span
+              ><strong>CPU · RAM · GPUs</strong>
+            </div>
+            <span class="node-mark" aria-hidden="true">n</span>
+          </div>
+          <div class="map-connector" aria-hidden="true">
+            ↓ <span>shared filesystem</span>
+          </div>
+          <div class="map-home">
+            <span class="map-tag">03 / YOUR SHARED HOME</span
+            ><strong>/ccn2/u/your_username</strong
+            ><span
+              >Code, environments, configuration, caches &amp; results</span
+            >
+          </div>
+          <p>
+            Files travel with you. Running processes stay on the node where you
+            started them.
+          </p>
+        </aside>
+      </section>
+
+      <aside class="shared-note">
+        <span class="note-label">Our house rule</span>
+        <p>
+          <strong>Use only the GPUs you need.</strong> ccn2 is a shared
+          resource. Start small, coordinate with others, and release resources
+          when your work is done.
+        </p>
+      </aside>
+
+      <div class="manual-layout">
+        <nav class="contents" aria-label="Manual sections">
+          <p class="eyebrow">In this guide</p>
+          <a href="#overview"><span>01</span> Know the cluster</a>
+          <a href="#access"><span>02</span> Connect with SSH</a>
+          <a href="#nodes"><span>03</span> Move between nodes</a>
+          <a href="#home"><span>04</span> Set up your home</a>
+          <a href="#environment"><span>05</span> Keep caches together</a>
+          <a href="#gpus"><span>06</span> Choose a GPU</a>
+          <a href="#jobs"><span>07</span> Run &amp; reconnect</a>
+          <a href="#help"><span>08</span> When things go wrong</a>
+          <div class="sidebar-note">
+            New to the lab?<br />Ask your lab contact for an account, the
+            current access route, and permission to use a node.
+          </div>
+        </nav>
+
+        <div class="chapters">
+          <section
+            class="chapter"
+            id="overview"
+            aria-labelledby="overview-title"
+          >
+            <p class="section-number">01 / The mental model</p>
+            <h2 id="overview-title">Shared storage. Separate compute.</h2>
+            <p>
+              ccn2 is a group of Linux machines, called <strong>nodes</strong>.
+              SSH puts you on one specific node. That node has its own CPU,
+              memory, GPU devices, processes, and local disk. The
+              <code>/ccn2/u/</code> filesystem is shared: your directory should
+              be available at the same path from every node you use.
+            </p>
+            <div class="two-cards">
+              <article>
+                <h3>Shared across nodes</h3>
+                <p>
+                  Your files under <code>/ccn2/u/your_username/</code>:
+                  repositories, environments, model caches, checkpoints, and
+                  logs.
+                </p>
+              </article>
+              <article>
+                <h3>Local to one node</h3>
+                <p>
+                  Running jobs, GPU allocations, tmux sessions, and usually
+                  <code>/tmp</code>. Node6’s GPU 0 is not node7’s GPU 0.
+                </p>
+              </article>
+            </div>
+            <p class="small-note">
+              A mounted directory is not a backup guarantee. Ask about quotas,
+              retention, and backup arrangements before relying on them.
+            </p>
+          </section>
+
+          <section class="chapter" id="access" aria-labelledby="access-title">
+            <p class="section-number">02 / Your first connection</p>
+            <h2 id="access-title">Get an account. Then SSH in.</h2>
+            <ol class="steps">
+              <li>
+                <strong>Get access from the lab.</strong> Ask your lab contact
+                or cluster administrator for your username, approved nodes, and
+                any Stanford network/VPN or gateway requirements. This guide
+                does not grant access.
+              </li>
+              <li>
+                <strong>Open Terminal on your Mac or Linux laptop.</strong>
+                Replace <code>your_username</code> below with your cluster
+                account, not necessarily your laptop username. Node6 is an
+                example; use the node you were assigned.
+              </li>
+            </ol>
+            <div class="code-block">
+              <div class="code-heading">On your laptop</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="first SSH connection">ssh your_username@node6-ccn2cluster.stanford.edu</code></pre>
+            </div>
+            <p>
+              On first connection, verify the server’s host-key fingerprint with
+              the administrator before accepting it. Use the approved
+              authentication method. Never disable host-key checking to get past
+              a warning.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">
+                Once connected · confirm where you are
+              </div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="connection checks">hostname
+whoami
+pwd</code></pre>
+            </div>
+            <details>
+              <summary>
+                Make repeated connections easier with an SSH key
+              </summary>
+              <div class="detail-body">
+                <p>
+                  If you do not already have an approved key, generate a
+                  dedicated one on your laptop. Choose a passphrase. If this
+                  filename exists, reuse an approved key or choose a new
+                  filename—do not overwrite it.
+                </p>
+                <div class="code-block">
+                  <div class="code-heading">On your laptop</div>
+                  <pre
+                    tabindex="0"
+                  ><code data-copy-label="SSH key generation">ssh-keygen -t ed25519 -f ~/.ssh/ccn2_ed25519 -C "ccn2 access"</code></pre>
+                </div>
+                <p>
+                  Give the administrator <strong>only</strong>
+                  <code>ccn2_ed25519.pub</code>, the public key, using the
+                  approved registration process. Keep the private key on your
+                  laptop. After registration:
+                </p>
+                <div class="code-block">
+                  <div class="code-heading">Use the registered key</div>
+                  <pre
+                    tabindex="0"
+                  ><code data-copy-label="SSH with a dedicated key">ssh -i ~/.ssh/ccn2_ed25519 your_username@node6-ccn2cluster.stanford.edu</code></pre>
+                </div>
+                <p>
+                  Optionally merge this entry into your laptop’s
+                  <code>~/.ssh/config</code>; preserve any existing entries.
+                  Then connect with <code>ssh ccn2-node6</code>.
+                </p>
+                <div class="code-block">
+                  <div class="code-heading">Laptop ~/.ssh/config</div>
+                  <pre
+                    tabindex="0"
+                  ><code data-copy-label="SSH alias configuration">Host ccn2-node6
+    HostName node6-ccn2cluster.stanford.edu
+    User your_username
+    IdentityFile ~/.ssh/ccn2_ed25519
+    IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 3</code></pre>
+                </div>
+                <p class="small-note">
+                  Configuration reference:
+                  <a href="https://man.openbsd.org/ssh_config"
+                    >OpenSSH client options</a
+                  >.
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="chapter" id="nodes" aria-labelledby="nodes-title">
+            <p class="section-number">03 / Finding your way around</p>
+            <h2 id="nodes-title">A node is an SSH destination.</h2>
+            <p>
+              The hostname pattern is
+              <code>nodeN-ccn2cluster.stanford.edu</code>. Use a full hostname
+              from your laptop or from another cluster node. Shared files do not
+              imply that SSH authentication is automatically shared.
+            </p>
+            <div class="node-picker" hidden>
+              <label for="node-select">Build a connection command</label
+              ><select id="node-select">
+                <option value="1">Node 1</option>
+                <option value="2">Node 2</option>
+                <option value="3">Node 3</option>
+                <option value="4">Node 4</option>
+                <option value="5">Node 5</option>
+                <option value="6" selected>Node 6</option>
+                <option value="7">Node 7</option>
+                <option value="8">Node 8</option>
+                <option value="9">Node 9</option>
+                <option value="10">Node 10</option>
+                <option value="11">Node 11</option>
+                <option value="14">Node 14</option>
+                <option value="15">Node 15</option>
+              </select>
+            </div>
+            <div class="code-block">
+              <div class="code-heading">
+                From your laptop or a permitted cluster node
+              </div>
+              <pre
+                tabindex="0"
+              ><code id="node-command" aria-live="polite" data-copy-label="selected node connection">ssh your_username@node6-ccn2cluster.stanford.edu</code></pre>
+            </div>
+            <p class="node-list">
+              <strong>Common node numbers:</strong> 1, 2, 3, 4, 5, 6, 7, 8, 9,
+              10, 11, 14, 15.
+            </p>
+            <aside class="callout">
+              <strong>Check permission, not just reachability.</strong>
+              <p>
+                Do not use node12. Use node13 only with explicit administrator
+                approval. The list above is a naming guide, not a live
+                availability board or permission to run jobs on every node.
+                Current lab instructions take precedence.
+              </p>
+            </aside>
+            <p>
+              For node-to-node SSH, arrange an approved authentication method
+              with the administrator. Do not copy your laptop’s private key onto
+              the cluster or turn on agent forwarding by default.
+            </p>
+            <details>
+              <summary>
+                My approved cluster key is in the shared home, but SSH cannot
+                find it
+              </summary>
+              <div class="detail-body">
+                <p>
+                  SSH may still look under the account’s configured home rather
+                  than the shared shell home. If you already have a dedicated,
+                  approved cluster-side key at the path below, name it
+                  explicitly. This is not an instruction to upload a laptop key.
+                </p>
+                <div class="code-block">
+                  <div class="code-heading">
+                    On a cluster node · existing cluster-side key only
+                  </div>
+                  <pre
+                    tabindex="0"
+                  ><code data-copy-label="explicit shared SSH identity">ssh -i /ccn2/u/your_username/.ssh/ccn2_ed25519 \
+    your_username@node7-ccn2cluster.stanford.edu</code></pre>
+                </div>
+                <p>
+                  Protect your own <code>.ssh</code> directory with mode
+                  <code>700</code> and private keys with <code>600</code>. Have
+                  the administrator confirm the correct
+                  <code>authorized_keys</code> location; changing shell
+                  variables does not change the SSH server’s account lookup.
+                </p>
+              </div>
+            </details>
+          </section>
+
+          <section class="chapter" id="home" aria-labelledby="home-title">
+            <p class="section-number">04 / One place for your work</p>
+            <h2 id="home-title">Your home belongs under /ccn2/u/.</h2>
+            <p>
+              Each person should have their own
+              <code>/ccn2/u/your_username/</code> directory, owned by their
+              account. Use it as the consistent home/workspace across nodes. Ask
+              the administrator to create or confirm it and configure the
+              account’s home path consistently on every node you use.
+            </p>
+            <div
+              class="directory-tree"
+              role="img"
+              aria-label="Suggested shared home layout: Code for repositories, .config for configuration, .cache for caches, envs for environments, and runs for outputs."
+            >
+              <div>/ccn2/u/your_username/</div>
+              <p>
+                ├── Code/ <span>repositories</span><br />├── .config/
+                <span>shared configuration</span><br />├── .cache/
+                <span>reusable downloads</span><br />├── envs/
+                <span>your environments</span><br />└── runs/
+                <span>logs &amp; checkpoints</span>
+              </p>
+            </div>
+            <div class="code-block">
+              <div class="code-heading">
+                On each node you use · inspect, do not change
+              </div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="home directory verification">printf 'Shell home: %s\n' "$HOME"
+getent passwd "$(id -un)" | cut -d: -f1,6
+ls -ld "/ccn2/u/$(id -un)"
+df -h "/ccn2/u/$(id -un)"</code></pre>
+            </div>
+            <aside class="callout">
+              <strong>Two different “homes” can exist.</strong>
+              <p>
+                A node’s account record may say
+                <code>/home/your_username</code> while your shell uses
+                <code>/ccn2/u/your_username</code>. A shell-only change does not
+                fix SSH key lookup, services, or every noninteractive job. Ask
+                for an administrator-approved setup, and verify it in a fresh
+                login on each node.
+              </p>
+            </aside>
+            <p>
+              If a node still uses a local home, keep only the necessary startup
+              wiring there and load a shared environment file. Do not delete,
+              move, or replace an existing home or <code>.ssh</code> directory
+              with a symlink without a migration plan. Missing shared mount?
+              Stop and ask for help; do not create a local look-alike under
+              <code>/ccn2</code>.
+            </p>
+          </section>
+
+          <section
+            class="chapter"
+            id="environment"
+            aria-labelledby="environment-title"
+          >
+            <p class="section-number">05 / Download once, use across nodes</p>
+            <h2 id="environment-title">Put caches beside your work.</h2>
+            <p>
+              Keep persistent configuration, environments, and large model
+              caches under your own shared home—not duplicated in each node’s
+              <code>/home</code>. The following Bash snippet assumes your shared
+              directory already exists and is mounted. Save it as
+              <code>/ccn2/u/your_username/.config/ccn2/env.sh</code>, creating
+              the parent directory if needed.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">Shared env.sh · no credentials</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="shared environment configuration">CCN2_USER="$(id -un)"
+CCN2_ROOT="/ccn2/u/$CCN2_USER"
+
+if [ -d "$CCN2_ROOT" ] &amp;&amp; [ -w "$CCN2_ROOT" ]; then
+    export XDG_CONFIG_HOME="$CCN2_ROOT/.config"
+    export XDG_CACHE_HOME="$CCN2_ROOT/.cache"
+    export XDG_DATA_HOME="$CCN2_ROOT/.local/share"
+    export XDG_STATE_HOME="$CCN2_ROOT/.local/state"
+    export HF_HOME="$XDG_CACHE_HOME/huggingface"
+    export HF_HUB_CACHE="$HF_HOME/hub"
+    export TORCH_HOME="$XDG_CACHE_HOME/torch"
+    export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
+    export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv/ComputeCache"
+    export CONDA_ENVS_PATH="$CCN2_ROOT/envs"
+    export CONDA_PKGS_DIRS="$XDG_CACHE_HOME/conda/pkgs"
+else
+    printf 'Shared ccn2 home unavailable; check the mount.\n' &gt;&amp;2
+    return 1
+fi</code></pre>
+            </div>
+            <p>
+              Load this file from the Bash startup file actually used on each
+              node, and explicitly from job scripts. Merge the line into
+              existing configuration; do not overwrite your startup files.
+              Noninteractive SSH commands may not load the same startup files as
+              your terminal.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">Bash startup or job script</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="load shared configuration">source "/ccn2/u/$(id -un)/.config/ccn2/env.sh"</code></pre>
+            </div>
+            <p>
+              Activate your project’s environment after loading this file. Use
+              your own Conda installation or the lab-approved environment setup;
+              another person’s installation path is not a template to copy.
+              Shared environments still need compatible CUDA libraries and node
+              hardware.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">
+                Verify the paths before downloading a model
+              </div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="cache path verification">printf '%s\n' "$XDG_CACHE_HOME" "$HF_HOME" "$HF_HUB_CACHE"
+python -m pip cache dir
+conda info --envs</code></pre>
+            </div>
+            <ul class="plain-list">
+              <li>
+                <strong>Pointing is not migrating.</strong> These settings
+                affect future reads and writes; they do not move existing caches
+                or environments. Coordinate a migration while your jobs are
+                stopped, then verify before removing anything.
+              </li>
+              <li>
+                <strong>Keep secrets private.</strong> Configuration and Hugging
+                Face home directories can contain login tokens. Never publish
+                them, copy another user’s credentials, or make them
+                world-readable. Use approved login tools and owner-only
+                permissions for credential files.
+              </li>
+              <li>
+                <strong>Not everything belongs on shared storage.</strong> Leave
+                runtime sockets and <code>XDG_RUNTIME_DIR</code> node-local. Use
+                administrator-approved local scratch for heavy temporary I/O; do
+                not blindly redirect <code>TMPDIR</code>. Monitor space in both
+                locations.
+              </li>
+            </ul>
+            <p class="small-note">
+              References:
+              <a href="https://specifications.freedesktop.org/basedir/latest/"
+                >XDG directory conventions</a
+              >
+              ·
+              <a
+                href="https://huggingface.co/docs/huggingface_hub/main/package_reference/environment_variables"
+                >Hugging Face cache settings</a
+              >. Some tools need their own cache setting; check each project’s
+              documentation.
+            </p>
+          </section>
+
+          <section class="chapter" id="gpus" aria-labelledby="gpus-title">
+            <p class="section-number">06 / Be a good cluster neighbor</p>
+            <h2 id="gpus-title">Check first. Use only what you need.</h2>
+            <p>
+              Follow the lab’s current reservation or scheduling process before
+              starting work. Check the node you are permitted to use. A low
+              utilization reading is a snapshot—not a reservation or proof that
+              a GPU is free.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">On your selected node</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="GPU availability checks">hostname
+nvidia-smi
+nvidia-smi --query-gpu=index,name,memory.used,utilization.gpu,temperature.gpu,power.draw --format=csv
+nvidia-smi --query-compute-apps=gpu_uuid,pid,process_name,used_memory --format=csv</code></pre>
+            </div>
+            <p>
+              Look for low memory use and low utilization together; temperature
+              and power provide additional context. A process holding memory may
+              be someone’s active or paused experiment. Coordinate with its
+              owner rather than assuming you can take over.
+            </p>
+            <div class="principles">
+              <article>
+                <span>01</span>
+                <h3>Start with one GPU</h3>
+                <p>
+                  Run a small sanity check. Scale only when the experiment needs
+                  it and the resources have been agreed.
+                </p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Never evict a neighbor</h3>
+                <p>
+                  Do not kill another person’s process or reset a device. If you
+                  are unsure who owns a job, ask.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Leave room for others</h3>
+                <p>
+                  Do not occupy extra nodes “just in case.” Be considerate with
+                  CPU threads, RAM, disk, and network I/O too.
+                </p>
+              </article>
+            </div>
+            <p>
+              Select the GPU explicitly for your process. For example,
+              <em>only if GPU 2 has been cleared for you</em>:
+            </p>
+            <div class="code-block">
+              <div class="code-heading">
+                Example · substitute your approved GPU and project command
+              </div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="single GPU job">CUDA_VISIBLE_DEVICES=2 python train.py</code></pre>
+            </div>
+            <p class="small-note">
+              <code>train.py</code> is a placeholder for your project. This mask
+              limits visibility; it does not reserve a GPU. Physical GPU 2
+              normally appears as <code>cuda:0</code> inside that process. Do
+              not override an allocation provided by a scheduler.
+              <a
+                href="https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/environment-variables.html"
+                >NVIDIA’s device visibility reference</a
+              >.
+            </p>
+          </section>
+
+          <section class="chapter" id="jobs" aria-labelledby="jobs-title">
+            <p class="section-number">
+              07 / Keep your job, not your laptop, running
+            </p>
+            <h2 id="jobs-title">Use tmux. Keep a small run record.</h2>
+            <p>
+              For an approved long-running job, start a named tmux session
+              <strong>on the target node</strong>. It keeps your shell alive if
+              the SSH connection drops. It does not reserve resources or survive
+              a node reboot.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">On the target node</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="start a tmux session">tmux new -s first-run</code></pre>
+            </div>
+            <p>
+              Inside tmux, load your shared configuration, activate your
+              environment, and run your command. This template uses one approved
+              GPU and a unique log filename. Replace the project and command
+              with your own.
+            </p>
+            <div class="code-block">
+              <div class="code-heading">Inside tmux · example job</div>
+              <pre
+                tabindex="0"
+              ><code data-copy-label="logged job template">source "/ccn2/u/$(id -un)/.config/ccn2/env.sh" || exit 1
+# Activate your project's environment here.
+cd "/ccn2/u/$(id -un)/Code/your_project" || exit 1
+mkdir -p "/ccn2/u/$(id -un)/runs/first-run" || exit 1
+CCN2_LOG="/ccn2/u/$(id -un)/runs/first-run/$(date +%Y%m%d-%H%M%S)-$(hostname)-$$.log"
+set -o pipefail
+CUDA_VISIBLE_DEVICES=2 python -u train.py 2&gt;&amp;1 | tee "$CCN2_LOG"</code></pre>
+            </div>
+            <p>
+              Detach with <kbd>Ctrl</kbd> + <kbd>b</kbd>, then <kbd>d</kbd>. To
+              return, SSH into <strong>the same node</strong> and reattach:
+            </p>
+            <div class="code-block">
+              <div class="code-heading">
+                Reconnect to the original node first
+              </div>
+              <pre tabindex="0"><code data-copy-label="reattach to tmux">tmux ls
+tmux attach -t first-run</code></pre>
+            </div>
+            <p>
+              Record the node, GPU IDs, tmux session, environment, command, log
+              path, and output/checkpoint directory. Check logs and
+              <code>nvidia-smi</code> while the job runs. Give concurrent jobs
+              separate output directories.
+            </p>
+            <aside class="callout">
+              <strong>Detaching is not stopping.</strong>
+              <p>
+                When finished, stop your own job cleanly, verify its process has
+                exited and GPU memory is released, and close any reservation
+                using the lab’s process. Do not leave an idle Python session
+                holding GPU memory.
+              </p>
+            </aside>
+            <p class="small-note">
+              More terminal basics:
+              <a href="https://github.com/tmux/tmux/wiki/Getting-Started"
+                >tmux’s getting-started guide</a
+              >.
+            </p>
+          </section>
+
+          <section class="chapter" id="help" aria-labelledby="help-title">
+            <p class="section-number">08 / A few common snags</p>
+            <h2 id="help-title">Pause, check, then ask.</h2>
+            <details>
+              <summary>SSH times out or cannot resolve the hostname</summary>
+              <div class="detail-body">
+                <p>
+                  Check the full hostname and your approved network/VPN or
+                  gateway connection. Confirm the node is available with the
+                  lab. Do not change firewall settings, start a public tunnel,
+                  or scan other nodes to work around access restrictions.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Permission denied (publickey)</summary>
+              <div class="detail-body">
+                <p>
+                  Confirm your cluster username, registered public key, and
+                  chosen identity file. Check which account home SSH uses. Ask
+                  the administrator to check key registration and permissions.
+                  Never send anyone your private key or a password in chat.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>The server’s host key changed</summary>
+              <div class="detail-body">
+                <p>
+                  Stop and verify the new fingerprint with the administrator. It
+                  may be a legitimate rebuild, but do not bypass checking or
+                  delete a known-host entry before verification.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                A cache is filling /home or downloading again on every node
+              </summary>
+              <div class="detail-body">
+                <p>
+                  Check <code>HOME</code>, the account record, and the cache
+                  variables in the actual job shell. Confirm the shared mount
+                  and that the job sources your shared environment file before
+                  importing libraries. Check tool-specific settings. Do not
+                  delete a cache another process is using.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>My tmux session disappeared</summary>
+              <div class="detail-body">
+                <p>
+                  Check <code>hostname</code> and return to the node where it
+                  was created. Sessions are not shared even though the
+                  filesystem is. If the node rebooted or the session ended,
+                  inspect logs and checkpoints before restarting to avoid
+                  duplicate work.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                CUDA out of memory, or a job is unexpectedly slow
+              </summary>
+              <div class="detail-body">
+                <p>
+                  Check your GPU mask, memory use, batch size, CPU workers, and
+                  data-loading path. Stop or adjust only your own work. Ask for
+                  help before moving to more GPUs or nodes; using additional
+                  hardware is not always the fix.
+                </p>
+              </div>
+            </details>
+            <div class="ready-card">
+              <p class="eyebrow">Before the first real run</p>
+              <h3>You’re ready when…</h3>
+              <ul>
+                <li>You know which node and GPU you are permitted to use.</li>
+                <li>
+                  Your shared home and cache paths resolve correctly on that
+                  node.
+                </li>
+                <li>A small test succeeds in the intended environment.</li>
+                <li>
+                  You know where the logs go, how to reconnect, and how to stop
+                  your job.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="#top"
+        ><img src="./snail.svg" width="30" height="30" alt="" /> SNAIL</a
+      >
+      <p>A shared cluster works best when we take care of it together.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+    <div
+      class="sr-only"
+      id="copy-status"
+      role="status"
+      aria-live="polite"
+    ></div>
+  </body>
+</html>
