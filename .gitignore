@@ -1,0 +1,5 @@
+# OAuth downloads and environment secrets must never become website assets.
+client_secret*.json
+.env
+.env.*
+!.env.example

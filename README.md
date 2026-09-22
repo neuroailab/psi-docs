@@ -44,7 +44,8 @@ remain explicit placeholders. See the directory's README for maintenance notes.
 The static booking page lives in `snail/office-hours/`; its persistent HTTPS API
 lives on the dedicated `snail-services` Google Cloud VM. See
 [backend/office_hours/SETUP.md](backend/office_hours/SETUP.md) for the one-time
-Google/Microsoft app registrations and host calendar authorization. Until those
-are complete, the page explicitly keeps sign-in/booking unavailable. Secrets,
+Google/Microsoft app registrations and host calendar authorization. Each sign-in
+provider stays disabled until its credentials are configured; booking slots stay
+unavailable until the selected host has connected and configured calendars. Secrets,
 tokens, databases, and virtual environments must never be committed. Backend
 source is excluded from the Pages artifact.

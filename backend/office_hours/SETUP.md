@@ -113,6 +113,18 @@ sudo systemctl --no-pager is-active snail-office-hours
 An alternative is to provide Codex with the paths to privately saved credential
 files so it can install them without displaying their contents.
 
+For a downloaded Google web client, `deploy/configure_oauth.py` safely accepts the
+JSON over stdin on the dedicated VM, validates the project/callback, and replaces
+only the two Google variables. It preserves the encryption key and Microsoft
+settings, writes atomically with mode 0600, and retains a root-only pre-change
+backup. Transfer the script (not the JSON) to the VM and send credentials through
+an encrypted SSH stdin pipe; never put secrets in command arguments. Restart the
+service afterwards. Keep downloaded client JSON files outside this repository.
+
+The currently implemented visitor login is Google/Microsoft OAuth. The proposed
+Stanford email-link login is a separate implementation step, not enabled by
+installing a Google Calendar client JSON.
+
 ## 4. Each host connects their own account
 
 1. Open Office Hours and sign in with a verified Stanford identity. Host access is
