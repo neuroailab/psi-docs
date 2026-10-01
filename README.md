@@ -13,6 +13,14 @@ The dashboard files under `psi2/training_plan/` are generated from the private
 `neuroailab/ccwm` repository. Update the canonical source there; its publishing
 workflow synchronizes only the static website assets into this repository.
 
+## Adding public pages
+
+See [Publishing public pages](PUBLISHING.md) for page locations, public URLs,
+local previews, safe commits, and deployment checks. The reusable
+[publish-psi-docs skill](skills/publish-psi-docs/SKILL.md) gives coding agents the
+same repository-specific workflow. Adding a local page does not authorize its
+publication; push only the files intended for public release.
+
 ## SNAIL onboarding
 
 The independent onboarding manual lives in `snail/onboarding/`. It uses plain
