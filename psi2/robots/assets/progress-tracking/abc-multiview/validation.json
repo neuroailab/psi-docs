@@ -1,0 +1,17 @@
+{
+  "scored_inputs": 590,
+  "temperatures": [
+    0.0,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+  ],
+  "all_logits_reductions_checked": true,
+  "float64_max_error": 8.059905212576268e-06,
+  "single_view_T1_max_difference": 3.814697265625e-06,
+  "source_hashes_unchanged": true,
+  "source_split_disjoint": true,
+  "poisoned_test_data_does_not_change_temperature": true,
+  "pairwise_auroc_sklearn_parity": true
+}

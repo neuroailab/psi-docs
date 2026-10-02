@@ -1,0 +1,38 @@
+{
+  "paper": "https://arxiv.org/html/2603.02115v2",
+  "repository": "https://github.com/robometer/robometer",
+  "verified_current_main": "352d160389daa964788de1ec933d1925f3a6de4f",
+  "status": "Reconstruction of the paper-described rule. Exact quantitative detector implementation not found in current public repository.",
+  "rule": "Flag failure if any sliding-window Pearson(progress, time) < -0.5, unless success probability >= 0.5. Otherwise predict success.",
+  "paper_parameters": "Success cutoff .5; correlation cutoff -.5 and window5 are documented example settings, window9 appears in one example. Full quantitative-table settings are not specified.",
+  "assumptions": [
+    "Primary uses any-time success override; final-time override shown as sensitivity because the paper does not specify the time aggregation.",
+    "Our existing 19\u201324 event-augmented queries per episode; original failure-detector query cadence is unknown.",
+    "Undefined constant-window correlation produces no alarm; this rule cannot recognize a perfectly flat trace from correlation alone.",
+    "Cached native-model/collator batch1 SDPA BF16 inference reused; exact author runtime parity is not established."
+  ],
+  "metric": "F1 and recalls with failure as positive. No continuous AUROC assigned to a binary rule.",
+  "samples": 72,
+  "failures": 29,
+  "successes": 43,
+  "source_curves_sha256": "23f9b967b8f911aaaac056ac0d11226286f2701c954afcca1f8e890c2503e6cf",
+  "independent_rule_and_confusion_checks": true,
+  "repository_audit": "ROBOMETER_REPOSITORY_AUDIT.md: six public branch tips and reachable history searched; dense inference clarified by authors in issue #16, full detector implementation not found.",
+  "dt_comparison": {
+    "model": "PSI DT rgb+rgblh",
+    "temperature": 1.0,
+    "score": "negative expected DT bin",
+    "score_threshold": -3.1662302017211914,
+    "distance_threshold": 3.1662302017211914,
+    "rule": "Predict successful iff terminal expected DT <= distance_threshold.",
+    "selection": "Maximize development balanced accuracy; ties prefer fewer false successes then higher success-score threshold. Same established ABC calibration criterion.",
+    "development_samples": 36,
+    "development_sources": 2,
+    "test_samples": 72,
+    "test_sources": 4,
+    "source_split_disjoint": true,
+    "poisoned_test_data_does_not_change_threshold": true,
+    "terminal_scores_sha256": "0e5fe75bb2da7e8f05b2e5700db00c955c07278a6645d51436c6cddf53593b88"
+  },
+  "comparison_caveat": "DT threshold is development-calibrated; Robometer keeps paper-described example settings without ABC fitting. Same test episodes and failure-positive metrics, different decision rules."
+}

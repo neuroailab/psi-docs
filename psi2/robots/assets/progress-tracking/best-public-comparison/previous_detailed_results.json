@@ -1,0 +1,572 @@
+{
+  "id": "progress-public-transfer",
+  "parent": "progress-tracking",
+  "group": "progress",
+  "compact": true,
+  "status": "results",
+  "title": "Test 2 \u00b7 Public benchmark VOC",
+  "environment": "RBM-EVAL-OOD \u00b7 six datasets \u00b7 72 successful episodes",
+  "summary": "Robometer\u2019s released-recipe VOC is 0.938 versus 0.945 reported in the paper. In the original T=1 comparison on 72 successful episodes across six datasets, Robometer progress has the highest endpoint-excluded VOC (0.840); the best PSI variant is DT + S5 (0.812). Including the goal-identical endpoint changes the comparison: DT scores 0.896 versus Robometer 0.832.",
+  "plan": [
+    "Successful-only VOC with own exact final goals for PSI/DINO.",
+    "Frozen 70% patch coverage and shrinking remaining horizon; no public calibration.",
+    "Robometer native progress head and released-recipe audit.",
+    "Keep ABC matched-reference success/failure evaluation separate."
+  ],
+  "outputs": [
+    "VOC for all model variants and baselines",
+    "Successful-episode curves, goals and inline videos"
+  ],
+  "questions": [],
+  "results": [
+    {
+      "type": "metrics_table",
+      "title": "Robometer \u00b7 reproduction versus paper Table XII",
+      "date": "2026-09-21",
+      "id": "robometer-paper-reproduction",
+      "columns": [
+        {
+          "key": "dataset",
+          "label": "Dataset"
+        },
+        {
+          "key": "paper",
+          "label": "Paper VOC"
+        },
+        {
+          "key": "release",
+          "label": "Our released-recipe VOC"
+        },
+        {
+          "key": "delta",
+          "label": "Difference"
+        }
+      ],
+      "rows": [
+        {
+          "dataset": "USC Trossen",
+          "paper": "0.910",
+          "release": "0.929",
+          "delta": "+0.019"
+        },
+        {
+          "dataset": "MIT Franka",
+          "paper": "0.945",
+          "release": "0.933",
+          "delta": "-0.012"
+        },
+        {
+          "dataset": "UTD SO101",
+          "paper": "0.916",
+          "release": "0.887",
+          "delta": "-0.029"
+        },
+        {
+          "dataset": "USC xArm",
+          "paper": "0.980",
+          "release": "0.957",
+          "delta": "-0.023"
+        },
+        {
+          "dataset": "USC Franka",
+          "paper": "0.949",
+          "release": "0.949",
+          "delta": "+0.000"
+        },
+        {
+          "dataset": "USC Koch",
+          "paper": "0.967",
+          "release": "0.973",
+          "delta": "+0.006"
+        },
+        {
+          "dataset": "Equal dataset mean",
+          "paper": "0.945",
+          "release": "0.938",
+          "delta": "-0.007"
+        }
+      ],
+      "text": "Our reproduction is 0.007 below the reported OOD mean. This supports a close numerical reproduction, not an identical end-to-end paper run.",
+      "caption": "Paper v2 Table XII, final Robometer column (RBM-1M training). Native progress head; five released-recipe query frames including frame 0; eight causal context frames. Full native compiler parity is verified on our saved predictions. The release selects prefix element j at query j with last_frame_only=False; the adapted comparison below uses each prefix\u2019s final prediction and frame-4 warmup instead. Current-frame VOC on the released grid is 0.879; warmup-grid VOC is 0.832, or 0.840 without endpoints. We sample at most 30 robot rows per dataset before retaining successes (72 total). Exact paper sample IDs, historical code/checkpoint revisions and runtime have not been verified. Our inference adapter uses batch size 1 and SDPA, versus batch size 32 in the released command; bin conversion explicitly uses float32 logits. Therefore metric-code parity does not establish bitwise inference parity."
+    },
+    {
+      "type": "metrics_table",
+      "title": "Our models versus Robometer \u00b7 same timestamps",
+      "date": "2026-09-21",
+      "id": "public-voc",
+      "columns": [
+        {
+          "key": "model",
+          "label": "Model"
+        },
+        {
+          "key": "included",
+          "label": "VOC \u00b7 endpoint included \u2191"
+        },
+        {
+          "key": "excluded",
+          "label": "VOC \u00b7 endpoint excluded \u2191"
+        }
+      ],
+      "rows": [
+        {
+          "model": "DT",
+          "included": "0.896",
+          "excluded": "0.799"
+        },
+        {
+          "model": "S1",
+          "included": "0.785",
+          "excluded": "0.688"
+        },
+        {
+          "model": "S3",
+          "included": "0.794",
+          "excluded": "0.689"
+        },
+        {
+          "model": "S5",
+          "included": "0.797",
+          "excluded": "0.729"
+        },
+        {
+          "model": "DT + S1",
+          "included": "0.747",
+          "excluded": "0.810"
+        },
+        {
+          "model": "DT + S3",
+          "included": "0.751",
+          "excluded": "0.809"
+        },
+        {
+          "model": "DT + S5",
+          "included": "0.752",
+          "excluded": "0.812"
+        },
+        {
+          "model": "DINOv2",
+          "included": "0.795",
+          "excluded": "0.423"
+        },
+        {
+          "model": "Robometer progress",
+          "included": "0.832",
+          "excluded": "0.840"
+        },
+        {
+          "model": "Robometer success \u00b7 auxiliary",
+          "included": "0.748",
+          "excluded": "0.761"
+        },
+        {
+          "model": "Elapsed time (control)",
+          "included": "1.000",
+          "excluded": "1.000"
+        }
+      ],
+      "text": "Robometer\u2019s released-recipe VOC is 0.938 versus 0.945 reported in the paper. In the original T=1 comparison on 72 successful episodes across six datasets, Robometer progress has the highest endpoint-excluded VOC (0.840); the best PSI variant is DT + S5 (0.812). Including the goal-identical endpoint changes the comparison: DT scores 0.896 versus Robometer 0.832.",
+      "caption": "Pearson(score, released-frame index) within each successful episode; average within each dataset, then equally across six datasets. Five common queries; the first is moved from frame 0 to frame 4 so S5 has causal history. Endpoint-excluded uses four queries. Constant/undefined correlations count as zero, matching the release. A clock scores 1 by construction: VOC tests ordering, not task understanding. Exact final goals are hindsight information; excluding the identical endpoint reduces that shortcut but does not remove hindsight.",
+      "explanation": {
+        "title": "Why these values differ from the paper-reproduction number",
+        "paragraphs": [
+          "Two things change: which Robometer prediction we select, and when we query the models. Robometer returns predictions for its eight input frames. The released benchmark code selects prefix element j at query j, which is usually an earlier frame. Our comparison selects the current frame\u2019s prediction. We also move the first query from frame 0 to frame 4 so PSI S5 has five causal observations.",
+          "For a 64-frame video, the released selection measures predictions associated with frames 0, 2, 9, 20, 36. The shared comparison measures frames 4, 15, 31, 47, 63; the endpoint-excluded version drops frame 63. These example indices depend on video length."
+        ],
+        "columns": [
+          {
+            "key": "setup",
+            "label": "Evaluation setup"
+          },
+          {
+            "key": "voc",
+            "label": "Robometer VOC"
+          }
+        ],
+        "rows": [
+          {
+            "setup": "Released benchmark prediction selection and query times",
+            "voc": "0.938"
+          },
+          {
+            "setup": "Same benchmark query times; select the current-frame prediction",
+            "voc": "0.879"
+          },
+          {
+            "setup": "Also move the first query from frame 0 to frame 4",
+            "voc": "0.832"
+          },
+          {
+            "setup": "Additionally exclude the final frame",
+            "voc": "0.840"
+          }
+        ],
+        "note": "The measured changes come from evaluating different outputs and portions of the trajectory, using the same model weights. Later progress can plateau or fluctuate, and removing the initial low-progress anchor can reduce correlation with time; these are possible explanations for the decrease, not separately established causes. The 0.938 result checks reproduction of the released benchmark. The 0.832/0.840 results compare models at the same current observations. Do not compare the former directly with PSI\u2019s shared-timestamp scores."
+      }
+    },
+    {
+      "type": "text",
+      "id": "native-entropy-surprisal-running",
+      "tag": "native_entropy_surprisal",
+      "title": "Running \u00b7 native surprisal and entropy",
+      "date": "2026-09-21",
+      "text": "Evaluating native first-code S1/S3/S5 and H1/H3/H5 on the same 72 successful public entries. Same 235 goal patches, RGB-only vocabulary, T=1 and teacher-forced actual goals. Four-code native S/H is recorded as a later experiment."
+    },
+    {
+      "type": "metrics_table",
+      "id": "dt-temperature",
+      "tag": "dt_temperature",
+      "title": "DT temperature sweep \u00b7 same images and timestamps",
+      "date": "2026-09-21",
+      "columns": [
+        {
+          "key": "temperature",
+          "label": "DT temperature"
+        },
+        {
+          "key": "included",
+          "label": "VOC \u00b7 endpoint included"
+        },
+        {
+          "key": "excluded",
+          "label": "VOC \u00b7 endpoint excluded"
+        }
+      ],
+      "rows": [
+        {
+          "temperature": "Deterministic / argmax",
+          "included": "0.848",
+          "excluded": "0.709"
+        },
+        {
+          "temperature": "0.3",
+          "included": "0.911",
+          "excluded": "0.844"
+        },
+        {
+          "temperature": "0.5",
+          "included": "0.913",
+          "excluded": "0.841"
+        },
+        {
+          "temperature": "0.7",
+          "included": "0.911",
+          "excluded": "0.832"
+        },
+        {
+          "temperature": "1 \u00b7 existing default",
+          "included": "0.896",
+          "excluded": "0.799"
+        }
+      ],
+      "text": "Best endpoint-excluded VOC in this sweep: T=0.3 (0.844); existing T=1 scores 0.799. This is an exploratory comparison on the public evaluation cohort.",
+      "caption": "T=0 uses the highest-probability DT bin (argmax). T>0 uses the expected bin under softmax(DT logits / T), restricted to valid DT bins. All five outputs are deterministic; no random token sampling. Negative distance is used for VOC. Same 72 successful episodes, exact own goals, 235 patches/image and equally weighted six-dataset means. T=1 reproduces the previous DT result. This table changes only DT temperature; the separate T=0.3 follow-up reports other variants. Selecting the best public temperature is not an independently validated improvement."
+    },
+    {
+      "type": "link",
+      "tag": "dt_temperature",
+      "title": "DT temperature \u00b7 per-episode VOC",
+      "url": "/assets/progress-tracking/dt-temperature/voc_per_episode.csv",
+      "label": "Download CSV"
+    },
+    {
+      "type": "metrics_table",
+      "id": "surprisal-temperature",
+      "tag": "surprisal_temperature",
+      "title": "T=0.3 follow-up \u00b7 surprisal and frozen fusions",
+      "date": "2026-09-21",
+      "columns": [
+        {
+          "key": "method",
+          "label": "Model"
+        },
+        {
+          "key": "old",
+          "label": "T=1 \u00b7 endpoint excluded"
+        },
+        {
+          "key": "new",
+          "label": "T=0.3 \u00b7 endpoint excluded"
+        },
+        {
+          "key": "included",
+          "label": "T=0.3 \u00b7 endpoint included"
+        }
+      ],
+      "rows": [
+        {
+          "method": "DT",
+          "old": "0.799",
+          "new": "0.844",
+          "included": "0.911"
+        },
+        {
+          "method": "S1",
+          "old": "0.688",
+          "new": "0.654",
+          "included": "0.777"
+        },
+        {
+          "method": "S3",
+          "old": "0.689",
+          "new": "0.686",
+          "included": "0.787"
+        },
+        {
+          "method": "S5",
+          "old": "0.729",
+          "new": "0.710",
+          "included": "0.794"
+        },
+        {
+          "method": "DT + S1",
+          "old": "0.810",
+          "new": "0.805",
+          "included": "0.736"
+        },
+        {
+          "method": "DT + S3",
+          "old": "0.809",
+          "new": "0.813",
+          "included": "0.737"
+        },
+        {
+          "method": "DT + S5",
+          "old": "0.812",
+          "new": "0.824",
+          "included": "0.737"
+        }
+      ],
+      "text": "At T=0.3, the highest endpoint-excluded PSI VOC is DT: 0.844. Robometer remains 0.840 on these queries.",
+      "caption": "Exploratory follow-up on the same public cohort after selecting T=0.3 in the DT sweep; no independent validation claim. S1/S3/S5 use log_softmax(full-vocabulary logits / 0.3) with unchanged teacher forcing and sequences. DT uses its T=0.3 expected-bin score. Both components change in DT+S fusions; original ABC means, standard deviations and coefficients remain fixed, with no public refit. Same 72 successful episodes, 235 patches/image, goals and query times. The main T=1 table is retained as the original comparison."
+    },
+    {
+      "type": "metrics_table",
+      "id": "multiview-temperature",
+      "tag": "multiview_temperature",
+      "title": "Temperature \u00d7 cameras \u00b7 rgb + rgblh",
+      "date": "2026-09-21",
+      "columns": [
+        {
+          "key": "temperature",
+          "label": "DT temperature"
+        },
+        {
+          "key": "rgb",
+          "label": "rgb only \u00b7 VOC"
+        },
+        {
+          "key": "rgblh",
+          "label": "rgb + rgblh \u00b7 VOC"
+        }
+      ],
+      "rows": [
+        {
+          "temperature": "Deterministic / argmax",
+          "rgb": "0.908",
+          "rgblh": "0.902"
+        },
+        {
+          "temperature": "0.3",
+          "rgb": "0.942",
+          "rgblh": "0.951"
+        },
+        {
+          "temperature": "0.5",
+          "rgb": "0.943",
+          "rgblh": "0.954"
+        },
+        {
+          "temperature": "0.7",
+          "rgb": "0.942",
+          "rgblh": "0.956"
+        },
+        {
+          "temperature": "1",
+          "rgb": "0.933",
+          "rgblh": "0.953"
+        }
+      ],
+      "text": "Best rgb + rgblh setting: T=0.7, endpoint-excluded VOC 0.956. Best rgb-only setting on these same episodes: T=0.5, VOC 0.943. Temperature is selected on this exploratory subset.",
+      "caption": "Endpoint-excluded VOC (Pearson correlation of negative DT with frame index; constant curves count as zero); identical 16 successful paired episodes (6 MIT Franka, 10 UTD SO101), equal mean of the two datasets. This subset is not comparable to the full six-dataset mean above. Sequence: rgb0,rgblh0,rgb0^g,dt0; the same external final goal is used throughout. Current images share the released-frame index, with no observation history. Only rgblh is swept, as requested; this is one wrist camera, not two. 235 patches per image; 3526 input tokens with wrist, 2351 without. T=0 is argmax; other temperatures use expected valid DT bins under softmax(logits/T), with no random sampling. At the selected multiview T=0.7, endpoint-included VOC is 0.962; all per-dataset and included/excluded results are downloadable. T=1 reproduces the earlier camera experiment. MIT pairing is reconstructed from source-loader order; UTD matches episode index and task/outcome. Released frame counts and fps match and paired images were inspected; raw capture timestamps are absent, so subframe synchronization remains unverified. Temperature selection is exploratory, not held-out validation."
+    },
+    {
+      "type": "link",
+      "tag": "multiview_temperature",
+      "title": "Temperature \u00d7 cameras \u00b7 all per-episode results",
+      "url": "/assets/progress-tracking/multiview-temperature/voc_per_episode.csv",
+      "label": "Download CSV"
+    },
+    {
+      "type": "link",
+      "tag": "multiview_temperature",
+      "title": "Temperature \u00d7 cameras \u00b7 dataset means and endpoint comparison",
+      "url": "/assets/progress-tracking/multiview-temperature/metrics.json",
+      "label": "Download metrics"
+    },
+    {
+      "type": "image",
+      "tag": "multiview_dt",
+      "title": "Paired camera examples \u00b7 same episode, two views",
+      "url": "/assets/progress-tracking/multiview-dt/camera_examples.jpg",
+      "caption": "Each row: external midpoint, wrist midpoint, external final goal, wrist final. The external final image is the supplied DT goal in both conditions."
+    },
+    {
+      "type": "link",
+      "tag": "multiview_dt",
+      "title": "Inspect all 16 recovered camera pairs",
+      "url": "/assets/progress-tracking/multiview-dt/paired_camera_audit.jpg",
+      "label": "Open camera contact sheet"
+    },
+    {
+      "type": "link",
+      "tag": "multiview_dt",
+      "title": "Earlier T=1 camera-role diagnostic \u00b7 archived per-episode results",
+      "url": "/assets/progress-tracking/multiview-dt/voc_per_episode.csv",
+      "label": "Download CSV"
+    },
+    {
+      "type": "metrics_table",
+      "title": "Scores and conditioning",
+      "date": "2026-09-21",
+      "wrap": true,
+      "columns": [
+        {
+          "key": "model",
+          "label": "Model"
+        },
+        {
+          "key": "sequence",
+          "label": "PSI sequence"
+        },
+        {
+          "key": "equation",
+          "label": "Score equation"
+        },
+        {
+          "key": "meaning",
+          "label": "What it measures"
+        }
+      ],
+      "rows": [
+        {
+          "model": "DT",
+          "sequence": "rgb0,rgb0^g,dt0",
+          "equation": "s = \u2212\u03a3k k P(dt0=k | rgb0,rgb0^g)",
+          "meaning": "Negative predicted temporal distance; higher is closer to goal."
+        },
+        {
+          "model": "S1",
+          "sequence": "rgb0,rgb{R}",
+          "equation": "s = mean over 235 patches of \u03a3code log P(goal code | observations, earlier goal codes)",
+          "meaning": "Negative goal surprisal; higher means a more predictable goal."
+        },
+        {
+          "model": "S3",
+          "sequence": "rgb0,rgb1,rgb2,rgb{2+R}",
+          "equation": "s = mean over 235 patches of \u03a3code log P(goal code | observations, earlier goal codes)",
+          "meaning": "Negative goal surprisal; higher means a more predictable goal."
+        },
+        {
+          "model": "S5",
+          "sequence": "rgb0,rgb1,rgb2,rgb3,rgb4,rgb{4+R}",
+          "equation": "s = mean over 235 patches of \u03a3code log P(goal code | observations, earlier goal codes)",
+          "meaning": "Negative goal surprisal; higher means a more predictable goal."
+        },
+        {
+          "model": "DT + S1",
+          "sequence": "DT: rgb0,rgb0^g,dt0\nS1: rgb0,rgb{R}",
+          "equation": "s = sigmoid(wDT zDT + wS zS + b), frozen ABC fit",
+          "meaning": "Existing fusion; no public-data fitting. Nonlinear fusion can change Pearson correlation."
+        },
+        {
+          "model": "DT + S3",
+          "sequence": "DT: rgb0,rgb0^g,dt0\nS3: rgb0,rgb1,rgb2,rgb{2+R}",
+          "equation": "s = sigmoid(wDT zDT + wS zS + b), frozen ABC fit",
+          "meaning": "Existing fusion; no public-data fitting. Nonlinear fusion can change Pearson correlation."
+        },
+        {
+          "model": "DT + S5",
+          "sequence": "DT: rgb0,rgb0^g,dt0\nS5: rgb0,rgb1,rgb2,rgb3,rgb4,rgb{4+R}",
+          "equation": "s = sigmoid(wDT zDT + wS zS + b), frozen ABC fit",
+          "meaning": "Existing fusion; no public-data fitting. Nonlinear fusion can change Pearson correlation."
+        },
+        {
+          "model": "DINOv2",
+          "sequence": "Current image + successful goal",
+          "equation": "s = cosine(f(current RGB), f(goal RGB))",
+          "meaning": "Frozen image similarity baseline."
+        },
+        {
+          "model": "Robometer progress",
+          "sequence": "",
+          "equation": "s = \u03a3j binj P(progress bin j | causal prefix, instruction)",
+          "meaning": "Paper VOC head; eight sampled causal frames, no visual goal."
+        },
+        {
+          "model": "Robometer success",
+          "sequence": "",
+          "equation": "s = sigmoid(success logit)",
+          "meaning": "Auxiliary diagnostic only; not the paper\u2019s VOC head. Same Robometer inputs."
+        }
+      ],
+      "caption": "rgbN denotes a PSI frame slot; ^g denotes the goal role. R = max(1, final released-frame index \u2212 current index). DT and DINO use one current observation plus a goal, with no observation history. S3 uses t\u22122,t\u22121,t and S5 uses t\u22124,\u2026,t: one released-frame gap. Robometer samples eight frames uniformly over the observed prefix 0\u2026t, so its gap grows with t (at t=63: 0,9,18,27,36,45,54,63). Evaluation query spacing is separate: for a 64-frame clip the shared queries are 4,15,31,47,63. Released-frame gaps are not known physical seconds. Surprisal scores all four content codes in each of 235 goal patches (940 tokens), excluding pointers; sum within a patch, then average patches, using full-vocabulary probabilities and teacher-forced actual goal codes. This historical RWM definition differs from PSI2 predictor defaults (first code per patch, RGB-local probabilities). Every PSI image uses 235/336 patches (69.94%); S1/S3/S5 use 2349/4699/7049 tokens. S3/S5 exceed the checkpoint\u2019s 4096-token training length."
+    },
+    {
+      "type": "episode_curves",
+      "title": "Successful episodes \u00b7 exact goal, raw curves and inline video",
+      "date": "2026-09-21",
+      "url": "/assets/progress-tracking/public-voc/curves.js",
+      "caption": "Select any of the 72 successful episodes. All models can be overlaid; PSI uses separate raw axes. Six sampled query points are connected for inspection; the metric uses the five specified common points."
+    },
+    {
+      "type": "link",
+      "title": "Paper \u00b7 VOC definition",
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/html/2603.02115v2",
+      "label": "Read the paper"
+    },
+    {
+      "type": "link",
+      "title": "Released evaluation command",
+      "date": "2026-09-21",
+      "url": "https://github.com/robometer/robometer/blob/352d160389daa964788de1ec933d1925f3a6de4f/eval_commands/reward_alignment.sh",
+      "label": "Inspect the released recipe"
+    },
+    {
+      "type": "link",
+      "title": "Per-episode VOC",
+      "date": "2026-09-21",
+      "url": "/assets/progress-tracking/public-voc/voc_per_episode.csv",
+      "label": "Download"
+    },
+    {
+      "type": "link",
+      "title": "All raw scores",
+      "date": "2026-09-21",
+      "url": "/assets/progress-tracking/public-voc/curve_scores.csv",
+      "label": "Download"
+    },
+    {
+      "type": "link",
+      "title": "Frozen cohort and protocol",
+      "date": "2026-09-21",
+      "url": "/assets/progress-tracking/public-voc/protocol.json",
+      "label": "Download"
+    },
+    {
+      "type": "link",
+      "title": "Validation checks",
+      "date": "2026-09-21",
+      "url": "/assets/progress-tracking/public-voc/validation.json",
+      "label": "Download"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-09-21",
+      "text": "Completed successful-only VOC for all ten model scores. Exact own-episode PSI goals, released Robometer context sampling and explicit released-aggregation audit. Public outcome detection removed."
+    }
+  ],
+  "voc_only": true
+}

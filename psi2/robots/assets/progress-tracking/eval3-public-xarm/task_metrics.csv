@@ -1,0 +1,55 @@
+method,task,kendall_tau_a,pair_accuracy,success_auroc,voc
+PSI DT,Close the drawer,0.8333333333333333,0.875,1.0,0.9854142059003278
+PSI DT,Fold the towel in half,-0.3333333333333333,0.5,0.0,-0.7852374985031739
+PSI DT,Put blue cup in sink,-0.49999999999999994,0.25,0.25,0.2993340614908376
+PSI DT,Put the banana on the red plate,0.8333333333333333,0.875,1.0,-0.3314608095509009
+PSI DT,Put the eggplant in the black bowl,-0.6666666666666666,0.25,0.0,-0.8923499920892214
+PSI DT,Stack the green shape on the red cylinder,0.6666666666666666,0.875,0.75,0.6947441505343626
+PSI S1,Close the drawer,1.0,1.0,1.0,0.9367333528652004
+PSI S1,Fold the towel in half,-0.49999999999999994,0.375,0.0,-0.7627158488485387
+PSI S1,Put blue cup in sink,0.49999999999999994,0.625,1.0,0.9043895518599443
+PSI S1,Put the banana on the red plate,0.8333333333333333,0.875,1.0,-0.6586117763827141
+PSI S1,Put the eggplant in the black bowl,0.16666666666666669,0.625,0.5,-0.716896152047957
+PSI S1,Stack the green shape on the red cylinder,0.8333333333333334,0.875,1.0,0.8445949011085072
+PSI S3,Close the drawer,1.0,1.0,1.0,0.9401224957652873
+PSI S3,Fold the towel in half,-0.16666666666666669,0.5,0.25,-0.5998082200353321
+PSI S3,Put blue cup in sink,0.49999999999999994,0.625,1.0,0.9391669874417047
+PSI S3,Put the banana on the red plate,0.8333333333333333,0.875,1.0,-0.7991550501348689
+PSI S3,Put the eggplant in the black bowl,0.0,0.5,0.5,-0.40763586213496433
+PSI S3,Stack the green shape on the red cylinder,0.8333333333333334,0.875,1.0,0.8666036925610969
+PSI S5,Close the drawer,1.0,1.0,1.0,0.9497279271402328
+PSI S5,Fold the towel in half,-0.16666666666666669,0.5,0.25,-0.5552494192020233
+PSI S5,Put blue cup in sink,0.49999999999999994,0.625,1.0,0.9413836462287324
+PSI S5,Put the banana on the red plate,0.8333333333333333,0.875,1.0,-0.7938546992511445
+PSI S5,Put the eggplant in the black bowl,-0.3333333333333333,0.375,0.25,-0.5346616211798795
+PSI S5,Stack the green shape on the red cylinder,1.0,1.0,1.0,0.8777089103899869
+Robometer progress,Close the drawer,1.0,1.0,1.0,0.9325583447109695
+Robometer progress,Fold the towel in half,0.3333333333333333,0.5,1.0,0.9781139183237195
+Robometer progress,Put blue cup in sink,1.0,1.0,1.0,0.9805733604769754
+Robometer progress,Put the banana on the red plate,0.8333333333333334,0.875,1.0,0.9775341133607341
+Robometer progress,Put the eggplant in the black bowl,0.3333333333333333,0.5,1.0,0.9400354505848504
+Robometer progress,Stack the green shape on the red cylinder,0.8333333333333334,0.875,1.0,0.9623797498214692
+Robometer success,Close the drawer,1.0,1.0,1.0,0.9499098279780589
+Robometer success,Fold the towel in half,0.3333333333333333,0.5,1.0,0.8530302963846321
+Robometer success,Put blue cup in sink,1.0,1.0,1.0,0.7771776614487671
+Robometer success,Put the banana on the red plate,0.8333333333333334,0.875,1.0,0.9122945926566501
+Robometer success,Put the eggplant in the black bowl,0.3333333333333333,0.5,1.0,0.7408760328992307
+Robometer success,Stack the green shape on the red cylinder,0.8333333333333334,0.875,1.0,0.9523210096297591
+DINOv2,Close the drawer,0.8333333333333333,0.875,1.0,0.9717747131280795
+DINOv2,Fold the towel in half,-0.49999999999999994,0.25,0.25,-0.9426460377450573
+DINOv2,Put blue cup in sink,0.3333333333333333,0.625,0.75,0.6586359455096676
+DINOv2,Put the banana on the red plate,0.3333333333333333,0.5,1.0,0.7865910798461295
+DINOv2,Put the eggplant in the black bowl,0.6666666666666666,0.75,1.0,0.8145296951885905
+DINOv2,Stack the green shape on the red cylinder,0.6666666666666666,0.875,0.75,0.8064282369169592
+Encoded time,Close the drawer,0.0,0.5,0.5,1.0
+Encoded time,Fold the towel in half,0.0,0.5,0.5,1.0
+Encoded time,Put blue cup in sink,0.0,0.5,0.5,1.0
+Encoded time,Put the banana on the red plate,0.0,0.5,0.5,1.0
+Encoded time,Put the eggplant in the black bowl,0.0,0.5,0.5,1.0
+Encoded time,Stack the green shape on the red cylinder,0.0,0.5,0.5,1.0
+Constant,Close the drawer,0.0,0.5,0.5,
+Constant,Fold the towel in half,0.0,0.5,0.5,
+Constant,Put blue cup in sink,0.0,0.5,0.5,
+Constant,Put the banana on the red plate,0.0,0.5,0.5,
+Constant,Put the eggplant in the black bowl,0.0,0.5,0.5,
+Constant,Stack the green shape on the red cylinder,0.0,0.5,0.5,

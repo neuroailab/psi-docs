@@ -1,0 +1,13 @@
+{
+  "full_native_compiler_parity": true,
+  "episodes": 72,
+  "datasets": 6,
+  "queries": 432,
+  "all_expected_keys_present": true,
+  "successful_own_goals_only": true,
+  "all_input_lengths_verified": true,
+  "causal_eight_frame_robometer_context": true,
+  "native_pearson_parity": true,
+  "frozen_fusion_hashes_verified": true,
+  "constant_curves_count_as_zero": true
+}

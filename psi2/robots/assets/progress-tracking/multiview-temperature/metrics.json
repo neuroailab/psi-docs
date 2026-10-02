@@ -1,0 +1,186 @@
+{
+  "rgb": {
+    "0.0": {
+      "endpoint included": {
+        "mean": 0.9317905216302811,
+        "by_dataset": {
+          "MIT Franka": 0.9393935299554627,
+          "UTD SO101": 0.9241875133050994
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9084048345915439,
+        "by_dataset": {
+          "MIT Franka": 0.9219777995897186,
+          "UTD SO101": 0.8948318695933691
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.3": {
+      "endpoint included": {
+        "mean": 0.9535987801154626,
+        "by_dataset": {
+          "MIT Franka": 0.9667359548281161,
+          "UTD SO101": 0.940461605402809
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9424140569707253,
+        "by_dataset": {
+          "MIT Franka": 0.9695197685280377,
+          "UTD SO101": 0.915308345413413
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.5": {
+      "endpoint included": {
+        "mean": 0.9568508255939409,
+        "by_dataset": {
+          "MIT Franka": 0.9692385930740501,
+          "UTD SO101": 0.9444630581138316
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.942850490668198,
+        "by_dataset": {
+          "MIT Franka": 0.969700450188182,
+          "UTD SO101": 0.916000531148214
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.7": {
+      "endpoint included": {
+        "mean": 0.95802545559291,
+        "by_dataset": {
+          "MIT Franka": 0.9701681938071142,
+          "UTD SO101": 0.9458827173787057
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9416450364197226,
+        "by_dataset": {
+          "MIT Franka": 0.968832463900299,
+          "UTD SO101": 0.9144576089391462
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "1.0": {
+      "endpoint included": {
+        "mean": 0.9514956288485726,
+        "by_dataset": {
+          "MIT Franka": 0.9645460768527019,
+          "UTD SO101": 0.9384451808444434
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9329811949349177,
+        "by_dataset": {
+          "MIT Franka": 0.9622163932151787,
+          "UTD SO101": 0.9037459966546567
+        },
+        "undefined_as_zero": 0
+      }
+    }
+  },
+  "rgb+rgblh": {
+    "0.0": {
+      "endpoint included": {
+        "mean": 0.9226719360152044,
+        "by_dataset": {
+          "MIT Franka": 0.9227221360267341,
+          "UTD SO101": 0.9226217360036746
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9020684095125857,
+        "by_dataset": {
+          "MIT Franka": 0.9020776444597457,
+          "UTD SO101": 0.9020591745654256
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.3": {
+      "endpoint included": {
+        "mean": 0.95556092601137,
+        "by_dataset": {
+          "MIT Franka": 0.964508525925127,
+          "UTD SO101": 0.9466133260976131
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9508942470879158,
+        "by_dataset": {
+          "MIT Franka": 0.9666444577789223,
+          "UTD SO101": 0.9351440363969094
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.5": {
+      "endpoint included": {
+        "mean": 0.9598687512543542,
+        "by_dataset": {
+          "MIT Franka": 0.9690458502263688,
+          "UTD SO101": 0.9506916522823398
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9542978510295832,
+        "by_dataset": {
+          "MIT Franka": 0.9721170698407634,
+          "UTD SO101": 0.9364786322184029
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "0.7": {
+      "endpoint included": {
+        "mean": 0.9619921073752651,
+        "by_dataset": {
+          "MIT Franka": 0.9715051825248545,
+          "UTD SO101": 0.9524790322256755
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9555439808692077,
+        "by_dataset": {
+          "MIT Franka": 0.97484078411156,
+          "UTD SO101": 0.9362471776268553
+        },
+        "undefined_as_zero": 0
+      }
+    },
+    "1.0": {
+      "endpoint included": {
+        "mean": 0.9588407278143467,
+        "by_dataset": {
+          "MIT Franka": 0.9694837550230914,
+          "UTD SO101": 0.948197700605602
+        },
+        "undefined_as_zero": 0
+      },
+      "endpoint excluded": {
+        "mean": 0.9532837023549319,
+        "by_dataset": {
+          "MIT Franka": 0.9744089999514306,
+          "UTD SO101": 0.932158404758433
+        },
+        "undefined_as_zero": 0
+      }
+    }
+  }
+}

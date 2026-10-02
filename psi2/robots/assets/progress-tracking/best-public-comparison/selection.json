@@ -1,0 +1,219 @@
+{
+  "cohort": "72 successes / six datasets",
+  "selection_metric": "Endpoint-excluded six-dataset macro VOC",
+  "best": {
+    "id": "DT_T0.3",
+    "label": "DT \u00b7 T=0.3",
+    "key": "DT",
+    "definition": "rgb0,rgb0^g,dt0; negative expected DT bin, or argmax at T=0. Single current view and exact own final goal.",
+    "excluded": {
+      "mean": 0.8444636356429666,
+      "by_dataset": {
+        "USC Trossen": 0.7575654269801835,
+        "MIT Franka": 0.6855113959771559,
+        "UTD SO101": 0.915308345413413,
+        "USC xArm": 0.9290905282310902,
+        "USC Franka": 0.892246824896892,
+        "USC Koch": 0.8870592923590643
+      }
+    },
+    "included": {
+      "mean": 0.9110964893287425,
+      "by_dataset": {
+        "USC Trossen": 0.8710060048773524,
+        "MIT Franka": 0.870811399984796,
+        "UTD SO101": 0.940461605402809,
+        "USC xArm": 0.9312416516660026,
+        "USC Franka": 0.9190289431132568,
+        "USC Koch": 0.9340293309282387
+      }
+    }
+  },
+  "robometer": {
+    "released_recipe": {
+      "mean": 0.9486487796678112,
+      "by_dataset": {
+        "MIT Franka": 0.960815933736762,
+        "USC Franka": 0.9419553719218519,
+        "USC Koch": 0.9719654664744279,
+        "USC Trossen": 0.9234641440560204,
+        "USC xArm": 0.9747063542904629,
+        "UTD SO101": 0.9189854075273424
+      },
+      "counts": {
+        "MIT Franka": 16,
+        "USC Franka": 8,
+        "USC Koch": 12,
+        "USC Trossen": 15,
+        "USC xArm": 11,
+        "UTD SO101": 10
+      },
+      "episodes": 72,
+      "native_compiler_parity": true
+    },
+    "adapted_excluded": {
+      "mean": 0.8398577205223173,
+      "by_dataset": {
+        "USC Trossen": 0.6822325336479296,
+        "MIT Franka": 0.8324756182394539,
+        "UTD SO101": 0.8905602449217396,
+        "USC xArm": 0.9169277261816299,
+        "USC Franka": 0.8614582688888737,
+        "USC Koch": 0.8554919312542775
+      }
+    },
+    "adapted_included": {
+      "mean": 0.8315219751828907,
+      "by_dataset": {
+        "USC Trossen": 0.6927272058953076,
+        "MIT Franka": 0.8377663857962243,
+        "UTD SO101": 0.852429951862856,
+        "USC xArm": 0.9532397733201851,
+        "USC Franka": 0.8132262782162061,
+        "USC Koch": 0.8397422560065645
+      }
+    }
+  },
+  "candidates": [
+    {
+      "id": "DT_T0.0",
+      "model": "DT \u00b7 argmax",
+      "excluded": 0.7089563626163399,
+      "included": 0.8484141918480018
+    },
+    {
+      "id": "DT_T0.3",
+      "model": "DT \u00b7 T=0.3",
+      "excluded": 0.8444636356429666,
+      "included": 0.9110964893287425
+    },
+    {
+      "id": "DT_T0.5",
+      "model": "DT \u00b7 T=0.5",
+      "excluded": 0.8405555949103948,
+      "included": 0.9132892943331602
+    },
+    {
+      "id": "DT_T0.7",
+      "model": "DT \u00b7 T=0.7",
+      "excluded": 0.8316881516943399,
+      "included": 0.9114108031992828
+    },
+    {
+      "id": "DT_T1.0",
+      "model": "DT \u00b7 T=1",
+      "excluded": 0.7986323507657089,
+      "included": 0.8957998709031197
+    },
+    {
+      "id": "S1_T1",
+      "model": "S1 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.6879941392775529,
+      "included": 0.7852018711182177
+    },
+    {
+      "id": "S1_T03",
+      "model": "S1 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.6536222655982206,
+      "included": 0.7769788213973388
+    },
+    {
+      "id": "S3_T1",
+      "model": "S3 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.6891529673295705,
+      "included": 0.7941922292585669
+    },
+    {
+      "id": "S3_T03",
+      "model": "S3 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.6862412979569251,
+      "included": 0.7866981639966338
+    },
+    {
+      "id": "S5_T1",
+      "model": "S5 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.7285736904698586,
+      "included": 0.7968532776797589
+    },
+    {
+      "id": "S5_T03",
+      "model": "S5 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.7095516163292382,
+      "included": 0.7935558912553576
+    },
+    {
+      "id": "DT + S1_T1",
+      "model": "DT + S1 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.8100643591719336,
+      "included": 0.7468527827809676
+    },
+    {
+      "id": "DT + S1_T03",
+      "model": "DT + S1 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.804887801033784,
+      "included": 0.7363992864331252
+    },
+    {
+      "id": "DT + S3_T1",
+      "model": "DT + S3 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.8090072801252607,
+      "included": 0.7512429089626367
+    },
+    {
+      "id": "DT + S3_T03",
+      "model": "DT + S3 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.8126101784842369,
+      "included": 0.736691548278451
+    },
+    {
+      "id": "DT + S5_T1",
+      "model": "DT + S5 \u00b7 four-code S \u00b7 T=1",
+      "excluded": 0.8121278838549714,
+      "included": 0.7521012719158519
+    },
+    {
+      "id": "DT + S5_T03",
+      "model": "DT + S5 \u00b7 four-code S \u00b7 T=0.3",
+      "excluded": 0.8239975140245378,
+      "included": 0.736941151547847
+    },
+    {
+      "id": "S1_native",
+      "model": "S1 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.6178715673057059,
+      "included": 0.7871152043726447
+    },
+    {
+      "id": "S3_native",
+      "model": "S3 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.6502249720950309,
+      "included": 0.7994346127706319
+    },
+    {
+      "id": "S5_native",
+      "model": "S5 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.678585711764455,
+      "included": 0.8017811103615454
+    },
+    {
+      "id": "H1_native",
+      "model": "H1 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.6779493925714745,
+      "included": 0.7941735468191422
+    },
+    {
+      "id": "H3_native",
+      "model": "H3 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.6741710489852585,
+      "included": 0.7999730516893561
+    },
+    {
+      "id": "H5_native",
+      "model": "H5 \u00b7 first code \u00b7 T=1",
+      "excluded": 0.6742137182830987,
+      "included": 0.7990289954269629
+    }
+  ],
+  "selection_is_exploratory": true,
+  "source_protocol_sha256": "4f30d9619a5bf02f5d994ac57093189c091d6fa32a11d1cfdd75396cd6cd30fa"
+}

@@ -1,0 +1,97 @@
+episode_id,dataset,method,view,voc,undefined
+bfe3503fc247305147fe,MIT Franka,agent,endpoint included,0.9117532502775585,False
+bfe3503fc247305147fe,MIT Franka,right wrist role,endpoint included,0.9240345174987543,False
+bfe3503fc247305147fe,MIT Franka,left wrist role,endpoint included,0.910278031480275,False
+bfe3503fc247305147fe,MIT Franka,agent,endpoint excluded,0.928209424708982,False
+bfe3503fc247305147fe,MIT Franka,right wrist role,endpoint excluded,0.9548052303868864,False
+bfe3503fc247305147fe,MIT Franka,left wrist role,endpoint excluded,0.947190000861267,False
+fccadd3af1339ebdcd05,MIT Franka,agent,endpoint included,0.9685152104449306,False
+fccadd3af1339ebdcd05,MIT Franka,right wrist role,endpoint included,0.9559231690207803,False
+fccadd3af1339ebdcd05,MIT Franka,left wrist role,endpoint included,0.9692270369409423,False
+fccadd3af1339ebdcd05,MIT Franka,agent,endpoint excluded,0.9868039017817254,False
+fccadd3af1339ebdcd05,MIT Franka,right wrist role,endpoint excluded,0.9805356341189249,False
+fccadd3af1339ebdcd05,MIT Franka,left wrist role,endpoint excluded,0.9922044518568256,False
+dcb220b185cc5ead1be1,MIT Franka,agent,endpoint included,0.9775457389515126,False
+dcb220b185cc5ead1be1,MIT Franka,right wrist role,endpoint included,0.9823783075486242,False
+dcb220b185cc5ead1be1,MIT Franka,left wrist role,endpoint included,0.9843094414318576,False
+dcb220b185cc5ead1be1,MIT Franka,agent,endpoint excluded,0.9555166670987498,False
+dcb220b185cc5ead1be1,MIT Franka,right wrist role,endpoint excluded,0.9592493089527527,False
+dcb220b185cc5ead1be1,MIT Franka,left wrist role,endpoint excluded,0.9651434129180918,False
+fa7eb41521e110479178,MIT Franka,agent,endpoint included,0.9741678163535286,False
+fa7eb41521e110479178,MIT Franka,right wrist role,endpoint included,0.9843707508387072,False
+fa7eb41521e110479178,MIT Franka,left wrist role,endpoint included,0.9806724049217701,False
+fa7eb41521e110479178,MIT Franka,agent,endpoint excluded,0.9705366922803254,False
+fa7eb41521e110479178,MIT Franka,right wrist role,endpoint excluded,0.9981290298580077,False
+fa7eb41521e110479178,MIT Franka,left wrist role,endpoint excluded,0.9801743025915197,False
+4ab108ea18e86fd1fc4e,MIT Franka,agent,endpoint included,0.9896991592747792,False
+4ab108ea18e86fd1fc4e,MIT Franka,right wrist role,endpoint included,0.9719768344994539,False
+4ab108ea18e86fd1fc4e,MIT Franka,left wrist role,endpoint included,0.9907344655900672,False
+4ab108ea18e86fd1fc4e,MIT Franka,agent,endpoint excluded,0.9950800416430279,False
+4ab108ea18e86fd1fc4e,MIT Franka,right wrist role,endpoint excluded,0.9544741027579133,False
+4ab108ea18e86fd1fc4e,MIT Franka,left wrist role,endpoint excluded,0.9795707507715583,False
+89e2f519c429fab670d5,MIT Franka,agent,endpoint included,0.96559527501824,False
+89e2f519c429fab670d5,MIT Franka,right wrist role,endpoint included,0.9598939855748907,False
+89e2f519c429fab670d5,MIT Franka,left wrist role,endpoint included,0.9816811935861679,False
+89e2f519c429fab670d5,MIT Franka,agent,endpoint excluded,0.9371515943934488,False
+89e2f519c429fab670d5,MIT Franka,right wrist role,endpoint excluded,0.9626874110798818,False
+89e2f519c429fab670d5,MIT Franka,left wrist role,endpoint excluded,0.9821711798038983,False
+d32b6a2ef83db85aefd2,UTD SO101,agent,endpoint included,0.9220998660158205,False
+d32b6a2ef83db85aefd2,UTD SO101,right wrist role,endpoint included,0.9265683013904507,False
+d32b6a2ef83db85aefd2,UTD SO101,left wrist role,endpoint included,0.9225561373742182,False
+d32b6a2ef83db85aefd2,UTD SO101,agent,endpoint excluded,0.9192410443689947,False
+d32b6a2ef83db85aefd2,UTD SO101,right wrist role,endpoint excluded,0.9385323473580707,False
+d32b6a2ef83db85aefd2,UTD SO101,left wrist role,endpoint excluded,0.9298326130693176,False
+2ca5fc0da88c83fe3045,UTD SO101,agent,endpoint included,0.9646360857395364,False
+2ca5fc0da88c83fe3045,UTD SO101,right wrist role,endpoint included,0.8934771228254474,False
+2ca5fc0da88c83fe3045,UTD SO101,left wrist role,endpoint included,0.8774079810082184,False
+2ca5fc0da88c83fe3045,UTD SO101,agent,endpoint excluded,0.9367873329250351,False
+2ca5fc0da88c83fe3045,UTD SO101,right wrist role,endpoint excluded,0.8443751785485586,False
+2ca5fc0da88c83fe3045,UTD SO101,left wrist role,endpoint excluded,0.8269194721082367,False
+71c3ff7896d0a7c33d5f,UTD SO101,agent,endpoint included,0.9651317924557905,False
+71c3ff7896d0a7c33d5f,UTD SO101,right wrist role,endpoint included,0.9907672879625973,False
+71c3ff7896d0a7c33d5f,UTD SO101,left wrist role,endpoint included,0.9954235932231582,False
+71c3ff7896d0a7c33d5f,UTD SO101,agent,endpoint excluded,0.9316020303706067,False
+71c3ff7896d0a7c33d5f,UTD SO101,right wrist role,endpoint excluded,0.9813449582550839,False
+71c3ff7896d0a7c33d5f,UTD SO101,left wrist role,endpoint excluded,0.992495979310425,False
+2d54a0612535c86396c7,UTD SO101,agent,endpoint included,0.9398580357231476,False
+2d54a0612535c86396c7,UTD SO101,right wrist role,endpoint included,0.9709991089166102,False
+2d54a0612535c86396c7,UTD SO101,left wrist role,endpoint included,0.9633227144525528,False
+2d54a0612535c86396c7,UTD SO101,agent,endpoint excluded,0.8820024041547941,False
+2d54a0612535c86396c7,UTD SO101,right wrist role,endpoint excluded,0.9436425507472519,False
+2d54a0612535c86396c7,UTD SO101,left wrist role,endpoint excluded,0.9271855365794461,False
+a078c19ccb0a2c0e04e2,UTD SO101,agent,endpoint included,0.9904880997699157,False
+a078c19ccb0a2c0e04e2,UTD SO101,right wrist role,endpoint included,0.9739950621101046,False
+a078c19ccb0a2c0e04e2,UTD SO101,left wrist role,endpoint included,0.9813849232187464,False
+a078c19ccb0a2c0e04e2,UTD SO101,agent,endpoint excluded,0.9999787850719059,False
+a078c19ccb0a2c0e04e2,UTD SO101,right wrist role,endpoint excluded,0.982345167399173,False
+a078c19ccb0a2c0e04e2,UTD SO101,left wrist role,endpoint excluded,0.9821433076731925,False
+3a6df3b456ed9a18fab4,UTD SO101,agent,endpoint included,0.9508255209668952,False
+3a6df3b456ed9a18fab4,UTD SO101,right wrist role,endpoint included,0.9661562614684509,False
+3a6df3b456ed9a18fab4,UTD SO101,left wrist role,endpoint included,0.9714918359508459,False
+3a6df3b456ed9a18fab4,UTD SO101,agent,endpoint excluded,0.968787047707391,False
+3a6df3b456ed9a18fab4,UTD SO101,right wrist role,endpoint excluded,0.9749406733701056,False
+3a6df3b456ed9a18fab4,UTD SO101,left wrist role,endpoint excluded,0.9787540988178813,False
+410f46b61ad6d367eb3b,UTD SO101,agent,endpoint included,0.7938618036500518,False
+410f46b61ad6d367eb3b,UTD SO101,right wrist role,endpoint included,0.9440510625769365,False
+410f46b61ad6d367eb3b,UTD SO101,left wrist role,endpoint included,0.9755255990781717,False
+410f46b61ad6d367eb3b,UTD SO101,agent,endpoint excluded,0.5822409855920201,False
+410f46b61ad6d367eb3b,UTD SO101,right wrist role,endpoint excluded,0.880929217451639,False
+410f46b61ad6d367eb3b,UTD SO101,left wrist role,endpoint excluded,0.9513985077162037,False
+77af4507559b19303094,UTD SO101,agent,endpoint included,0.9657015099303563,False
+77af4507559b19303094,UTD SO101,right wrist role,endpoint included,0.9571225195337132,False
+77af4507559b19303094,UTD SO101,left wrist role,endpoint included,0.914063267275315,False
+77af4507559b19303094,UTD SO101,agent,endpoint excluded,0.9616348159461905,False
+77af4507559b19303094,UTD SO101,right wrist role,endpoint excluded,0.9187071908200296,False
+77af4507559b19303094,UTD SO101,left wrist role,endpoint excluded,0.8515964676912493,False
+e5540d6ab7ba21c44ed6,UTD SO101,agent,endpoint included,0.962016137809512,False
+e5540d6ab7ba21c44ed6,UTD SO101,right wrist role,endpoint included,0.9156348702646786,False
+e5540d6ab7ba21c44ed6,UTD SO101,left wrist role,endpoint included,0.9178218278549735,False
+e5540d6ab7ba21c44ed6,UTD SO101,agent,endpoint excluded,0.9828774766473334,False
+e5540d6ab7ba21c44ed6,UTD SO101,right wrist role,endpoint excluded,0.9054903317583479,False
+e5540d6ab7ba21c44ed6,UTD SO101,left wrist role,endpoint excluded,0.9327716479868875,False
+4411a2fb8c2c5424465c,UTD SO101,agent,endpoint included,0.9298331490929161,False
+4411a2fb8c2c5424465c,UTD SO101,right wrist role,endpoint included,0.9106644381740887,False
+4411a2fb8c2c5424465c,UTD SO101,left wrist role,endpoint included,0.9629790298891481,False
+4411a2fb8c2c5424465c,UTD SO101,agent,endpoint excluded,0.8723083797462011,False
+4411a2fb8c2c5424465c,UTD SO101,right wrist role,endpoint excluded,0.8292454149706541,False
+4411a2fb8c2c5424465c,UTD SO101,left wrist role,endpoint excluded,0.9484863038738471,False

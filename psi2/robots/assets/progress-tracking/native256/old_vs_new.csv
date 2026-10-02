@@ -1,0 +1,241 @@
+branch_percent,arm_condition,method,metric,old_render,approved_render,change
+50,original,DINOv2,auroc,1.0,1.0,0.0
+50,original,DINOv2,balanced_accuracy,1.0,1.0,0.0
+50,original,DINOv2,recall_success,1.0,1.0,0.0
+50,original,DINOv2,recall_incomplete,1.0,1.0,0.0
+50,original,DT,auroc,1.0,1.0,0.0
+50,original,DT,balanced_accuracy,1.0,0.9375,-0.0625
+50,original,DT,recall_success,1.0,1.0,0.0
+50,original,DT,recall_incomplete,1.0,0.875,-0.125
+50,original,Elapsed time,auroc,0.5,0.5,0.0
+50,original,Elapsed time,balanced_accuracy,0.5,0.5,0.0
+50,original,Elapsed time,recall_success,0.0,0.0,0.0
+50,original,Elapsed time,recall_incomplete,1.0,1.0,0.0
+50,original,S1,auroc,1.0,1.0,0.0
+50,original,S1,balanced_accuracy,1.0,1.0,0.0
+50,original,S1,recall_success,1.0,1.0,0.0
+50,original,S1,recall_incomplete,1.0,1.0,0.0
+50,original,S3,auroc,1.0,1.0,0.0
+50,original,S3,balanced_accuracy,1.0,1.0,0.0
+50,original,S3,recall_success,1.0,1.0,0.0
+50,original,S3,recall_incomplete,1.0,1.0,0.0
+50,original,S5,auroc,1.0,1.0,0.0
+50,original,S5,balanced_accuracy,1.0,1.0,0.0
+50,original,S5,recall_success,1.0,1.0,0.0
+50,original,S5,recall_incomplete,1.0,1.0,0.0
+50,original,DT + S1,auroc,1.0,1.0,0.0
+50,original,DT + S1,balanced_accuracy,1.0,1.0,0.0
+50,original,DT + S1,recall_success,1.0,1.0,0.0
+50,original,DT + S1,recall_incomplete,1.0,1.0,0.0
+50,original,DT + S3,auroc,1.0,1.0,0.0
+50,original,DT + S3,balanced_accuracy,1.0,1.0,0.0
+50,original,DT + S3,recall_success,1.0,1.0,0.0
+50,original,DT + S3,recall_incomplete,1.0,1.0,0.0
+50,original,DT + S5,auroc,1.0,1.0,0.0
+50,original,DT + S5,balanced_accuracy,1.0,1.0,0.0
+50,original,DT + S5,recall_success,1.0,1.0,0.0
+50,original,DT + S5,recall_incomplete,1.0,1.0,0.0
+50,original,Always successful,auroc,0.5,0.5,0.0
+50,original,Always successful,balanced_accuracy,0.5,0.5,0.0
+50,original,Always successful,recall_success,1.0,1.0,0.0
+50,original,Always successful,recall_incomplete,0.0,0.0,0.0
+50,parked,DINOv2,auroc,1.0,1.0,0.0
+50,parked,DINOv2,balanced_accuracy,0.5,0.5,0.0
+50,parked,DINOv2,recall_success,1.0,1.0,0.0
+50,parked,DINOv2,recall_incomplete,0.0,0.0,0.0
+50,parked,DT,auroc,1.0,1.0,0.0
+50,parked,DT,balanced_accuracy,0.5625,0.5,-0.0625
+50,parked,DT,recall_success,1.0,1.0,0.0
+50,parked,DT,recall_incomplete,0.125,0.0,-0.125
+50,parked,Elapsed time,auroc,0.5,0.5,0.0
+50,parked,Elapsed time,balanced_accuracy,0.5,0.5,0.0
+50,parked,Elapsed time,recall_success,0.75,0.75,0.0
+50,parked,Elapsed time,recall_incomplete,0.25,0.25,0.0
+50,parked,S1,auroc,0.90625,0.96875,0.0625
+50,parked,S1,balanced_accuracy,0.5,0.5,0.0
+50,parked,S1,recall_success,1.0,1.0,0.0
+50,parked,S1,recall_incomplete,0.0,0.0,0.0
+50,parked,S3,auroc,0.9375,0.96875,0.03125
+50,parked,S3,balanced_accuracy,0.5,0.5,0.0
+50,parked,S3,recall_success,1.0,1.0,0.0
+50,parked,S3,recall_incomplete,0.0,0.0,0.0
+50,parked,S5,auroc,0.9375,1.0,0.0625
+50,parked,S5,balanced_accuracy,0.5,0.5,0.0
+50,parked,S5,recall_success,1.0,1.0,0.0
+50,parked,S5,recall_incomplete,0.0,0.0,0.0
+50,parked,DT + S1,auroc,1.0,1.0,0.0
+50,parked,DT + S1,balanced_accuracy,0.5,0.5,0.0
+50,parked,DT + S1,recall_success,1.0,1.0,0.0
+50,parked,DT + S1,recall_incomplete,0.0,0.0,0.0
+50,parked,DT + S3,auroc,1.0,1.0,0.0
+50,parked,DT + S3,balanced_accuracy,0.5,0.5,0.0
+50,parked,DT + S3,recall_success,1.0,1.0,0.0
+50,parked,DT + S3,recall_incomplete,0.0,0.0,0.0
+50,parked,DT + S5,auroc,1.0,1.0,0.0
+50,parked,DT + S5,balanced_accuracy,0.5,0.5,0.0
+50,parked,DT + S5,recall_success,1.0,1.0,0.0
+50,parked,DT + S5,recall_incomplete,0.0,0.0,0.0
+50,parked,Always successful,auroc,0.5,0.5,0.0
+50,parked,Always successful,balanced_accuracy,0.5,0.5,0.0
+50,parked,Always successful,recall_success,1.0,1.0,0.0
+50,parked,Always successful,recall_incomplete,0.0,0.0,0.0
+70,original,DINOv2,auroc,0.9714285714285714,1.0,0.02857142857142858
+70,original,DINOv2,balanced_accuracy,0.9,0.9,0.0
+70,original,DINOv2,recall_success,0.8,0.8,0.0
+70,original,DINOv2,recall_incomplete,1.0,1.0,0.0
+70,original,DT,auroc,0.8,0.9714285714285714,0.17142857142857137
+70,original,DT,balanced_accuracy,0.9,0.9285714285714286,0.02857142857142858
+70,original,DT,recall_success,0.8,1.0,0.19999999999999996
+70,original,DT,recall_incomplete,1.0,0.8571428571428571,-0.1428571428571429
+70,original,Elapsed time,auroc,0.37142857142857144,0.37142857142857144,0.0
+70,original,Elapsed time,balanced_accuracy,0.5,0.5,0.0
+70,original,Elapsed time,recall_success,0.0,0.0,0.0
+70,original,Elapsed time,recall_incomplete,1.0,1.0,0.0
+70,original,S1,auroc,0.9714285714285714,0.9714285714285714,0.0
+70,original,S1,balanced_accuracy,0.9,0.9,0.0
+70,original,S1,recall_success,0.8,0.8,0.0
+70,original,S1,recall_incomplete,1.0,1.0,0.0
+70,original,S3,auroc,0.9714285714285714,0.9714285714285714,0.0
+70,original,S3,balanced_accuracy,0.9,0.9,0.0
+70,original,S3,recall_success,0.8,0.8,0.0
+70,original,S3,recall_incomplete,1.0,1.0,0.0
+70,original,S5,auroc,0.9714285714285714,0.9428571428571428,-0.02857142857142858
+70,original,S5,balanced_accuracy,0.9,0.9,0.0
+70,original,S5,recall_success,0.8,0.8,0.0
+70,original,S5,recall_incomplete,1.0,1.0,0.0
+70,original,DT + S1,auroc,0.8,1.0,0.19999999999999996
+70,original,DT + S1,balanced_accuracy,0.9,0.9,0.0
+70,original,DT + S1,recall_success,0.8,0.8,0.0
+70,original,DT + S1,recall_incomplete,1.0,1.0,0.0
+70,original,DT + S3,auroc,0.8,1.0,0.19999999999999996
+70,original,DT + S3,balanced_accuracy,0.9,0.9,0.0
+70,original,DT + S3,recall_success,0.8,0.8,0.0
+70,original,DT + S3,recall_incomplete,1.0,1.0,0.0
+70,original,DT + S5,auroc,0.8,0.9714285714285714,0.17142857142857137
+70,original,DT + S5,balanced_accuracy,0.9,0.9,0.0
+70,original,DT + S5,recall_success,0.8,0.8,0.0
+70,original,DT + S5,recall_incomplete,1.0,1.0,0.0
+70,original,Always successful,auroc,0.5,0.5,0.0
+70,original,Always successful,balanced_accuracy,0.5,0.5,0.0
+70,original,Always successful,recall_success,1.0,1.0,0.0
+70,original,Always successful,recall_incomplete,0.0,0.0,0.0
+70,parked,DINOv2,auroc,0.9166666666666666,0.9444444444444444,0.02777777777777779
+70,parked,DINOv2,balanced_accuracy,0.5,0.5,0.0
+70,parked,DINOv2,recall_success,1.0,1.0,0.0
+70,parked,DINOv2,recall_incomplete,0.0,0.0,0.0
+70,parked,DT,auroc,0.6111111111111112,0.6111111111111112,0.0
+70,parked,DT,balanced_accuracy,0.5,0.5,0.0
+70,parked,DT,recall_success,1.0,1.0,0.0
+70,parked,DT,recall_incomplete,0.0,0.0,0.0
+70,parked,Elapsed time,auroc,0.4166666666666667,0.4166666666666667,0.0
+70,parked,Elapsed time,balanced_accuracy,0.41666666666666663,0.41666666666666663,0.0
+70,parked,Elapsed time,recall_success,0.6666666666666666,0.6666666666666666,0.0
+70,parked,Elapsed time,recall_incomplete,0.16666666666666666,0.16666666666666666,0.0
+70,parked,S1,auroc,0.9722222222222222,1.0,0.02777777777777779
+70,parked,S1,balanced_accuracy,0.5,0.5,0.0
+70,parked,S1,recall_success,1.0,1.0,0.0
+70,parked,S1,recall_incomplete,0.0,0.0,0.0
+70,parked,S3,auroc,0.9722222222222222,0.9722222222222222,0.0
+70,parked,S3,balanced_accuracy,0.5,0.5,0.0
+70,parked,S3,recall_success,1.0,1.0,0.0
+70,parked,S3,recall_incomplete,0.0,0.0,0.0
+70,parked,S5,auroc,0.9722222222222222,1.0,0.02777777777777779
+70,parked,S5,balanced_accuracy,0.5,0.5,0.0
+70,parked,S5,recall_success,1.0,1.0,0.0
+70,parked,S5,recall_incomplete,0.0,0.0,0.0
+70,parked,DT + S1,auroc,0.8888888888888888,0.8611111111111112,-0.02777777777777768
+70,parked,DT + S1,balanced_accuracy,0.5,0.5,0.0
+70,parked,DT + S1,recall_success,1.0,1.0,0.0
+70,parked,DT + S1,recall_incomplete,0.0,0.0,0.0
+70,parked,DT + S3,auroc,0.8888888888888888,0.8611111111111112,-0.02777777777777768
+70,parked,DT + S3,balanced_accuracy,0.5,0.5,0.0
+70,parked,DT + S3,recall_success,1.0,1.0,0.0
+70,parked,DT + S3,recall_incomplete,0.0,0.0,0.0
+70,parked,DT + S5,auroc,0.8888888888888888,0.8611111111111112,-0.02777777777777768
+70,parked,DT + S5,balanced_accuracy,0.5,0.5,0.0
+70,parked,DT + S5,recall_success,1.0,1.0,0.0
+70,parked,DT + S5,recall_incomplete,0.0,0.0,0.0
+70,parked,Always successful,auroc,0.5,0.5,0.0
+70,parked,Always successful,balanced_accuracy,0.5,0.5,0.0
+70,parked,Always successful,recall_success,1.0,1.0,0.0
+70,parked,Always successful,recall_incomplete,0.0,0.0,0.0
+90,original,DINOv2,auroc,,,
+90,original,DINOv2,balanced_accuracy,,,
+90,original,DINOv2,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,DINOv2,recall_incomplete,,,
+90,original,DT,auroc,,,
+90,original,DT,balanced_accuracy,,,
+90,original,DT,recall_success,0.3333333333333333,0.9166666666666666,0.5833333333333333
+90,original,DT,recall_incomplete,,,
+90,original,Elapsed time,auroc,,,
+90,original,Elapsed time,balanced_accuracy,,,
+90,original,Elapsed time,recall_success,0.0,0.0,0.0
+90,original,Elapsed time,recall_incomplete,,,
+90,original,S1,auroc,,,
+90,original,S1,balanced_accuracy,,,
+90,original,S1,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,S1,recall_incomplete,,,
+90,original,S3,auroc,,,
+90,original,S3,balanced_accuracy,,,
+90,original,S3,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,S3,recall_incomplete,,,
+90,original,S5,auroc,,,
+90,original,S5,balanced_accuracy,,,
+90,original,S5,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,S5,recall_incomplete,,,
+90,original,DT + S1,auroc,,,
+90,original,DT + S1,balanced_accuracy,,,
+90,original,DT + S1,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,DT + S1,recall_incomplete,,,
+90,original,DT + S3,auroc,,,
+90,original,DT + S3,balanced_accuracy,,,
+90,original,DT + S3,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,DT + S3,recall_incomplete,,,
+90,original,DT + S5,auroc,,,
+90,original,DT + S5,balanced_accuracy,,,
+90,original,DT + S5,recall_success,0.3333333333333333,0.3333333333333333,0.0
+90,original,DT + S5,recall_incomplete,,,
+90,original,Always successful,auroc,,,
+90,original,Always successful,balanced_accuracy,,,
+90,original,Always successful,recall_success,1.0,1.0,0.0
+90,original,Always successful,recall_incomplete,,,
+90,parked,DINOv2,auroc,,,
+90,parked,DINOv2,balanced_accuracy,,,
+90,parked,DINOv2,recall_success,1.0,1.0,0.0
+90,parked,DINOv2,recall_incomplete,,,
+90,parked,DT,auroc,,,
+90,parked,DT,balanced_accuracy,,,
+90,parked,DT,recall_success,1.0,1.0,0.0
+90,parked,DT,recall_incomplete,,,
+90,parked,Elapsed time,auroc,,,
+90,parked,Elapsed time,balanced_accuracy,,,
+90,parked,Elapsed time,recall_success,0.75,0.75,0.0
+90,parked,Elapsed time,recall_incomplete,,,
+90,parked,S1,auroc,,,
+90,parked,S1,balanced_accuracy,,,
+90,parked,S1,recall_success,1.0,1.0,0.0
+90,parked,S1,recall_incomplete,,,
+90,parked,S3,auroc,,,
+90,parked,S3,balanced_accuracy,,,
+90,parked,S3,recall_success,1.0,1.0,0.0
+90,parked,S3,recall_incomplete,,,
+90,parked,S5,auroc,,,
+90,parked,S5,balanced_accuracy,,,
+90,parked,S5,recall_success,1.0,1.0,0.0
+90,parked,S5,recall_incomplete,,,
+90,parked,DT + S1,auroc,,,
+90,parked,DT + S1,balanced_accuracy,,,
+90,parked,DT + S1,recall_success,1.0,1.0,0.0
+90,parked,DT + S1,recall_incomplete,,,
+90,parked,DT + S3,auroc,,,
+90,parked,DT + S3,balanced_accuracy,,,
+90,parked,DT + S3,recall_success,1.0,1.0,0.0
+90,parked,DT + S3,recall_incomplete,,,
+90,parked,DT + S5,auroc,,,
+90,parked,DT + S5,balanced_accuracy,,,
+90,parked,DT + S5,recall_success,1.0,1.0,0.0
+90,parked,DT + S5,recall_incomplete,,,
+90,parked,Always successful,auroc,,,
+90,parked,Always successful,balanced_accuracy,,,
+90,parked,Always successful,recall_success,1.0,1.0,0.0
+90,parked,Always successful,recall_incomplete,,,

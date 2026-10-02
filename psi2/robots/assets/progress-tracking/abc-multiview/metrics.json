@@ -1,0 +1,118 @@
+{
+  "selected_temperatures": {
+    "rgb": 1.0,
+    "rgb+rgblh": 1.0
+  },
+  "selection": "Maximize pooled terminal development AUROC; ties prefer the temperature closest to 1. Select separately for rgb and rgb+rgblh. Freeze before reporting test AUROC.",
+  "test_samples": 72,
+  "test_sources": 4,
+  "dev_samples": 36,
+  "dev_sources": 2,
+  "successes": 43,
+  "incomplete": 29,
+  "auroc": {
+    "PSI DT": 0.8989574979951884,
+    "DINOv2": 0.8740978348035284,
+    "Robometer success": 0.7085004009623096,
+    "Robometer progress": 0.5838011226944667
+  },
+  "temperature_sweep": [
+    {
+      "temperature": 0.0,
+      "rgb dev": 0.849025974025974,
+      "rgb test": 0.8584603047313553,
+      "rgb+rgblh dev": 0.8717532467532467,
+      "rgb+rgblh test": 0.871692060946271
+    },
+    {
+      "temperature": 0.3,
+      "rgb dev": 0.8668831168831169,
+      "rgb test": 0.8917401764234162,
+      "rgb+rgblh dev": 0.8766233766233766,
+      "rgb+rgblh test": 0.8869286287089013
+    },
+    {
+      "temperature": 0.5,
+      "rgb dev": 0.8798701298701299,
+      "rgb test": 0.8973536487570168,
+      "rgb+rgblh dev": 0.8831168831168831,
+      "rgb+rgblh test": 0.8877305533279871
+    },
+    {
+      "temperature": 0.7,
+      "rgb dev": 0.8798701298701299,
+      "rgb test": 0.9061748195669607,
+      "rgb+rgblh dev": 0.8863636363636364,
+      "rgb+rgblh test": 0.8933440256615878
+    },
+    {
+      "temperature": 1.0,
+      "rgb dev": 0.8961038961038961,
+      "rgb test": 0.9246190858059342,
+      "rgb+rgblh dev": 0.8993506493506493,
+      "rgb+rgblh test": 0.8989574979951884
+    }
+  ],
+  "conditions": [
+    {
+      "branch_percent": 50,
+      "arm_condition": "original",
+      "successes": 4,
+      "incomplete": 8,
+      "PSI DT": 1.0,
+      "DINOv2": 1.0,
+      "Robometer success": 0.40625,
+      "Robometer progress": 0.21875
+    },
+    {
+      "branch_percent": 50,
+      "arm_condition": "parked",
+      "successes": 4,
+      "incomplete": 8,
+      "PSI DT": 1.0,
+      "DINOv2": 1.0,
+      "Robometer success": 0.8125,
+      "Robometer progress": 0.8125
+    },
+    {
+      "branch_percent": 70,
+      "arm_condition": "original",
+      "successes": 5,
+      "incomplete": 7,
+      "PSI DT": 0.8285714285714286,
+      "DINOv2": 1.0,
+      "Robometer success": 0.8285714285714286,
+      "Robometer progress": 0.5428571428571428
+    },
+    {
+      "branch_percent": 70,
+      "arm_condition": "parked",
+      "successes": 6,
+      "incomplete": 6,
+      "PSI DT": 0.8333333333333334,
+      "DINOv2": 0.9444444444444444,
+      "Robometer success": 0.7222222222222222,
+      "Robometer progress": 0.6388888888888888
+    },
+    {
+      "branch_percent": 90,
+      "arm_condition": "original",
+      "successes": 12,
+      "incomplete": 0,
+      "PSI DT": null,
+      "DINOv2": null,
+      "Robometer success": null,
+      "Robometer progress": null
+    },
+    {
+      "branch_percent": 90,
+      "arm_condition": "parked",
+      "successes": 12,
+      "incomplete": 0,
+      "PSI DT": null,
+      "DINOv2": null,
+      "Robometer success": null,
+      "Robometer progress": null
+    }
+  ]
+}

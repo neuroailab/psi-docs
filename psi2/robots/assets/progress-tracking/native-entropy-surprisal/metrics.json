@@ -1,0 +1,158 @@
+{
+  "S1 native": {
+    "endpoint included": {
+      "mean": 0.7871152043726447,
+      "by_dataset": {
+        "USC Trossen": 0.7973847668880908,
+        "MIT Franka": 0.7630119960057054,
+        "UTD SO101": 0.7960380425779634,
+        "USC xArm": 0.7984015760112392,
+        "USC Franka": 0.7810845742352474,
+        "USC Koch": 0.7867702705176218
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.6178715673057059,
+      "by_dataset": {
+        "USC Trossen": 0.8984863607322264,
+        "MIT Franka": 0.12776601453208347,
+        "UTD SO101": 0.8984383527982311,
+        "USC xArm": 0.7020016908716463,
+        "USC Franka": 0.593771243439137,
+        "USC Koch": 0.48676574146091084
+      },
+      "undefined_as_zero": 0
+    }
+  },
+  "S3 native": {
+    "endpoint included": {
+      "mean": 0.7994346127706319,
+      "by_dataset": {
+        "USC Trossen": 0.8082769135065226,
+        "MIT Franka": 0.7625141565990505,
+        "UTD SO101": 0.8074349670735005,
+        "USC xArm": 0.8177174723893306,
+        "USC Franka": 0.8052027158322014,
+        "USC Koch": 0.795461451223186
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.6502249720950309,
+      "by_dataset": {
+        "USC Trossen": 0.905334532181628,
+        "MIT Franka": 0.06676327265816537,
+        "UTD SO101": 0.9181186196872355,
+        "USC xArm": 0.7471066059642012,
+        "USC Franka": 0.7348338288155336,
+        "USC Koch": 0.5291929732634225
+      },
+      "undefined_as_zero": 0
+    }
+  },
+  "S5 native": {
+    "endpoint included": {
+      "mean": 0.8017811103615454,
+      "by_dataset": {
+        "USC Trossen": 0.8129450196847343,
+        "MIT Franka": 0.7632618751595535,
+        "UTD SO101": 0.8043453783487504,
+        "USC xArm": 0.8220115732531884,
+        "USC Franka": 0.8099889718725644,
+        "USC Koch": 0.7981338438504815
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.678585711764455,
+      "by_dataset": {
+        "USC Trossen": 0.9136884321227768,
+        "MIT Franka": 0.2555315627513819,
+        "UTD SO101": 0.8382466576885237,
+        "USC xArm": 0.7669284976669903,
+        "USC Franka": 0.711404628477617,
+        "USC Koch": 0.5857144918794407
+      },
+      "undefined_as_zero": 0
+    }
+  },
+  "H1 native": {
+    "endpoint included": {
+      "mean": 0.7941735468191422,
+      "by_dataset": {
+        "USC Trossen": 0.8016734950816378,
+        "MIT Franka": 0.7626998969215217,
+        "UTD SO101": 0.7978073030189115,
+        "USC xArm": 0.8035372371494408,
+        "USC Franka": 0.7983169540509583,
+        "USC Koch": 0.801006394692383
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.6779493925714745,
+      "by_dataset": {
+        "USC Trossen": 0.9071470675165312,
+        "MIT Franka": 0.1561301958509314,
+        "UTD SO101": 0.9114619590737958,
+        "USC xArm": 0.7452183285365689,
+        "USC Franka": 0.6792771585570834,
+        "USC Koch": 0.6684616458939368
+      },
+      "undefined_as_zero": 0
+    }
+  },
+  "H3 native": {
+    "endpoint included": {
+      "mean": 0.7999730516893561,
+      "by_dataset": {
+        "USC Trossen": 0.8083304003861331,
+        "MIT Franka": 0.7623381738648924,
+        "UTD SO101": 0.7981680502537227,
+        "USC xArm": 0.8209377877504369,
+        "USC Franka": 0.8054187331309188,
+        "USC Koch": 0.8046451647500321
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.6741710489852585,
+      "by_dataset": {
+        "USC Trossen": 0.9054216957875691,
+        "MIT Franka": 0.10619276461265185,
+        "UTD SO101": 0.8575786624310764,
+        "USC xArm": 0.778982062123595,
+        "USC Franka": 0.7179251388712329,
+        "USC Koch": 0.6789259700854261
+      },
+      "undefined_as_zero": 0
+    }
+  },
+  "H5 native": {
+    "endpoint included": {
+      "mean": 0.7990289954269629,
+      "by_dataset": {
+        "USC Trossen": 0.8131624706002448,
+        "MIT Franka": 0.764604640546297,
+        "UTD SO101": 0.7908246834272136,
+        "USC xArm": 0.817563139614343,
+        "USC Franka": 0.8022163300314498,
+        "USC Koch": 0.8058027083422296
+      },
+      "undefined_as_zero": 0
+    },
+    "endpoint excluded": {
+      "mean": 0.6742137182830987,
+      "by_dataset": {
+        "USC Trossen": 0.9166932752177172,
+        "MIT Franka": 0.30183345829666286,
+        "UTD SO101": 0.7673718248158827,
+        "USC xArm": 0.7395051198330904,
+        "USC Franka": 0.6493014043684332,
+        "USC Koch": 0.6705772271668063
+      },
+      "undefined_as_zero": 0
+    }
+  }
+}

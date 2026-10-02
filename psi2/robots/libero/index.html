@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="../site-runtime.js" data-static="true"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PSI2 Robot World Model — LIBERO-90 sim eval</title>
+<style>
+  :root { --bg:#fff; --fg:#111; --mut:#666; --line:#e5e5e5; --good:#2e7d32; --warn:#f57c00; --bad:#c62828; --acc:#1565c0; }
+  html,body { margin:0; padding:0; background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; line-height:1.55; }
+  main { max-width:1220px; margin:0 auto; padding:24px 28px 60px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:26px; }
+  header h1 { margin:0 0 4px 0; font-size:22px; font-weight:700; }
+  header .sub { color:var(--mut); font-size:13px; }
+  h2.sec { font-size:17px; margin:36px 0 12px 0; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  h2.sec .n { color:var(--acc); margin-right:6px; font-weight:600; }
+  .tiles { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:8px 0 4px; }
+  .tile { position:relative; background:#fafafa; border:1px solid var(--line); border-radius:6px; padding:12px 14px 12px 18px; }
+  .tile .stripe { position:absolute; left:0; top:6px; bottom:6px; width:5px; border-radius:2px; }
+  .bg-good{background:var(--good)} .bg-warn{background:var(--warn)} .bg-acc{background:var(--acc)} .bg-bad{background:var(--bad)}
+  .tile .lab { font-size:11.5px; color:var(--mut); text-transform:uppercase; letter-spacing:0.05em; }
+  .tile .big { font-size:26px; font-weight:700; margin:2px 0; }
+  .tile .cap { font-size:11px; color:var(--mut); line-height:1.4; }
+  .s-good{color:var(--good)} .s-warn{color:var(--warn)} .s-acc{color:var(--acc)} .s-bad{color:var(--bad)}
+  .chart { background:#fafafa; border:1px solid var(--line); border-radius:8px; padding:14px 16px; }
+  .chart .title { font-weight:600; margin-bottom:4px; }
+  .chart .note { color:var(--mut); font-size:12.5px; margin:6px 0 10px 0; line-height:1.5; }
+  .plot { max-width:100%; height:auto; border:1px solid var(--line); background:#fff; border-radius:4px; }
+  select { border:1px solid var(--line); border-radius:4px; background:#fff; }
+  .twrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:12.5px; }
+  th, td { border-bottom:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:#f3f3f3; }
+  td.res { font-variant-numeric:tabular-nums; }
+  code, .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; }
+  .pill { display:inline-block; padding:1px 7px; font-size:11px; border-radius:10px; background:#eef4ff; color:#1565c0; border:1px solid #cfe0ff; }
+  .pill.warn { background:#fff2e5; color:#e65100; border-color:#ffcc99; }
+  h2.sec { scroll-margin-top:20px; }
+  a.anchor { color:#bbb; text-decoration:none; font-weight:400; margin-left:8px; font-size:0.75em; opacity:0.4; transition:opacity 0.15s; }
+  h2.sec:hover a.anchor, h2.sec:hover button.copylink { opacity:1; }
+  a.anchor:hover { color:var(--acc); }
+  button.copylink { font-size:0.7em; font-weight:400; margin-left:6px; padding:2px 8px; border:1px solid var(--line); border-radius:4px; background:#fafafa; color:#555; cursor:pointer; opacity:0.4; transition:opacity 0.15s, background 0.15s; vertical-align:middle; }
+  button.copylink:hover { background:#eef4ff; color:var(--acc); border-color:#cfe0ff; }
+  button.copylink.copied { background:#e6f4ea; color:var(--good); border-color:#b7dfb9; opacity:1; }
+  /* LIBERO_FOCUSED_VIEW_BEGIN
+     Temporarily show only the two benchmark sections. Keep all other markup,
+     figures, IDs and publisher markers intact so this can be reversed. */
+  .tiles,
+  h2.sec:not(#sim-500stem):not(#four-suite),
+  h2.sec:not(#sim-500stem):not(#four-suite) + .chart { display:none !important; }
+  /* LIBERO_FOCUSED_VIEW_END */
+</style>
+</head>
+<body>
+<main>
+
+  <p><a href="../studies/generalizability/" style="color:#186b62;text-decoration:none">← Generalizability</a> <span id="libero-sync" style="float:right;color:#65747e;font-size:12px">Checking for updates…</span></p>
+  <header>
+    <h1>PSI2 Robot World Model — LIBERO-90 sim eval</h1>
+    <div class="sub">Live cross-model episode success on the 500-stem manifest (400 IND across 80 seen tasks + 100 OOD across 10 held-out tasks). Auto-refreshed by the 15-min update cron.</div>
+  </header>
+
+  <div class="tiles">
+    <!-- LIVE_TILE_IND_BEGIN -->
+      <div class="tile">
+        <span class="stripe bg-good"></span>
+        <div class="lab">Best IND per-task ± SEM (500-stem)</div>
+        <div class="big s-good">78.2%</div>
+        <div class="cap">randomik808 RGB 824k, T=0.3, 600 ms cadence — per-task mean ± 2.8%, 313/400 raw episodes.</div>
+      </div>
+      <!-- LIVE_TILE_IND_END -->
+    <!-- LIVE_TILE_OOD_BEGIN -->
+      <div class="tile">
+        <span class="stripe bg-warn"></span>
+        <div class="lab">Best OOD per-task ± SEM (500-stem)</div>
+        <div class="big s-warn">43.0%</div>
+        <div class="cap">FDstitched 808 → 816k, T=0.3, 600 ms cadence — per-task mean ± 9.2%, 43/100 raw episodes.</div>
+      </div>
+      <!-- LIVE_TILE_OOD_END -->
+  </div>
+
+  <h2 id="sim-500stem" class="sec"><span class="n">▸</span> LIBERO sim success — 500-stem eval (per-task mean ± SEM) <a class="anchor" href="#sim-500stem">#</a> <button class="copylink" onclick="copyLink('sim-500stem', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Per-task episode success rate on the 500-stem sim eval (400 IND × 80 tasks + 100 OOD × 10 held-out tasks) at 600 ms replan</div>
+    <div class="note">
+      Bar = per-task success rate averaged across all tasks with rollouts in this sweep;
+      error bar = standard error of that mean across tasks (not per-episode Bernoulli).
+      Current bars (13 sweeps, all T=0.3 serial): plus20k goalseq (807 / 820 / 824),
+      statecond (816 / 828), FDstitched 808 (<b>816 / 824 / 830 / 840</b>), and its
+      RGB-only twin from the same randomik808 base at 4 checkpoints
+      (<b>816 / 824 / 830 / 840k</b>). RGB peaks at IND 78% / OOD 32% at 824k
+      then plateaus; FD peaks OOD 43% at 816k with a ~66% IND floor across
+      816/824/830/840. Extending training past 830k gives no further IND gain
+      for either family and slightly regresses on OOD for RGB (40→33 pp
+      830→840). FDstitched's OOD advantage over its RGB twin shrinks with
+      training: +13pp at 816k, +7.5pp at 824k, ~tied at 830k/840k.
+      sqrt-reweight sweeps excluded.
+    </div>
+    <p><img class="plot" src="../sim_bars_500stem.png" alt="LIBERO 500-stem success rate bar plot at 600 ms cadence" /></p>
+  </div>
+
+  <h2 id="dt-mv-capacity" class="sec"><span class="n">▸</span> DT vs action-prediction capacity — MVDT training-mixture study (Aug 2026) <a class="anchor" href="#dt-mv-capacity">#</a> <button class="copylink" onclick="copyLink('dt-mv-capacity', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">What happens when the same 8B model has to jointly predict a distance-to-goal (dt) token AND actions? The dt head is useful; the action head loses bandwidth.</div>
+    <div class="note">
+      <b>Setup.</b> Two action-notation families both trained from the same
+      799k base. <b>MV</b> = <code>rgb{N},rgblh{N},rgb0,rgblh0→a0</code>: two
+      views, caller picks goal-frame index N. <b>MVDT</b> = trained jointly
+      on MV sequences plus <code>rgb0^g,rgblh0^g,rgb0,rgblh0→dt0</code> +
+      <code>...,dt0→a0</code> sequences where dt is a discrete
+      frames-to-goal bin. At inference "dt_predict_each" means: every 600 ms
+      re-plan, sample dt, convert <code>N = dt_bin // 5</code>, then decode a0
+      from MV notation.
+      <br><br>
+      <b>Hybrid finding (headline).</b> Loading MVDT_837k AND MV_820 on the
+      same GPU — MVDT samples dt, MV_820 decodes actions with that N — beats
+      <em>both</em> parents on <em>both</em> splits:
+      <table style="border-collapse:collapse; margin:8px 0; font-size:13px;">
+        <tr><th style="text-align:left; padding:2px 12px 2px 0;">recipe</th><th style="text-align:right; padding:2px 12px;">IND</th><th style="text-align:right; padding:2px 12px;">OOD</th></tr>
+        <tr><td style="padding:2px 12px 2px 0;">MV_820 alone (action-only, best mv_median_N7)</td><td style="text-align:right;">61.5%</td><td style="text-align:right;">21.0%</td></tr>
+        <tr><td style="padding:2px 12px 2px 0;">MVDT_837 alone (mv_median_N7 mode)</td><td style="text-align:right;">48.2%</td><td style="text-align:right;">6.0%</td></tr>
+        <tr><td style="padding:2px 12px 2px 0;"><b>HYBRID MVDT_837 dt + MV_820 action</b></td><td style="text-align:right;"><b>69.2%</b></td><td style="text-align:right;"><b>23.0%</b></td></tr>
+      </table>
+      +7.7 pp IND / +2.0 pp OOD over the strongest parent, +21 pp IND over
+      MVDT alone. MVDT's dt head is strictly useful — it lifts MV. But MVDT's
+      own action head is far weaker than MV_820's despite same architecture
+      and same base checkpoint.
+      <br><br>
+      <b>Training-mixture ablation — sim success, dt MAE, dt bias.</b> All models loaded from the same 799k base; each row is a distinct training mixture ± checkpoint. Solid bars = IND (400 stems), hatched bars = OOD (100 stems). Dotted verticals in the sim panel mark MV_820 IND (61.5%) and OOD (21.0%) — the action-only reference.
+      <p><img class="plot" src="../dt_mv_capacity.png" alt="Action-prediction capacity — 500-stem sim + per-chunk dt error, across all MVDT variants" /></p>
+      <b>What this tells us:</b>
+      <ol style="margin:6px 0 6px 20px;">
+        <li>The old ~50/50 recipe plateaued at ~47% IND and drifted dt bias monotonically upward (+0.12 s → +0.63 s from 818k → 860k) — extra training progressively wrecked dt calibration without lifting sim.</li>
+        <li>Shifting to 20/80 (dt02) or 10/90 (dt01_act09) recovers 5-20 pp IND depending on the mixture. dt01_act09_834k reaches <b>68.5% IND</b>, hitting the same ballpark as the hybrid (69.2%) with a single model.</li>
+        <li><b>dt02_dtonly is the surprise winner: 76.0% IND / 33.3% OOD.</b> Beats the hybrid IND (+6.8 pp) and OOD (+10 pp) despite being one model. Also beats old MVDT by +26 IND, +20 OOD. Best MVDT-family result to date.</li>
+        <li>The name "dtonly" is misleading — it does train on action sequences too; the labels reflect training-mode-config <em>ratios</em>, not literal exclusivity. The exact <code>mode_config</code> yaml diff hasn't been done yet and is the highest-signal next debug step.</li>
+        <li><b>Per-frame static dt eval (MVDT_860, 40 stems):</b> IND MAE 2.84 s with <b>+2.8 s bias at episode start</b> (gt≈1.6 s, pred≈6.8 s) — over-prediction on real training-domain video frames is ~2× worse than in sim rollouts. Sim visits a narrower state distribution than training and masks the drift.</li>
+      </ol>
+      <div style="font-size:11px; color:#777; margin-top:6px;">All dt errors are in <b>seconds</b> (converted from the raw psi2-frame bins that the model was trained on: 1 bin = 1 psi2-frame = 0.2 s).</div>
+      <b>Files:</b>
+      hybrid driver <code>evals/libero/inference/predict_reset_closed_loop_hybrid.py</code> (+ <code>_stitched.py</code> for RGB action head);
+      per-frame dt eval <code>evals/libero/inference/dt_static_frame_eval.py</code>;
+      full report <code>rwm_results/libero_sim/REPORT_dt_vs_action_capacity_2026_08_18.md</code>.
+    </div>
+  </div>
+
+  <h2 id="four-suite" class="sec"><span class="n">▸</span> LIBERO 4-suite — pi0-FAST benchmarks (Spatial / Object / Goal / libero_10) <a class="anchor" href="#four-suite">#</a> <button class="copylink" onclick="copyLink('four-suite', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Per-suite episode success rate on the 4 pi0-FAST LIBERO benchmarks (100 stems each) at 600 ms replan</div>
+    <div class="note">
+      Grouped bars: 4 suites × N model checkpoints. Bar color follows the same
+      family/step convention as the 500-stem chart above. Error bars are
+      per-stem Bernoulli SE (√p(1−p)/n). Only models with ≥95% coverage across
+      all 4 suites are shown. These 4 suites are the pi0-FAST evaluation set —
+      distinct from the LIBERO-90 train pool, so they're a stronger
+      generalization test than the OOD split of the 500-stem eval.
+      <br><br>
+      <b>Headline pattern:</b> FDstitched dominates 3 of 4 suites at 816k
+      (Spatial 34%, Goal 25%, libero_10 11%), while RGB 840k is strongest on
+      Object (38%). libero_10 (compositional multi-step tasks) is universally
+      hard for every model: no ckpt exceeds ~11%.
+    </div>
+    <p><img class="plot" src="../four_suite_bars.png" alt="LIBERO 4-suite per-suite success rate bar plot" /></p>
+  </div>
+
+  <h2 id="video-viewer" class="sec"><span class="n">▸</span> LIBERO 500-stem — episode video viewer <a class="anchor" href="#video-viewer">#</a> <button class="copylink" onclick="copyLink('video-viewer', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Watch success and failure rollouts across the 500-stem models</div>
+    <div class="note">
+      Pick a model, filter by success/failure and IND/OOD split, then click
+      an episode to play. Only fully-covered T=0.3 serial sweeps are listed
+      (same filter as the 500-stem bar plot above). Videos are 600 ms
+      cadence rollouts rendered inline by the sweep runner. If no videos
+      show up, the live server (serve.py) is not running — the Artifact
+      version does not have server-side file access.
+    </div>
+    <div id="ep-controls" style="display:flex; flex-wrap:wrap; gap:10px 16px; margin:10px 0 12px 0; align-items:center; font-size:13px;">
+      <span><b>Suite:</b> <select id="ep-suite" style="padding:3px 6px; font-size:13px;">
+        <option value="500stem" selected>500-stem</option>
+        <option value="spatial">4-suite: Spatial</option>
+        <option value="object">4-suite: Object</option>
+        <option value="goal">4-suite: Goal</option>
+        <option value="10">4-suite: libero_10</option>
+      </select></span>
+      <span><b>Model:</b> <select id="ep-model" style="padding:3px 6px; font-size:13px;"></select></span>
+      <span><b>Outcome:</b>
+        <label><input type="checkbox" id="ep-succ" checked> Success</label>
+        <label><input type="checkbox" id="ep-fail" checked> Failure</label>
+      </span>
+      <span><b>Split:</b> <select id="ep-split" style="padding:3px 6px; font-size:13px;">
+        <option value="all" selected>All (IND + OOD)</option>
+        <option value="IND">IND</option>
+        <option value="OOD">OOD</option>
+      </select></span>
+      <span><b>Filter stem:</b> <input type="text" id="ep-search" placeholder="task/verb…" style="padding:3px 6px; font-size:13px; width:200px;"></span>
+      <span id="ep-count" style="color:#666;"></span>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr; gap:14px; max-height:none;">
+      <div style="border:1px solid #ddd; border-radius:4px; max-height:340px; overflow-y:auto; background:#fafafa;">
+        <table id="ep-table" style="width:100%; border-collapse:collapse; font-size:12px;">
+          <thead style="position:sticky; top:0; background:#eee; z-index:1;">
+            <tr><th style="text-align:left;padding:5px 8px;">Outcome</th>
+                <th style="text-align:left;padding:5px 8px;">Split</th>
+                <th style="text-align:left;padding:5px 8px;">Stem</th></tr>
+          </thead>
+          <tbody id="ep-tbody"></tbody>
+        </table>
+      </div>
+      <div style="border:1px solid #ddd; border-radius:4px; padding:8px; background:#fff; min-height:280px;">
+        <div id="ep-playing" style="font-size:12px; color:#666; margin-bottom:6px;">Click an episode above to play.</div>
+        <video id="ep-video" controls preload="none" style="width:100%; max-height:540px; background:#000; display:none;"></video>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      // Do not load the episode index while its entire section is hidden.
+      if (getComputedStyle(document.getElementById('video-viewer')).display === 'none') return;
+      let INDEX = [];
+      const $ = id => document.getElementById(id);
+      async function load() {
+        try {
+          const r = await fetch(ROBOT_SITE.url('/api/video_index'));
+          INDEX = await r.json();
+        } catch (e) {
+          INDEX = [];
+        }
+        if (!INDEX.length) {
+          $('ep-model').innerHTML = '<option>no videos available (needs serve.py)</option>';
+          return;
+        }
+        populateModels();
+        render();
+      }
+      function populateModels() {
+        const suite = $('ep-suite').value;
+        const models = [...new Set(INDEX.filter(x => x.suite === suite).map(x => x.model))].sort();
+        const sel = $('ep-model'); sel.innerHTML = '';
+        if (!models.length) {
+          sel.innerHTML = '<option>no videos in this suite yet</option>';
+          return;
+        }
+        for (const m of models) {
+          const o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o);
+        }
+      }
+      function render() {
+        const suite = $('ep-suite').value;
+        const model = $('ep-model').value;
+        const succ = $('ep-succ').checked, fail = $('ep-fail').checked;
+        const splitSel = $('ep-split').value;
+        const q = $('ep-search').value.trim().toLowerCase();
+        const rows = INDEX.filter(x => x.suite === suite && x.model === model)
+          .filter(x => (x.success && succ) || (!x.success && fail))
+          .filter(x => splitSel === 'all' || x.split === splitSel)
+          .filter(x => !q || x.stem.toLowerCase().includes(q))
+          .sort((a,b) => a.stem.localeCompare(b.stem));
+        $('ep-count').textContent = `${rows.length} episodes`;
+        const tb = $('ep-tbody'); tb.innerHTML = '';
+        for (const r of rows) {
+          const tr = document.createElement('tr');
+          tr.style.cursor = 'pointer';
+          tr.onmouseover = () => tr.style.background = '#eef';
+          tr.onmouseout  = () => tr.style.background = '';
+          tr.onclick = () => play(r);
+          const badge = r.success
+            ? '<span style="color:#0a7;font-weight:600;">✓ SUCC</span>'
+            : '<span style="color:#c44;font-weight:600;">✗ FAIL</span>';
+          tr.innerHTML = `<td style="padding:3px 8px;">${badge}</td>
+                          <td style="padding:3px 8px;">${r.split}</td>
+                          <td style="padding:3px 8px;font-family:monospace;">${r.stem}</td>`;
+          tb.appendChild(tr);
+        }
+      }
+      function play(r) {
+        const v = $('ep-video');
+        v.src = r.url;
+        v.style.display = 'block';
+        $('ep-playing').textContent = `${r.model} · ${r.split} · ${r.success ? 'SUCC' : 'FAIL'} · ${r.stem}`;
+        v.play().catch(() => {});
+      }
+      $('ep-suite').onchange = () => { populateModels(); render(); };
+      $('ep-model').onchange = render;
+      $('ep-split').onchange = render;
+      for (const id of ['ep-succ','ep-fail']) $(id).onchange = render;
+      $('ep-search').oninput = render;
+      load();
+    })();
+  </script>
+
+  <h2 id="per-bucket-loss" class="sec"><span class="n">▸</span> Per-bucket action-token loss — all RGB-family 500-stem models <a class="anchor" href="#per-bucket-loss">#</a> <button class="copylink" onclick="copyLink('per-bucket-loss', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Median teacher-forced loss at a specific goal-frame bucket, across all RGB-family 500-stem models</div>
+    <div class="note">
+      For every model in the 500-stem chart above (excluding sqrt-reweight), we
+      ran a 50-sample teacher-forced loss eval per goal-frame bucket. Each
+      model uses its own training notation — RGB families
+      <code>rgb0,rgbN,a0</code>, FDstitched <code>rgb0,d0,dN,rgbN,f01,a0</code>,
+      statecond <code>rgb0,rgbN,pr0,a0</code> — but loss is computed only over
+      the <b>action</b> tokens (<code>mask_all_except:action</code>), so bars
+      are directly comparable across families: each is the average cross-entropy
+      the model assigns to the ground-truth action given its native conditioning.
+      Use the dropdown to switch buckets. Bar color = family (matches the bar
+      plot above); shade = ckpt step within family; error bars = SEM.
+      <br><br>
+      <b>Note on FDstitched:</b> flow codes on LIBERO stitched files are
+      pre-tokenized with <code>frame_gap=5</code> baked in, which forces the
+      dataset's graph solver to stride file-frames by 5 whenever the notation
+      contains <code>f01</code>. With max stitched-file length ≈63 frames, only
+      notations with N ≤ 12 can ever solve; N ≥ 13 is physically unrealizable
+      given the current flow tokenization. FDstitched training silently
+      retried failed draws, so the model only ever saw N ≤ 12 for its
+      <code>rgb0,d0,dN,rgbN,f01,a0</code> notations. Consequently FD contributes
+      only to G1 (near) here — a strict subset (N=2..12) of RGB's G1 range
+      (N=2..22) — and is absent from G2/G3/G4 by construction, not by choice.
+    </div>
+    <div style="margin:12px 0 10px 0;">
+      <label for="loss-bucket-select" style="font-weight:600;margin-right:8px">Goal-frame bucket:</label>
+      <select id="loss-bucket-select" onchange="document.getElementById('loss-bucket-img').src=ROBOT_SITE.url('/per_bucket_loss_'+this.value+'.png');" style="padding:4px 8px;font-size:14px;">
+        <option value="G1" selected>G1 near  (N=2..22, 0.4-4.4 s ahead)</option>
+        <option value="G2">G2 med-near  (N=23..44, 4.6-8.8 s)</option>
+        <option value="G3">G3 med-far  (N=45..66, 9.0-13.2 s)</option>
+        <option value="G4">G4 far  (N=67..90, 13.4-18.0 s)</option>
+      </select>
+      <p><img id="loss-bucket-img" class="plot" src="../per_bucket_loss_G1.png" alt="Per-bucket action-token loss across models" /></p>
+    </div>
+  </div>
+
+  <h2 id="success-vs-loss" class="sec"><span class="n">▸</span> IND success vs per-bucket action-token loss <a class="anchor" href="#success-vs-loss">#</a> <button class="copylink" onclick="copyLink('success-vs-loss', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Does lower per-bucket action loss predict higher sim IND success? One dot per model, colored to match the 500-stem bar chart</div>
+    <div class="note">
+      For each model that has both a fully-covered 500-stem sweep and a per-bucket
+      loss eval, plot IND per-task success (y, from
+      <code>sim_bars_500stem.png</code>) against median action-token
+      cross-entropy in the selected bucket (x, from
+      <code>per_bucket_loss_*.png</code>). Colors are the same family/step
+      gradient as the bar chart, so you can eyeball each family's
+      "loss ↓ ⇒ success ↑" slope.
+      FDstitched appears only in G1 (see the note on
+      <code>frame_gap=5</code> above for why G2/G3/G4 are impossible for FD).
+    </div>
+    <div style="margin:12px 0 10px 0;">
+      <label for="svl-bucket-select" style="font-weight:600;margin-right:8px">Goal-frame bucket:</label>
+      <select id="svl-bucket-select" onchange="document.getElementById('svl-img').src=ROBOT_SITE.url('/per_bucket_success_vs_loss_'+this.value+'.png');" style="padding:4px 8px;font-size:14px;">
+        <option value="G1" selected>G1 near  (N=2..22, 0.4-4.4 s ahead)</option>
+        <option value="G2">G2 med-near  (N=23..44, 4.6-8.8 s)</option>
+        <option value="G3">G3 med-far  (N=45..66, 9.0-13.2 s)</option>
+        <option value="G4">G4 far  (N=67..90, 13.4-18.0 s)</option>
+      </select>
+      <p><img id="svl-img" class="plot" src="../per_bucket_success_vs_loss_G1.png" alt="IND success vs per-bucket action loss" /></p>
+    </div>
+  </div>
+
+
+  <h2 id="per-task-group" class="sec"><span class="n">▸</span> LIBERO sim success — per-task group breakdown <a class="anchor" href="#per-task-group">#</a> <button class="copylink" onclick="copyLink('per-task-group', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">Per-task IND success grouped by task property (500-stem eval, T=0.3, 600 ms replan)</div>
+    <div class="note">
+      Same "new recipe" models as the 500-stem bar plot above, but re-aggregated
+      by task property to see whether failures concentrate on longer / harder
+      tasks or spread uniformly. <b>Length</b> = mean number of raw action steps
+      across the 50 available demos per task (quartiles across the 80 IND
+      tasks). <b>Compositional</b> = task name contains "_and_" (multi-step
+      goal), e.g. <i>close_the_top_drawer AND put_the_black_bowl_on_top_of_it</i>.
+      Bar heights are per-task mean success, error bars = SEM across tasks in
+      the group.
+    </div>
+    <div style="margin:12px 0 10px 0;">
+      <label for="grouping-select" style="font-weight:600;margin-right:8px">Group by:</label>
+      <select id="grouping-select" onchange="document.getElementById('grouping-img').src=ROBOT_SITE.url('/per_task_by_'+this.value+'.png');" style="padding:4px 8px;font-size:14px;">
+        <option value="length" selected>Task length (Q1 short → Q4 long)</option>
+        <option value="composite">Compositionality (single-step vs contains '_and_')</option>
+      </select>
+      <p><img id="grouping-img" class="plot" src="../per_task_by_length.png" alt="500-stem per-task IND success grouped by task property" /></p>
+    </div>
+  </div>
+
+
+  <h2 id="ood-heatmap" class="sec"><span class="n">▸</span> OOD per-task heatmap (500-stem) <a class="anchor" href="#ood-heatmap">#</a> <button class="copylink" onclick="copyLink('ood-heatmap', this)">copy link</button></h2>
+  <div class="chart" style="margin-bottom:22px;">
+    <div class="title">OOD episode success by held-out task, one row per 500-stem model at T=0.3</div>
+    <div class="note">Rows are models (same filter as the 500-stem bar chart), columns are the 10 held-out (val_new_task) tasks. Each cell is the per-task success rate on that task's 10 demos.</div>
+    <p><img class="plot" src="../ood_task_heatmap_500stem.png" alt="OOD per-task success heatmap for 500-stem sweeps" /></p>
+  </div>
+
+</main>
+
+<script>
+  function copyLink(anchorId, btn) {
+    const url = window.location.origin + window.location.pathname + '#' + anchorId;
+    const done = () => {
+      const orig = btn.textContent;
+      btn.textContent = 'copied ✓';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 1400);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(() => {
+        // Fallback for non-HTTPS: use a hidden textarea
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (_) { alert(url); }
+        document.body.removeChild(ta);
+      });
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = url; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (_) { alert(url); }
+      document.body.removeChild(ta);
+    }
+  }
+</script>
+<script>
+// Refresh changed figures and metric tiles without interrupting episode playback.
+let journalVersion = null;
+async function refreshJournal() {
+ try {
+  const r = await fetch(ROBOT_SITE.url('/api/journal-version'), {cache:'no-store'});
+  if (!r.ok) throw new Error('Update check failed');
+  const data = await r.json();
+  if (journalVersion !== null && journalVersion !== data.revision) {
+   const html = await fetch(ROBOT_SITE.url('/index.html'), {cache:'no-store'});
+   if (!html.ok) throw new Error('Journal refresh failed');
+   const next = new DOMParser().parseFromString(await html.text(), 'text/html');
+   const tiles = document.querySelector('.tiles');
+   if (tiles && next.querySelector('.tiles')) tiles.innerHTML = next.querySelector('.tiles').innerHTML;
+   for (const section of next.querySelectorAll('h2.sec')) {
+    if (section.id === 'video-viewer') continue;
+    const current = document.getElementById(section.id)?.nextElementSibling;
+    const replacement = section.nextElementSibling;
+    if (!current || !replacement) continue;
+    for (const select of current.querySelectorAll('select[id]')) {
+     const newSelect = replacement.querySelector('#'+select.id);
+     if (newSelect) { newSelect.value = select.value; }
+    }
+    current.replaceWith(replacement);
+    for (const select of replacement.querySelectorAll('select[onchange]')) select.dispatchEvent(new Event('change'));
+   }
+   for (const img of document.querySelectorAll('img.plot')) { const u=new URL(img.src); u.searchParams.set('v',data.revision); img.src=u.href; }
+  }
+  journalVersion=data.revision;
+  document.getElementById('libero-sync').textContent=ROBOT_SITE.isStatic ? 'Published · '+data.exported_at.slice(0,10) : 'Live · checks every 15s';
+ } catch { document.getElementById('libero-sync').textContent='Updates disconnected · retrying'; }
+}
+refreshJournal(); if (!ROBOT_SITE.isStatic) setInterval(()=>{if(!document.hidden)refreshJournal();},15000);
+</script>
+</body>
+</html>

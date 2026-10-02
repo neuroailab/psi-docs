@@ -1,0 +1,49 @@
+episode_id,dataset,model,view,voc,undefined
+bfe3503fc247305147fe,MIT Franka,PSI rgb+rgblh,endpoint included,0.9159453809368113,False
+bfe3503fc247305147fe,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9499034884388241,False
+fccadd3af1339ebdcd05,MIT Franka,PSI rgb+rgblh,endpoint included,0.9708535076610412,False
+fccadd3af1339ebdcd05,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9918862448479309,False
+dcb220b185cc5ead1be1,MIT Franka,PSI rgb+rgblh,endpoint included,0.9893738939071091,False
+dcb220b185cc5ead1be1,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9791052812549328,False
+fa7eb41521e110479178,MIT Franka,PSI rgb+rgblh,endpoint included,0.9823433569763189,False
+fa7eb41521e110479178,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9771455213484179,False
+4ab108ea18e86fd1fc4e,MIT Franka,PSI rgb+rgblh,endpoint included,0.986291832195956,False
+4ab108ea18e86fd1fc4e,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9725125006007247,False
+89e2f519c429fab670d5,MIT Franka,PSI rgb+rgblh,endpoint included,0.9842231234718903,False
+89e2f519c429fab670d5,MIT Franka,PSI rgb+rgblh,endpoint excluded,0.9784916681785301,False
+d32b6a2ef83db85aefd2,UTD SO101,PSI rgb+rgblh,endpoint included,0.9342914890648117,False
+d32b6a2ef83db85aefd2,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9411148477403801,False
+2ca5fc0da88c83fe3045,UTD SO101,PSI rgb+rgblh,endpoint included,0.877035924636869,False
+2ca5fc0da88c83fe3045,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.8189814720115463,False
+71c3ff7896d0a7c33d5f,UTD SO101,PSI rgb+rgblh,endpoint included,0.994144262698928,False
+71c3ff7896d0a7c33d5f,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9892143005565563,False
+2d54a0612535c86396c7,UTD SO101,PSI rgb+rgblh,endpoint included,0.9623204911896734,False
+2d54a0612535c86396c7,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9249886198991892,False
+a078c19ccb0a2c0e04e2,UTD SO101,PSI rgb+rgblh,endpoint included,0.9758960844446194,False
+a078c19ccb0a2c0e04e2,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9768498401666181,False
+3a6df3b456ed9a18fab4,UTD SO101,PSI rgb+rgblh,endpoint included,0.9716816432495745,False
+3a6df3b456ed9a18fab4,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9763643716059984,False
+410f46b61ad6d367eb3b,UTD SO101,PSI rgb+rgblh,endpoint included,0.9807676748906251,False
+410f46b61ad6d367eb3b,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9652552648041737,False
+77af4507559b19303094,UTD SO101,PSI rgb+rgblh,endpoint included,0.9384192794768178,False
+77af4507559b19303094,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.8914264739891076,False
+e5540d6ab7ba21c44ed6,UTD SO101,PSI rgb+rgblh,endpoint included,0.9353766574650728,False
+e5540d6ab7ba21c44ed6,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9505812641285235,False
+4411a2fb8c2c5424465c,UTD SO101,PSI rgb+rgblh,endpoint included,0.9548568151397658,False
+4411a2fb8c2c5424465c,UTD SO101,PSI rgb+rgblh,endpoint excluded,0.9276953213664596,False
+bfe3503fc247305147fe,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.919807713094581,False
+fccadd3af1339ebdcd05,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.9817558570625471,False
+dcb220b185cc5ead1be1,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.9679785687608573,False
+fa7eb41521e110479178,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.9936666892132276,False
+4ab108ea18e86fd1fc4e,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.9641509514893923,False
+89e2f519c429fab670d5,MIT Franka,Robometer released recipe,author offline protocol (all eight outputs),0.9053865945450169,False
+d32b6a2ef83db85aefd2,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.596913981518735,False
+2ca5fc0da88c83fe3045,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9241582790160383,False
+71c3ff7896d0a7c33d5f,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.966729113296098,False
+2d54a0612535c86396c7,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9678096400262534,False
+a078c19ccb0a2c0e04e2,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9855619059703535,False
+3a6df3b456ed9a18fab4,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9922964639395159,False
+410f46b61ad6d367eb3b,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9852730072237945,False
+77af4507559b19303094,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.8800733401663772,False
+e5540d6ab7ba21c44ed6,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.8984976586194994,False
+4411a2fb8c2c5424465c,UTD SO101,Robometer released recipe,author offline protocol (all eight outputs),0.9925406854967577,False

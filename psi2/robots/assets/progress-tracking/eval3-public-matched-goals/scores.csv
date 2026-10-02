@@ -1,0 +1,421 @@
+episode_id,task,frame,condition,method,native_score,goal_episode_id
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,PSI DT,-27.872690200805664,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,PSI S1,-14.908414840698242,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,PSI S3,-14.620963096618652,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,PSI S5,-14.563668251037598,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,DINOv2,0.702908992767334,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,Robometer progress (unchanged),0.5629885196685791,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,independent,Encoded time,4.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,PSI DT,-24.204021453857422,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,PSI S1,-15.03349494934082,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,PSI S3,-14.85944938659668,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,PSI S5,-14.728721618652344,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,DINOv2,0.7103684544563293,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,Robometer progress (unchanged),0.5629885196685791,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,4,matched,Encoded time,4.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,PSI DT,-26.329456329345703,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,PSI S1,-14.388638496398926,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,PSI S3,-14.146486282348633,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,PSI S5,-13.981432914733887,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,DINOv2,0.7364600896835327,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,Robometer progress (unchanged),0.5174420475959778,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,independent,Encoded time,15.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,PSI DT,-21.349853515625,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,PSI S1,-14.100211143493652,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,PSI S3,-13.812451362609863,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,PSI S5,-13.589197158813477,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,DINOv2,0.7109711766242981,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,Robometer progress (unchanged),0.5174420475959778,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,15,matched,Encoded time,15.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,PSI DT,-20.897302627563477,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,PSI S1,-14.519598007202148,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,PSI S3,-14.304302215576172,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,PSI S5,-14.108860969543457,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,DINOv2,0.7531859278678894,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,Robometer progress (unchanged),0.6036100387573242,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,independent,Encoded time,31.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,PSI DT,-15.776021003723145,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,PSI S1,-13.842283248901367,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,PSI S3,-13.466588020324707,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,PSI S5,-13.198677062988281,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,DINOv2,0.754453182220459,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,Robometer progress (unchanged),0.6036100387573242,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,31,matched,Encoded time,31.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,PSI DT,-19.553213119506836,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,PSI S1,-13.441574096679688,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,PSI S3,-12.990034103393555,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,PSI S5,-12.670186996459961,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,DINOv2,0.8648070096969604,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,Robometer progress (unchanged),0.8053147792816162,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,independent,Encoded time,47.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,PSI DT,-7.666938781738281,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,PSI S1,-12.181844711303711,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,PSI S3,-11.630411148071289,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,PSI S5,-11.317389488220215,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,DINOv2,0.8846293091773987,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,Robometer progress (unchanged),0.8053147792816162,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,47,matched,Encoded time,47.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,PSI DT,-15.87873363494873,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,PSI S1,-12.259675025939941,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,PSI S3,-12.172712326049805,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,PSI S5,-11.976545333862305,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,DINOv2,0.9165351390838623,859a08b0-fc9a-47a2-af6b-112087cc7863
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,Robometer progress (unchanged),0.8553478121757507,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,independent,Encoded time,63.0,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,PSI DT,-2.446092367172241,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,PSI S1,-0.14931751787662506,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,PSI S3,-0.6858029365539551,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,PSI S5,-0.9559508562088013,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,DINOv2,1.0,1d035ec5-5127-4af9-9cca-fe214830d670
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,Robometer progress (unchanged),0.8553478121757507,
+1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,63,matched,Encoded time,63.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,PSI DT,-29.09027671813965,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,PSI S1,-14.334638595581055,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,PSI S3,-13.679239273071289,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,PSI S5,-13.335023880004883,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,DINOv2,0.8502997159957886,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,Robometer progress (unchanged),0.24945084750652313,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,independent,Encoded time,4.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,PSI DT,-27.02980613708496,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,PSI S1,-15.475613594055176,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,PSI S3,-14.510738372802734,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,PSI S5,-14.07201099395752,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,DINOv2,0.6308729648590088,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,Robometer progress (unchanged),0.24945084750652313,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,4,matched,Encoded time,4.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,PSI DT,-34.09166717529297,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,PSI S1,-13.804084777832031,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,PSI S3,-13.435629844665527,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,PSI S5,-13.315494537353516,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,DINOv2,0.8695567846298218,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,Robometer progress (unchanged),0.2503551244735718,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,independent,Encoded time,15.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,PSI DT,-17.617572784423828,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,PSI S1,-15.662496566772461,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,PSI S3,-15.271418571472168,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,PSI S5,-15.016645431518555,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,DINOv2,0.7626008987426758,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,Robometer progress (unchanged),0.2503551244735718,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,15,matched,Encoded time,15.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,PSI DT,-25.797409057617188,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,PSI S1,-13.50654125213623,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,PSI S3,-12.694717407226562,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,PSI S5,-12.103391647338867,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,DINOv2,0.8308838605880737,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,Robometer progress (unchanged),0.5949562788009644,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,independent,Encoded time,31.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,PSI DT,-16.50998306274414,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,PSI S1,-15.646318435668945,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,PSI S3,-14.962124824523926,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,PSI S5,-14.520751953125,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,DINOv2,0.7455126047134399,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,Robometer progress (unchanged),0.5949562788009644,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,31,matched,Encoded time,31.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,PSI DT,-41.562538146972656,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,PSI S1,-15.10052490234375,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,PSI S3,-14.5112943649292,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,PSI S5,-14.255711555480957,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,DINOv2,0.7533667087554932,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,Robometer progress (unchanged),0.6924811601638794,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,independent,Encoded time,47.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,PSI DT,-3.2562122344970703,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,PSI S1,-14.075976371765137,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,PSI S3,-13.212236404418945,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,PSI S5,-12.800053596496582,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,DINOv2,0.873328447341919,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,Robometer progress (unchanged),0.6924811601638794,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,47,matched,Encoded time,47.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,PSI DT,-45.941436767578125,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,PSI S1,-16.09015655517578,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,PSI S3,-14.543296813964844,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,PSI S5,-14.41244125366211,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,DINOv2,0.6931012272834778,7c3a6129-d2a2-42f9-80d8-c75b763acb80
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,Robometer progress (unchanged),0.9210281372070312,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,independent,Encoded time,63.0,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,PSI DT,-2.392688274383545,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,PSI S1,-0.15265752375125885,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,PSI S3,-0.6030875444412231,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,PSI S5,-0.916785717010498,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,DINOv2,0.9999998807907104,310abc9d-04d9-401f-93b9-c20447296f32
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,Robometer progress (unchanged),0.9210281372070312,
+310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,63,matched,Encoded time,63.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,PSI DT,-29.77417755126953,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,PSI S1,-15.046120643615723,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,PSI S3,-14.796239852905273,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,PSI S5,-14.60692024230957,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,DINOv2,0.692379891872406,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,Robometer progress (unchanged),0.18536195158958435,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,independent,Encoded time,4.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,PSI DT,-15.868522644042969,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,PSI S1,-12.722166061401367,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,PSI S3,-12.305370330810547,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,PSI S5,-12.029091835021973,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,DINOv2,0.9105085134506226,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,Robometer progress (unchanged),0.18536195158958435,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,4,matched,Encoded time,4.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,PSI DT,-34.894996643066406,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,PSI S1,-15.048433303833008,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,PSI S3,-14.81771183013916,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,PSI S5,-14.572418212890625,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,DINOv2,0.7315431833267212,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,Robometer progress (unchanged),0.20562276244163513,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,independent,Encoded time,15.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,PSI DT,-16.735492706298828,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,PSI S1,-12.66681957244873,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,PSI S3,-12.204607009887695,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,PSI S5,-11.857961654663086,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,DINOv2,0.8659636378288269,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,Robometer progress (unchanged),0.20562276244163513,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,15,matched,Encoded time,15.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,PSI DT,-30.270299911499023,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,PSI S1,-14.931411743164062,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,PSI S3,-14.564035415649414,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,PSI S5,-14.442388534545898,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,DINOv2,0.8206406831741333,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,Robometer progress (unchanged),0.5694452524185181,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,independent,Encoded time,31.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,PSI DT,-11.550167083740234,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,PSI S1,-12.302325248718262,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,PSI S3,-11.730706214904785,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,PSI S5,-11.659614562988281,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,DINOv2,0.8383090496063232,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,Robometer progress (unchanged),0.5694452524185181,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,31,matched,Encoded time,31.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,PSI DT,-27.34837532043457,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,PSI S1,-14.827718734741211,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,PSI S3,-14.190337181091309,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,PSI S5,-13.902519226074219,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,DINOv2,0.8040915131568909,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,Robometer progress (unchanged),0.684148907661438,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,independent,Encoded time,47.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,PSI DT,-6.7168684005737305,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,PSI S1,-11.73176097869873,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,PSI S3,-10.599141120910645,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,PSI S5,-10.203744888305664,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,DINOv2,0.8325932025909424,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,Robometer progress (unchanged),0.684148907661438,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,47,matched,Encoded time,47.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,PSI DT,-31.250530242919922,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,PSI S1,-14.3660249710083,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,PSI S3,-14.229901313781738,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,PSI S5,-13.88626766204834,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,DINOv2,0.7700397968292236,df9150f6-d097-4e51-a49a-329b601c9f6a
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,Robometer progress (unchanged),0.8883039951324463,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,independent,Encoded time,63.0,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,PSI DT,-2.3496570587158203,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,PSI S1,-0.12421880662441254,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,PSI S3,-0.39268359541893005,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,PSI S5,-0.46901434659957886,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,DINOv2,1.0,a8a40e75-11ef-42ec-89bd-04ab8b04d95e
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,Robometer progress (unchanged),0.8883039951324463,
+a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,63,matched,Encoded time,63.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,PSI DT,-41.890357971191406,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,PSI S1,-14.643637657165527,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,PSI S3,-14.167484283447266,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,PSI S5,-13.899969100952148,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,DINOv2,0.6332142353057861,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,Robometer progress (unchanged),0.3660098612308502,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,independent,Encoded time,4.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,PSI DT,-34.630958557128906,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,PSI S1,-12.90342903137207,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,PSI S3,-12.328076362609863,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,PSI S5,-12.26565170288086,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,DINOv2,0.6150109767913818,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,Robometer progress (unchanged),0.3660098612308502,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,4,matched,Encoded time,4.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,PSI DT,-25.240806579589844,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,PSI S1,-14.854171752929688,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,PSI S3,-14.126551628112793,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,PSI S5,-13.718915939331055,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,DINOv2,0.7876944541931152,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,Robometer progress (unchanged),0.5268673896789551,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,independent,Encoded time,15.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,PSI DT,-26.92229461669922,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,PSI S1,-13.292192459106445,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,PSI S3,-12.553898811340332,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,PSI S5,-11.994345664978027,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,DINOv2,0.8249378204345703,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,Robometer progress (unchanged),0.5268673896789551,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,15,matched,Encoded time,15.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,PSI DT,-40.79871368408203,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,PSI S1,-15.164682388305664,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,PSI S3,-14.550987243652344,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,PSI S5,-14.223978996276855,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,DINOv2,0.8192749619483948,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,Robometer progress (unchanged),0.671734631061554,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,independent,Encoded time,31.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,PSI DT,-19.75674057006836,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,PSI S1,-12.26441764831543,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,PSI S3,-11.546030044555664,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,PSI S5,-11.095081329345703,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,DINOv2,0.8796851634979248,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,Robometer progress (unchanged),0.671734631061554,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,31,matched,Encoded time,31.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,PSI DT,-51.71917724609375,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,PSI S1,-15.302202224731445,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,PSI S3,-14.846572875976562,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,PSI S5,-14.483719825744629,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,DINOv2,0.7592142224311829,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,Robometer progress (unchanged),0.7122381925582886,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,independent,Encoded time,47.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,PSI DT,-11.42766284942627,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,PSI S1,-11.273195266723633,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,PSI S3,-10.536632537841797,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,PSI S5,-9.97593879699707,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,DINOv2,0.8223893046379089,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,Robometer progress (unchanged),0.7122381925582886,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,47,matched,Encoded time,47.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,PSI DT,-37.6589241027832,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,PSI S1,-14.978658676147461,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,PSI S3,-14.570677757263184,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,PSI S5,-14.275833129882812,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,DINOv2,0.8926559686660767,e51140b4-7742-4023-aaf3-f38b3f30696f
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,Robometer progress (unchanged),0.8735666871070862,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,independent,Encoded time,63.0,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,PSI DT,-2.315246105194092,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,PSI S1,-0.14009036123752594,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,PSI S3,-0.7226112484931946,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,PSI S5,-0.944534420967102,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,DINOv2,0.9999998807907104,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,Robometer progress (unchanged),0.8735666871070862,
+11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,63,matched,Encoded time,63.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,PSI DT,-27.436477661132812,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,PSI S1,-14.622461318969727,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,PSI S3,-14.315620422363281,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,PSI S5,-14.098515510559082,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,DINOv2,0.7287800312042236,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,Robometer progress (unchanged),0.18227791786193848,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,independent,Encoded time,4.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,PSI DT,-40.802207946777344,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,PSI S1,-13.06307601928711,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,PSI S3,-12.700356483459473,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,PSI S5,-12.39069652557373,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,DINOv2,0.7949134111404419,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,Robometer progress (unchanged),0.18227791786193848,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,4,matched,Encoded time,4.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,PSI DT,-35.046939849853516,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,PSI S1,-14.52071475982666,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,PSI S3,-14.208627700805664,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,PSI S5,-14.011568069458008,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,DINOv2,0.799420177936554,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,Robometer progress (unchanged),0.3651317358016968,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,independent,Encoded time,15.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,PSI DT,-35.5738639831543,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,PSI S1,-13.461214065551758,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,PSI S3,-12.916728973388672,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,PSI S5,-12.632771492004395,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,DINOv2,0.8057419061660767,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,Robometer progress (unchanged),0.3651317358016968,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,15,matched,Encoded time,15.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,PSI DT,-34.577571868896484,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,PSI S1,-15.04152774810791,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,PSI S3,-14.555233001708984,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,PSI S5,-14.329965591430664,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,DINOv2,0.780502200126648,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,Robometer progress (unchanged),0.4792107343673706,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,independent,Encoded time,31.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,PSI DT,-22.011232376098633,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,PSI S1,-13.336124420166016,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,PSI S3,-12.650542259216309,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,PSI S5,-12.178764343261719,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,DINOv2,0.7400824427604675,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,Robometer progress (unchanged),0.4792107343673706,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,31,matched,Encoded time,31.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,PSI DT,-35.60323715209961,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,PSI S1,-14.628541946411133,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,PSI S3,-13.94529914855957,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,PSI S5,-13.828073501586914,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,DINOv2,0.8783966302871704,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,Robometer progress (unchanged),0.4912233352661133,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,independent,Encoded time,47.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,PSI DT,-16.63877296447754,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,PSI S1,-11.712179183959961,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,PSI S3,-10.527565956115723,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,PSI S5,-9.864675521850586,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,DINOv2,0.9302393198013306,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,Robometer progress (unchanged),0.4912233352661133,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,47,matched,Encoded time,47.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,PSI DT,-42.48634338378906,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,PSI S1,-15.351439476013184,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,PSI S3,-14.89306354522705,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,PSI S5,-14.807806968688965,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,DINOv2,0.8391933441162109,7173f226-298c-4459-9d89-9d95efd05d29
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,Robometer progress (unchanged),0.8763253688812256,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,independent,Encoded time,63.0,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,PSI DT,-2.182614326477051,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,PSI S1,-0.16119319200515747,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,PSI S3,-1.1390093564987183,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,PSI S5,-1.39168381690979,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,DINOv2,1.0,77f0dace-9472-486a-bf5e-20b412919de7
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,Robometer progress (unchanged),0.8763253688812256,
+77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,63,matched,Encoded time,63.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,PSI DT,-29.422218322753906,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,PSI S1,-13.888479232788086,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,PSI S3,-13.518101692199707,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,PSI S5,-13.418574333190918,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,DINOv2,0.6575139760971069,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,Robometer progress (unchanged),0.20652569830417633,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,independent,Encoded time,4.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,PSI DT,-27.098661422729492,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,PSI S1,-13.28994083404541,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,PSI S3,-12.833658218383789,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,PSI S5,-12.809596061706543,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,DINOv2,0.5983935594558716,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,Robometer progress (unchanged),0.20652569830417633,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,4,matched,Encoded time,4.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,PSI DT,-46.02442932128906,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,PSI S1,-14.442639350891113,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,PSI S3,-13.799757957458496,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,PSI S5,-13.232513427734375,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,DINOv2,0.8639710545539856,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,Robometer progress (unchanged),0.41980987787246704,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,independent,Encoded time,15.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,PSI DT,-27.77153778076172,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,PSI S1,-13.547989845275879,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,PSI S3,-12.851188659667969,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,PSI S5,-12.280903816223145,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,DINOv2,0.8515405058860779,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,Robometer progress (unchanged),0.41980987787246704,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,15,matched,Encoded time,15.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,PSI DT,-15.896622657775879,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,PSI S1,-14.074316024780273,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,PSI S3,-13.771696090698242,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,PSI S5,-13.56077766418457,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,DINOv2,0.8451569676399231,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,Robometer progress (unchanged),0.704766035079956,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,independent,Encoded time,31.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,PSI DT,-14.487322807312012,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,PSI S1,-13.095512390136719,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,PSI S3,-12.647164344787598,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,PSI S5,-12.515192031860352,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,DINOv2,0.8584094643592834,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,Robometer progress (unchanged),0.704766035079956,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,31,matched,Encoded time,31.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,PSI DT,-11.137199401855469,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,PSI S1,-12.390936851501465,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,PSI S3,-11.97856330871582,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,PSI S5,-11.807790756225586,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,DINOv2,0.9248937964439392,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,Robometer progress (unchanged),0.7382850646972656,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,independent,Encoded time,47.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,PSI DT,-2.0073134899139404,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,PSI S1,-10.475573539733887,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,PSI S3,-9.63160228729248,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,PSI S5,-9.32805061340332,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,DINOv2,0.9146291017532349,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,Robometer progress (unchanged),0.7382850646972656,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,47,matched,Encoded time,47.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,PSI DT,-16.87335205078125,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,PSI S1,-12.403797149658203,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,PSI S3,-11.665657997131348,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,PSI S5,-11.399640083312988,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,DINOv2,0.9145358800888062,96a97ec6-16b3-45fa-85ff-115c92195f52
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,Robometer progress (unchanged),0.9013736248016357,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,independent,Encoded time,63.0,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,PSI DT,-2.469829559326172,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,PSI S1,-0.1357683539390564,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,PSI S3,-1.0424461364746094,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,PSI S5,-1.2165381908416748,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,DINOv2,0.9999998807907104,86591c99-29bc-463c-b689-428ce47513d8
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,Robometer progress (unchanged),0.9013736248016357,
+86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,63,matched,Encoded time,63.0,

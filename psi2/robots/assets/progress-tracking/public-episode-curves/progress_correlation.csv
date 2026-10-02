@@ -1,0 +1,241 @@
+condition,model_and_endpoint_policy,episode_id,n,voc
+approximate_start_match,DT without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.5089581219420055
+approximate_start_match,DT without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.4319309826048836
+approximate_start_match,DT without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8111199210802399
+approximate_start_match,DT without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.7415203789166838
+approximate_start_match,DT without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.596719083322758
+approximate_start_match,DT without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.5541313904719084
+approximate_start_match,DT with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.5952363401955109
+approximate_start_match,DT with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.393162579548602
+approximate_start_match,DT with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8188601512096182
+approximate_start_match,DT with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.6885394439124995
+approximate_start_match,DT with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.6683555601427309
+approximate_start_match,DT with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.40041904816208745
+approximate_start_match,S1 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.8704920104764106
+approximate_start_match,S1 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.8017403933378844
+approximate_start_match,S1 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9285588884235584
+approximate_start_match,S1 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8500232344341129
+approximate_start_match,S1 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.47686917988708
+approximate_start_match,S1 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.6069290608819489
+approximate_start_match,S1 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.8954716706445115
+approximate_start_match,S1 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.8387906808658442
+approximate_start_match,S1 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9404606215117044
+approximate_start_match,S1 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8480344114485519
+approximate_start_match,S1 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.5970135161427668
+approximate_start_match,S1 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.47368484582266823
+approximate_start_match,S3 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.8252858039593961
+approximate_start_match,S3 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.9230335078364841
+approximate_start_match,S3 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9166300921930784
+approximate_start_match,S3 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8407863699491523
+approximate_start_match,S3 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.25004696836733326
+approximate_start_match,S3 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.7463081877873359
+approximate_start_match,S3 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.8361903885251124
+approximate_start_match,S3 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.8959850221214479
+approximate_start_match,S3 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9328294902304164
+approximate_start_match,S3 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8548631961498101
+approximate_start_match,S3 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.421202110125831
+approximate_start_match,S3 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.6867062668476938
+approximate_start_match,S5 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.7830780278577735
+approximate_start_match,S5 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.9038183657162987
+approximate_start_match,S5 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9283946355395332
+approximate_start_match,S5 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.765883696661079
+approximate_start_match,S5 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.3798326073436798
+approximate_start_match,S5 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.701025993155133
+approximate_start_match,S5 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.8065371980568379
+approximate_start_match,S5 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.8981355147794906
+approximate_start_match,S5 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9415322894169279
+approximate_start_match,S5 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7905634117318044
+approximate_start_match,S5 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.546934233077631
+approximate_start_match,S5 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.6478842768866955
+approximate_start_match,DT + S1 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.5477572655382779
+approximate_start_match,DT + S1 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.6086528981218539
+approximate_start_match,DT + S1 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8476489069862226
+approximate_start_match,DT + S1 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8975864687982585
+approximate_start_match,DT + S1 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.6112241907172696
+approximate_start_match,DT + S1 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.43278813745287836
+approximate_start_match,DT + S1 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.5987543036909454
+approximate_start_match,DT + S1 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.5657420473768753
+approximate_start_match,DT + S1 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8779325237450919
+approximate_start_match,DT + S1 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8070702563342982
+approximate_start_match,DT + S1 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.6816513616889309
+approximate_start_match,DT + S1 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.3648223312928233
+approximate_start_match,DT + S3 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.49307765421666466
+approximate_start_match,DT + S3 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.6510476877760786
+approximate_start_match,DT + S3 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8517914541357242
+approximate_start_match,DT + S3 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8754176472025003
+approximate_start_match,DT + S3 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.5660759287924947
+approximate_start_match,DT + S3 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.45086701245708294
+approximate_start_match,DT + S3 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.5443344396578952
+approximate_start_match,DT + S3 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.5783103863129645
+approximate_start_match,DT + S3 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8784665822068147
+approximate_start_match,DT + S3 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8006468456565878
+approximate_start_match,DT + S3 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.6459847916376942
+approximate_start_match,DT + S3 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.39333923622797234
+approximate_start_match,DT + S5 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.4460210778587943
+approximate_start_match,DT + S5 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.6777199040439683
+approximate_start_match,DT + S5 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8563414643190608
+approximate_start_match,DT + S5 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8668136936385895
+approximate_start_match,DT + S5 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,-0.6017339551300768
+approximate_start_match,DT + S5 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,-0.43631967514434117
+approximate_start_match,DT + S5 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.49913964653955095
+approximate_start_match,DT + S5 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.6159755134957947
+approximate_start_match,DT + S5 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8795110239533358
+approximate_start_match,DT + S5 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7930863218708626
+approximate_start_match,DT + S5 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,-0.6794318689909938
+approximate_start_match,DT + S5 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,-0.3820139297036502
+approximate_start_match,DINOv2 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,-0.8832053717911729
+approximate_start_match,DINOv2 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.5897874139198119
+approximate_start_match,DINOv2 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9062599164738312
+approximate_start_match,DINOv2 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.7731476259833122
+approximate_start_match,DINOv2 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.2512626475630768
+approximate_start_match,DINOv2 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.5629408652768968
+approximate_start_match,DINOv2 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,-0.8741415800668958
+approximate_start_match,DINOv2 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.49517462659853306
+approximate_start_match,DINOv2 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.922463517626379
+approximate_start_match,DINOv2 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7651127903290247
+approximate_start_match,DINOv2 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.3335090500749303
+approximate_start_match,DINOv2 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.6426354438784546
+approximate_start_match,Robometer progress without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.9683344167411874
+approximate_start_match,Robometer progress without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.9732770395818507
+approximate_start_match,Robometer progress without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8980403542020365
+approximate_start_match,Robometer progress without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.811148828123901
+approximate_start_match,Robometer progress without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.8313363153988208
+approximate_start_match,Robometer progress without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.7797035265550462
+approximate_start_match,Robometer progress with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.9743008021387846
+approximate_start_match,Robometer progress with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.9762007956346438
+approximate_start_match,Robometer progress with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9087250695393487
+approximate_start_match,Robometer progress with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8292493041038769
+approximate_start_match,Robometer progress with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.8637378048162524
+approximate_start_match,Robometer progress with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.8219204486360899
+approximate_start_match,Robometer success without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8159780812945611
+approximate_start_match,Robometer success without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.7595990767682643
+approximate_start_match,Robometer success without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9133848279586725
+approximate_start_match,Robometer success without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.7435541633817047
+approximate_start_match,Robometer success without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.5177396563562504
+approximate_start_match,Robometer success without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.9663367712045952
+approximate_start_match,Robometer success with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.83910414551701
+approximate_start_match,Robometer success with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.8101070490381481
+approximate_start_match,Robometer success with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.926228830333773
+approximate_start_match,Robometer success with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7931682459602478
+approximate_start_match,Robometer success with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.6366116295471216
+approximate_start_match,Robometer success with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.8135526610966636
+own_success,DT without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.9050037952496672
+own_success,DT without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.8964233928530033
+own_success,DT without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9471655931547285
+own_success,DT without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.9154318421480029
+own_success,DT without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.9341388796455602
+own_success,DT without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.8928639562107585
+own_success,DT with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.9085075318268002
+own_success,DT with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.9109686383945348
+own_success,DT with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9476355358450522
+own_success,DT with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.9030923862543391
+own_success,DT with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.9411868961708062
+own_success,DT with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.9071674131377574
+own_success,S1 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8530713327365151
+own_success,S1 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.7445018485651076
+own_success,S1 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8850007957451427
+own_success,S1 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.9088478103090296
+own_success,S1 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.7795960506094126
+own_success,S1 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.8262875735792401
+own_success,S1 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.6188233644580439
+own_success,S1 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.7031119488678701
+own_success,S1 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.771284844330169
+own_success,S1 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8109168934174803
+own_success,S1 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.7601971710155123
+own_success,S1 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.7205697424565081
+own_success,S3 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8854072522642216
+own_success,S3 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.8014465696469025
+own_success,S3 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8959800198925095
+own_success,S3 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.9039337061108673
+own_success,S3 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.8032234768544633
+own_success,S3 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.8647114256460854
+own_success,S3 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.6669374203209995
+own_success,S3 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.7556332255986009
+own_success,S3 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8079457658048033
+own_success,S3 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8437574610005215
+own_success,S3 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.7979932735903907
+own_success,S3 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.7660492633969989
+own_success,S5 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8729081294019496
+own_success,S5 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.8099392454836843
+own_success,S5 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9066481544329167
+own_success,S5 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8816030260219792
+own_success,S5 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.8157507572254721
+own_success,S5 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.8785228749068155
+own_success,S5 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.675185668767067
+own_success,S5 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.7629030278130581
+own_success,S5 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.8310733802773038
+own_success,S5 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8352708583169279
+own_success,S5 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.8106066500259509
+own_success,S5 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.7820570731725776
+own_success,DT + S1 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8251367500784574
+own_success,DT + S1 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.6598787065365984
+own_success,DT + S1 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.7213995009392158
+own_success,DT + S1 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8395267288796613
+own_success,DT + S1 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.6209984990641566
+own_success,DT + S1 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.6439283460269165
+own_success,DT + S1 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.46716676358838677
+own_success,DT + S1 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.6043542951425931
+own_success,DT + S1 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.5725684221327632
+own_success,DT + S1 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.6530879724511013
+own_success,DT + S1 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.6227658027398544
+own_success,DT + S1 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.5752431240089817
+own_success,DT + S3 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8307200707306863
+own_success,DT + S3 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.7081613200908546
+own_success,DT + S3 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.7279594392521315
+own_success,DT + S3 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8576991818719101
+own_success,DT + S3 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.632665308172408
+own_success,DT + S3 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.6895115168942259
+own_success,DT + S3 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.4865482270480756
+own_success,DT + S3 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.6567030321736628
+own_success,DT + S3 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.616278859296015
+own_success,DT + S3 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.726321546740157
+own_success,DT + S3 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.6640654417675929
+own_success,DT + S3 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.6231695271343523
+own_success,DT + S5 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8313522905409183
+own_success,DT + S5 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.7216515159998417
+own_success,DT + S5 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.7351690099250661
+own_success,DT + S5 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8600606485859273
+own_success,DT + S5 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.6370523773144572
+own_success,DT + S5 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.7051047063695266
+own_success,DT + S5 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.4954825560730942
+own_success,DT + S5 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.6684074939374374
+own_success,DT + S5 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.6388574533260003
+own_success,DT + S5 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7418646157298456
+own_success,DT + S5 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.6760159694686081
+own_success,DT + S5 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.6405231715858755
+own_success,DINOv2 without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.7213576421616598
+own_success,DINOv2 without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.13731857513967952
+own_success,DINOv2 without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9431508983488499
+own_success,DINOv2 without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.8116660792700353
+own_success,DINOv2 without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.2852577053782833
+own_success,DINOv2 without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.5521445670925841
+own_success,DINOv2 with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.7672972821830776
+own_success,DINOv2 with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.3922398665122602
+own_success,DINOv2 with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9529071317315398
+own_success,DINOv2 with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8445503834818398
+own_success,DINOv2 with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.4798733295704723
+own_success,DINOv2 with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.6494974424780074
+own_success,Robometer progress without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.9683344167411874
+own_success,Robometer progress without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.9732770395818507
+own_success,Robometer progress without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.8980403542020365
+own_success,Robometer progress without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.811148828123901
+own_success,Robometer progress without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.8313363153988208
+own_success,Robometer progress without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.7797035265550462
+own_success,Robometer progress with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.9743008021387846
+own_success,Robometer progress with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.9762007956346438
+own_success,Robometer progress with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.9087250695393487
+own_success,Robometer progress with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.8292493041038769
+own_success,Robometer progress with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.8637378048162524
+own_success,Robometer progress with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.8219204486360899
+own_success,Robometer success without endpoint,310abc9d-04d9-401f-93b9-c20447296f32,14,0.8159780812945611
+own_success,Robometer success without endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,14,0.7595990767682643
+own_success,Robometer success without endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,14,0.9133848279586725
+own_success,Robometer success without endpoint,86591c99-29bc-463c-b689-428ce47513d8,14,0.7435541633817047
+own_success,Robometer success without endpoint,77f0dace-9472-486a-bf5e-20b412919de7,14,0.5177396563562504
+own_success,Robometer success without endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,14,0.9663367712045952
+own_success,Robometer success with endpoint,310abc9d-04d9-401f-93b9-c20447296f32,15,0.83910414551701
+own_success,Robometer success with endpoint,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,15,0.8101070490381481
+own_success,Robometer success with endpoint,1d035ec5-5127-4af9-9cca-fe214830d670,15,0.926228830333773
+own_success,Robometer success with endpoint,86591c99-29bc-463c-b689-428ce47513d8,15,0.7931682459602478
+own_success,Robometer success with endpoint,77f0dace-9472-486a-bf5e-20b412919de7,15,0.6366116295471216
+own_success,Robometer success with endpoint,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,15,0.8135526610966636

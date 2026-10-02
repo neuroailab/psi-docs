@@ -1,0 +1,74 @@
+{
+  "episodes": 16,
+  "datasets": {
+    "MIT Franka": 6,
+    "UTD SO101": 10
+  },
+  "temperature": 0.7,
+  "sequence": "rgb0,rgblh0,rgb0^g,dt0",
+  "metrics": {
+    "PSI rgb+rgblh": {
+      "endpoint included": {
+        "mean": 0.9619921073752651,
+        "by_dataset": {
+          "MIT Franka": 0.9715051825248545,
+          "UTD SO101": 0.9524790322256755
+        }
+      },
+      "endpoint excluded": {
+        "mean": 0.9555439808692077,
+        "by_dataset": {
+          "MIT Franka": 0.97484078411156,
+          "UTD SO101": 0.9362471776268553
+        }
+      }
+    },
+    "Robometer released recipe": {
+      "mean": 0.9372215682774729,
+      "by_dataset": {
+        "MIT Franka": 0.9554577290276036,
+        "UTD SO101": 0.9189854075273424
+      },
+      "counts": {
+        "MIT Franka": 6,
+        "UTD SO101": 10
+      },
+      "episodes": 16,
+      "native_compiler_parity": true
+    }
+  },
+  "adapted_current_frame_robometer": {
+    "endpoint included": {
+      "mean": 0.8664309304673583,
+      "by_dataset": {
+        "MIT Franka": 0.8804319090718606,
+        "UTD SO101": 0.852429951862856
+      }
+    },
+    "endpoint excluded": {
+      "mean": 0.8602387961110536,
+      "by_dataset": {
+        "MIT Franka": 0.8299173473003675,
+        "UTD SO101": 0.8905602449217396
+      }
+    }
+  },
+  "robometer_released_recipe": {
+    "mean": 0.9372215682774729,
+    "by_dataset": {
+      "MIT Franka": 0.9554577290276036,
+      "UTD SO101": 0.9189854075273424
+    },
+    "counts": {
+      "MIT Franka": 6,
+      "UTD SO101": 10
+    },
+    "episodes": 16,
+    "native_compiler_parity": true
+  },
+  "comparison_protocol": "PSI keeps its own endpoint-excluded protocol; Robometer keeps all eight outputs from the author-clarified offline protocol.",
+  "aggregation": "Average within each dataset, then equal-weight mean of the two datasets.",
+  "selection": "Best multiview DT temperature selected on these same episodes; exploratory, not held-out.",
+  "robometer": "Cached native progress-head predictions, eight causal external-camera frames plus instruction; author-clarified full-trajectory frame/output selection, no wrist or goal input.",
+  "alignment": "Equal released-frame index; capture-time synchronization cannot be reverified because raw timestamps are absent."
+}

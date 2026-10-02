@@ -1,0 +1,81 @@
+condition,model,metric,lower95,upper95
+independent,DT,auroc,0.14583333333333334,0.7708333333333334
+independent,DT,balanced_accuracy,0.5,0.5
+independent,DT,recall_success,0.0,0.0
+independent,DT,false_success_rate,0.0,0.0
+independent,S1,auroc,0.346875,0.8819444444444444
+independent,S1,balanced_accuracy,0.5,0.5
+independent,S1,recall_success,0.0,0.0
+independent,S1,false_success_rate,0.0,0.0
+independent,S3,auroc,0.5138888888888888,0.8611111111111112
+independent,S3,balanced_accuracy,0.5,0.5
+independent,S3,recall_success,0.0,0.0
+independent,S3,false_success_rate,0.0,0.0
+independent,S5,auroc,0.4791666666666667,0.8472222222222222
+independent,S5,balanced_accuracy,0.5,0.5
+independent,S5,recall_success,0.0,0.0
+independent,S5,false_success_rate,0.0,0.0
+independent,DT + S1,auroc,0.1873263888888889,0.7777777777777778
+independent,DT + S1,balanced_accuracy,0.5,0.5
+independent,DT + S1,recall_success,0.0,0.0
+independent,DT + S1,false_success_rate,0.0,0.0
+independent,DT + S3,auroc,0.1873263888888889,0.7777777777777778
+independent,DT + S3,balanced_accuracy,0.5,0.5
+independent,DT + S3,recall_success,0.0,0.0
+independent,DT + S3,false_success_rate,0.0,0.0
+independent,DT + S5,auroc,0.1873263888888889,0.7708333333333334
+independent,DT + S5,balanced_accuracy,0.5,0.5
+independent,DT + S5,recall_success,0.0,0.0
+independent,DT + S5,false_success_rate,0.0,0.0
+independent,DINOv2,auroc,0.4791666666666667,0.9513888888888888
+independent,DINOv2,balanced_accuracy,0.5,0.5
+independent,DINOv2,recall_success,0.0,0.0
+independent,DINOv2,false_success_rate,0.0,0.0
+independent,Robometer progress,auroc,0.9722222222222222,1.0
+independent,Robometer progress,balanced_accuracy,0.9375,1.0
+independent,Robometer progress,recall_success,1.0,1.0
+independent,Robometer progress,false_success_rate,0.0,0.125
+independent,Robometer success,auroc,0.9375,1.0
+independent,Robometer success,balanced_accuracy,0.5208333333333333,0.6666666666666667
+independent,Robometer success,recall_success,1.0,1.0
+independent,Robometer success,false_success_rate,0.6666666666666666,0.9583333333333334
+approximate_start_match,DT,auroc,0.1595486111111111,0.7918402777777768
+approximate_start_match,DT,balanced_accuracy,0.5,0.5
+approximate_start_match,DT,recall_success,0.0,0.0
+approximate_start_match,DT,false_success_rate,0.0,0.0
+approximate_start_match,S1,auroc,0.4375,0.8819444444444444
+approximate_start_match,S1,balanced_accuracy,0.5,0.5
+approximate_start_match,S1,recall_success,0.0,0.0
+approximate_start_match,S1,false_success_rate,0.0,0.0
+approximate_start_match,S3,auroc,0.4652777777777778,0.9305555555555556
+approximate_start_match,S3,balanced_accuracy,0.5,0.5
+approximate_start_match,S3,recall_success,0.0,0.0
+approximate_start_match,S3,false_success_rate,0.0,0.0
+approximate_start_match,S5,auroc,0.4513888888888889,0.9305555555555556
+approximate_start_match,S5,balanced_accuracy,0.5,0.5
+approximate_start_match,S5,recall_success,0.0,0.0
+approximate_start_match,S5,false_success_rate,0.0,0.0
+approximate_start_match,DT + S1,auroc,0.16666666666666666,0.7986111111111112
+approximate_start_match,DT + S1,balanced_accuracy,0.5,0.5
+approximate_start_match,DT + S1,recall_success,0.0,0.0
+approximate_start_match,DT + S1,false_success_rate,0.0,0.0
+approximate_start_match,DT + S3,auroc,0.16666666666666666,0.8194444444444444
+approximate_start_match,DT + S3,balanced_accuracy,0.5,0.5
+approximate_start_match,DT + S3,recall_success,0.0,0.0
+approximate_start_match,DT + S3,false_success_rate,0.0,0.0
+approximate_start_match,DT + S5,auroc,0.16666666666666666,0.8194444444444444
+approximate_start_match,DT + S5,balanced_accuracy,0.5,0.5
+approximate_start_match,DT + S5,recall_success,0.0,0.0
+approximate_start_match,DT + S5,false_success_rate,0.0,0.0
+approximate_start_match,DINOv2,auroc,0.5277777777777778,1.0
+approximate_start_match,DINOv2,balanced_accuracy,0.5,0.5
+approximate_start_match,DINOv2,recall_success,0.0,0.0
+approximate_start_match,DINOv2,false_success_rate,0.0,0.0
+approximate_start_match,Robometer progress,auroc,0.9722222222222222,1.0
+approximate_start_match,Robometer progress,balanced_accuracy,0.9375,1.0
+approximate_start_match,Robometer progress,recall_success,1.0,1.0
+approximate_start_match,Robometer progress,false_success_rate,0.0,0.125
+approximate_start_match,Robometer success,auroc,0.9375,1.0
+approximate_start_match,Robometer success,balanced_accuracy,0.5208333333333333,0.6666666666666667
+approximate_start_match,Robometer success,recall_success,1.0,1.0
+approximate_start_match,Robometer success,false_success_rate,0.6666666666666666,0.9583333333333334

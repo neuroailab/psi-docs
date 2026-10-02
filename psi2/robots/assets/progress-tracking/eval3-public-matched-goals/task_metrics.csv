@@ -1,0 +1,85 @@
+analysis,method,episode_id,task,independent,matched,paired_delta
+primary_excluding_endpoint,PSI DT,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9713403058525567,0.9907115183568223,0.019371212504265545
+primary_excluding_endpoint,PSI DT,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.556838315470225,0.9522077328266347,1.5090460482968597
+primary_excluding_endpoint,PSI DT,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.5584401525267171,0.946735577071962,0.3882954245452449
+primary_excluding_endpoint,PSI DT,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.6002497684018621,0.9966674488986692,1.5969172173005313
+primary_excluding_endpoint,PSI DT,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.7554275225835035,0.9853286702203657,1.7407561928038693
+primary_excluding_endpoint,PSI DT,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.7490944251504267,0.9633374136447982,0.2142429884943715
+primary_excluding_endpoint,PSI S1,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.8890402046511291,0.9604085499974525,0.07136834534632341
+primary_excluding_endpoint,PSI S1,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.42495669590831564,0.7527941642125698,1.1777508601208855
+primary_excluding_endpoint,PSI S1,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9678097517621059,0.9675332782007021,-0.00027647356140381163
+primary_excluding_endpoint,PSI S1,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.9855750279081793,0.9053653304540356,1.8909403583622149
+primary_excluding_endpoint,PSI S1,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.3004070882870463,0.7182511947790553,1.0186582830661015
+primary_excluding_endpoint,PSI S1,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.7463504834355762,0.8404449105312908,0.09409442709571458
+primary_excluding_endpoint,PSI S3,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.8691465607007951,0.9652235655460825,0.09607700484528736
+primary_excluding_endpoint,PSI S3,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.3445117631609806,0.6561301064678159,1.0006418696287964
+primary_excluding_endpoint,PSI S3,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9468111072580375,0.9478871271037601,0.0010760198457225867
+primary_excluding_endpoint,PSI S3,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.9581215049838873,0.9365045464430984,1.8946260514269857
+primary_excluding_endpoint,PSI S3,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.4081780553149211,0.8200516373120094,0.4118735819970883
+primary_excluding_endpoint,PSI S3,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.7340091356451224,0.8363807197022983,0.10237158405717595
+primary_excluding_endpoint,PSI S5,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.8893304103214579,0.9684365546454617,0.07910614432400387
+primary_excluding_endpoint,PSI S5,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.2575464612595637,0.6470522962595556,0.9045987575191193
+primary_excluding_endpoint,PSI S5,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9130592679584747,0.9003793910343026,-0.012679876924172051
+primary_excluding_endpoint,PSI S5,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.8949847160488545,0.9867271534538921,1.8817118695027466
+primary_excluding_endpoint,PSI S5,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.32233512661125363,0.8464795926334316,0.524144466022178
+primary_excluding_endpoint,PSI S5,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.7446381819596223,0.8367000782979612,0.09206189633833894
+primary_excluding_endpoint,DINOv2,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9387672858456284,0.9175337916972872,-0.021233494148341192
+primary_excluding_endpoint,DINOv2,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.8756917577173569,0.9067604835005085,1.7824522412178654
+primary_excluding_endpoint,DINOv2,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.8928612395689467,-0.9219082533296766,-1.8147694928986233
+primary_excluding_endpoint,DINOv2,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,0.586155797688107,0.6937443989559565,0.10758860126784953
+primary_excluding_endpoint,DINOv2,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.8860654506983116,0.5762559553121049,-0.3098094953862066
+primary_excluding_endpoint,DINOv2,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.836550532304662,0.8309977602085594,-0.0055527720961026095
+primary_excluding_endpoint,Robometer progress (unchanged),1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.8676727482400594,0.8676727482400594,0.0
+primary_excluding_endpoint,Robometer progress (unchanged),310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,0.9533861759792255,0.9533861759792255,0.0
+primary_excluding_endpoint,Robometer progress (unchanged),a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9625530600151856,0.9625530600151856,0.0
+primary_excluding_endpoint,Robometer progress (unchanged),11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,0.9545890955721044,0.9545890955721044,0.0
+primary_excluding_endpoint,Robometer progress (unchanged),77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.9095960595443833,0.9095960595443833,0.0
+primary_excluding_endpoint,Robometer progress (unchanged),86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.950812196742338,0.950812196742338,0.0
+primary_excluding_endpoint,Encoded time,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,1.0,1.0,0.0
+primary_excluding_endpoint,Encoded time,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,1.0,1.0,0.0
+primary_excluding_endpoint,Encoded time,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,1.0,1.0,0.0
+primary_excluding_endpoint,Encoded time,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,1.0,1.0,0.0
+primary_excluding_endpoint,Encoded time,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,1.0,1.0,0.0
+primary_excluding_endpoint,Encoded time,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,1.0,1.0,0.0
+secondary_including_endpoint,PSI DT,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9854142059003278,0.9955867362047022,0.010172530304374372
+secondary_including_endpoint,PSI DT,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.7852374985031739,0.9554538220278406,1.7406913205310146
+secondary_including_endpoint,PSI DT,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.2993340614908376,0.975269076732709,0.6759350152418715
+secondary_including_endpoint,PSI DT,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.3314608095509009,0.9984051572669697,1.3298659668178705
+secondary_including_endpoint,PSI DT,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.8923499920892214,0.9915374803929495,1.8838874724821708
+secondary_including_endpoint,PSI DT,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.6947441505343626,0.9503066997420492,0.2555625492076866
+secondary_including_endpoint,PSI S1,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9367333528652004,0.8282038190189379,-0.10852953384626252
+secondary_including_endpoint,PSI S1,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.7627158488485387,0.775940237938861,1.5386560867873997
+secondary_including_endpoint,PSI S1,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9043895518599443,0.7748309861568956,-0.1295585657030487
+secondary_including_endpoint,PSI S1,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.6586117763827141,0.8073891297339733,1.4660009061166872
+secondary_including_endpoint,PSI S1,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.716896152047957,0.7833803817007563,1.5002765337487132
+secondary_including_endpoint,PSI S1,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.8445949011085072,0.8364410822282659,-0.00815381888024136
+secondary_including_endpoint,PSI S3,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9401224957652873,0.8465004510279097,-0.09362204473737756
+secondary_including_endpoint,PSI S3,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.5998082200353321,0.7796385812096213,1.3794468012449532
+secondary_including_endpoint,PSI S3,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9391669874417047,0.8086432013836002,-0.13052378605810444
+secondary_including_endpoint,PSI S3,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.7991550501348689,0.8212949904878305,1.6204500406226994
+secondary_including_endpoint,PSI S3,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.40763586213496433,0.8234538997070763,1.2310897618420407
+secondary_including_endpoint,PSI S3,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.8666036925610969,0.8559742943296055,-0.01062939823149145
+secondary_including_endpoint,PSI S5,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9497279271402328,0.8563702425337844,-0.09335768460644844
+secondary_including_endpoint,PSI S5,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.5552494192020233,0.7832657439077275,1.3385151631097507
+secondary_including_endpoint,PSI S5,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9413836462287324,0.8112550917786231,-0.1301285544501093
+secondary_including_endpoint,PSI S5,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,-0.7938546992511445,0.8436748447383551,1.6375295439894995
+secondary_including_endpoint,PSI S5,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,-0.5346616211798795,0.8438383861683774,1.378500007348257
+secondary_including_endpoint,PSI S5,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.8777089103899869,0.8622290924881421,-0.015479817901844828
+secondary_including_endpoint,DINOv2,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9717747131280795,0.9559068630889581,-0.01586785003912139
+secondary_including_endpoint,DINOv2,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,-0.9426460377450573,0.9565284136639313,1.8991744514089886
+secondary_including_endpoint,DINOv2,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.6586359455096676,0.37095984454704817,-0.2876761009626195
+secondary_including_endpoint,DINOv2,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,0.7865910798461295,0.846305612633649,0.05971453278751948
+secondary_including_endpoint,DINOv2,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.8145296951885905,0.8106071129722568,-0.003922582216333681
+secondary_including_endpoint,DINOv2,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.8064282369169592,0.8860118781042834,0.0795836411873242
+secondary_including_endpoint,Robometer progress (unchanged),1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,0.9325583447109695,0.9325583447109695,0.0
+secondary_including_endpoint,Robometer progress (unchanged),310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,0.9781139183237195,0.9781139183237195,0.0
+secondary_including_endpoint,Robometer progress (unchanged),a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,0.9805733604769754,0.9805733604769754,0.0
+secondary_including_endpoint,Robometer progress (unchanged),11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,0.9775341133607341,0.9775341133607341,0.0
+secondary_including_endpoint,Robometer progress (unchanged),77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,0.9400354505848504,0.9400354505848504,0.0
+secondary_including_endpoint,Robometer progress (unchanged),86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,0.9623797498214692,0.9623797498214692,0.0
+secondary_including_endpoint,Encoded time,1d035ec5-5127-4af9-9cca-fe214830d670,Close the drawer,1.0,1.0,0.0
+secondary_including_endpoint,Encoded time,310abc9d-04d9-401f-93b9-c20447296f32,Fold the towel in half,1.0,1.0,0.0
+secondary_including_endpoint,Encoded time,a8a40e75-11ef-42ec-89bd-04ab8b04d95e,Put blue cup in sink,1.0,1.0,0.0
+secondary_including_endpoint,Encoded time,11210ee0-2e3d-4f82-9319-91b0ff5b3d0d,Put the banana on the red plate,1.0,1.0,0.0
+secondary_including_endpoint,Encoded time,77f0dace-9472-486a-bf5e-20b412919de7,Put the eggplant in the black bowl,1.0,1.0,0.0
+secondary_including_endpoint,Encoded time,86591c99-29bc-463c-b689-428ce47513d8,Stack the green shape on the red cylinder,1.0,1.0,0.0

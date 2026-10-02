@@ -1,0 +1,289 @@
+method,episode_id,success,predicted_success,progress_alarm,success_override,first_alarm_frame,first_alarm_seconds,min_correlation,undefined_windows,terminal_dt_score,dt_success_score_threshold
+Paper-described W5 · any-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8396837313836689,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.8258790350242708,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.7454771497948514,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8396837313836689,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.9725645211407613,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.7454771497948514,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8470625631898785,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.7593392909201221,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.848326691966554,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8470625631898785,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8552174797263583,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.848326691966554,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.977468513954211,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.6293372470374181,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9332348992881693,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.977468513954211,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9389916556847152,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9332348992881693,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9928997844641185,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9928997844641185,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9358396653459273,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9358396653459273,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9562106078799862,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,True,True,True,277,9.233333333333333,-0.9793403375024252,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,277,9.233333333333333,-0.9781765547424953,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9562106078799862,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,True,True,True,277,9.233333333333333,-0.9793403375024252,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,277,9.233333333333333,-0.9781765547424953,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,True,True,True,277,9.233333333333333,-0.9345324675697673,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,446,14.866666666666667,-0.8314352155426339,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,-0.33800746721168246,0,,
+Paper-described W5 · any-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,625,20.833333333333332,-0.803860647703865,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,446,14.866666666666667,-0.8314352155426339,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,774,25.8,-0.923279434188198,0,,
+Paper-described W5 · any-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,625,20.833333333333332,-0.8937061597868554,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,714,23.8,-0.8218205384099287,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,-0.3105143127657316,0,,
+Paper-described W5 · any-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,False,True,,,-0.3428434481107683,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,714,23.8,-0.8218205384099287,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,834,27.8,-0.9259265195957103,0,,
+Paper-described W5 · any-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,834,27.8,-0.8427263184682691,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,491,16.366666666666667,-0.6399132820450038,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,True,True,True,491,16.366666666666667,-0.5412214441328878,0,,
+Paper-described W5 · any-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,491,16.366666666666667,-0.5412214441328878,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,491,16.366666666666667,-0.7906683378436525,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,True,True,True,491,16.366666666666667,-0.7172004613329442,0,,
+Paper-described W5 · any-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,491,16.366666666666667,-0.689094565734044,0,,
+W9 · window sensitivity,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,694,23.133333333333333,-0.6534919844648962,0,,
+W9 · window sensitivity,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,True,False,False,,,-0.049869181735072765,0,,
+W9 · window sensitivity,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,True,False,False,,,-0.4421932084715994,0,,
+W9 · window sensitivity,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,694,23.133333333333333,-0.6534919844648962,0,,
+W9 · window sensitivity,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,853,28.433333333333334,-0.8906696412572358,0,,
+W9 · window sensitivity,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,True,False,False,,,-0.4421932084715994,0,,
+W9 · window sensitivity,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,595,19.833333333333332,-0.7635127346429884,0,,
+W9 · window sensitivity,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,595,19.833333333333332,-0.700198384231568,0,,
+W9 · window sensitivity,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,694,23.133333333333333,-0.8210351621035081,0,,
+W9 · window sensitivity,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,595,19.833333333333332,-0.7635127346429884,0,,
+W9 · window sensitivity,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,595,19.833333333333332,-0.700198384231568,0,,
+W9 · window sensitivity,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,694,23.133333333333333,-0.8210351621035081,0,,
+W9 · window sensitivity,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,False,False,,,-0.4467384350474235,0,,
+W9 · window sensitivity,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,True,False,False,,,-0.4147016953196884,0,,
+W9 · window sensitivity,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,743,24.766666666666666,-0.5207122838809753,0,,
+W9 · window sensitivity,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,False,False,,,-0.4467384350474235,0,,
+W9 · window sensitivity,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,True,False,False,,,-0.4147016953196884,0,,
+W9 · window sensitivity,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,743,24.766666666666666,-0.5207122838809753,0,,
+W9 · window sensitivity,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,376,12.533333333333333,-0.9632404479281991,0,,
+W9 · window sensitivity,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,True,False,False,,,-0.45311374585398834,0,,
+W9 · window sensitivity,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,376,12.533333333333333,-0.7075828766865959,0,,
+W9 · window sensitivity,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,376,12.533333333333333,-0.9632404479281991,0,,
+W9 · window sensitivity,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,811,27.033333333333335,-0.8956720186112793,0,,
+W9 · window sensitivity,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,376,12.533333333333333,-0.7075828766865959,0,,
+W9 · window sensitivity,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,469,15.633333333333333,-0.9743013621775481,0,,
+W9 · window sensitivity,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,469,15.633333333333333,-0.941793997904295,0,,
+W9 · window sensitivity,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,469,15.633333333333333,-0.9001086353408805,0,,
+W9 · window sensitivity,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,469,15.633333333333333,-0.9743013621775481,0,,
+W9 · window sensitivity,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,469,15.633333333333333,-0.941793997904295,0,,
+W9 · window sensitivity,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,469,15.633333333333333,-0.9001086353408805,0,,
+W9 · window sensitivity,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,469,15.633333333333333,-0.8559585050916655,0,,
+W9 · window sensitivity,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,721,24.033333333333335,-0.675102323116905,0,,
+W9 · window sensitivity,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,721,24.033333333333335,-0.8945573586043598,0,,
+W9 · window sensitivity,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,721,24.033333333333335,-0.686172995682551,0,,
+W9 · window sensitivity,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,721,24.033333333333335,-0.675102323116905,0,,
+W9 · window sensitivity,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,721,24.033333333333335,-0.8975017559573996,0,,
+W9 · window sensitivity,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,721,24.033333333333335,-0.686172995682551,0,,
+W9 · window sensitivity,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,610,20.333333333333332,-0.5769203451829099,0,,
+W9 · window sensitivity,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,True,True,True,610,20.333333333333332,-0.7518487549573105,0,,
+W9 · window sensitivity,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,610,20.333333333333332,-0.6370986017008494,0,,
+W9 · window sensitivity,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,610,20.333333333333332,-0.5769203451829099,0,,
+W9 · window sensitivity,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,True,True,True,610,20.333333333333332,-0.7518487549573105,0,,
+W9 · window sensitivity,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,True,True,True,610,20.333333333333332,-0.7035272212658823,0,,
+W9 · window sensitivity,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,774,25.8,-0.6645746788189466,0,,
+W9 · window sensitivity,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,True,True,True,774,25.8,-0.6968675296853868,0,,
+W9 · window sensitivity,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,True,True,True,774,25.8,-0.6752467362520252,0,,
+W9 · window sensitivity,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,True,True,774,25.8,-0.6645746788189466,0,,
+W9 · window sensitivity,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,True,True,True,774,25.8,-0.7126456841566663,0,,
+W9 · window sensitivity,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,True,True,True,774,25.8,-0.699596647880249,0,,
+W9 · window sensitivity,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,False,True,,,0.04047128454094484,0,,
+W9 · window sensitivity,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,0.3266096562365157,0,,
+W9 · window sensitivity,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,669,22.3,-0.7466814499246066,0,,
+W9 · window sensitivity,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,954,31.8,-0.609727813537891,0,,
+W9 · window sensitivity,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,834,27.8,-0.9267191558490175,0,,
+W9 · window sensitivity,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,669,22.3,-0.8834736799981698,0,,
+W9 · window sensitivity,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,False,True,,,-0.1837768240269676,0,,
+W9 · window sensitivity,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,-0.2372687134866613,0,,
+W9 · window sensitivity,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,False,True,,,-0.06557405400704724,0,,
+W9 · window sensitivity,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,894,29.8,-0.7333354253515041,0,,
+W9 · window sensitivity,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,894,29.8,-0.9066271829857762,0,,
+W9 · window sensitivity,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,894,29.8,-0.7116761454839737,0,,
+W9 · window sensitivity,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,False,True,,,-0.07464697694108824,0,,
+W9 · window sensitivity,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,True,False,True,,,0.42653711645638626,0,,
+W9 · window sensitivity,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,False,True,,,0.42653711645638626,0,,
+W9 · window sensitivity,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,True,True,834,27.8,-0.7638226362567575,0,,
+W9 · window sensitivity,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,True,True,True,834,27.8,-0.7835480366670875,0,,
+W9 · window sensitivity,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,834,27.8,-0.7099948654564601,0,,
+W5 · final-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8396837313836689,0,,
+W5 · final-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.8258790350242708,0,,
+W5 · final-time success override,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.7454771497948514,0,,
+W5 · final-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8396837313836689,0,,
+W5 · final-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.9725645211407613,0,,
+W5 · final-time success override,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.7454771497948514,0,,
+W5 · final-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8470625631898785,0,,
+W5 · final-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,True,False,297,9.9,-0.7593392909201221,0,,
+W5 · final-time success override,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.848326691966554,0,,
+W5 · final-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8470625631898785,0,,
+W5 · final-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8552174797263583,0,,
+W5 · final-time success override,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,True,False,297,9.9,-0.848326691966554,0,,
+W5 · final-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,True,False,297,9.9,-0.8533885533986545,0,,
+W5 · final-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.977468513954211,0,,
+W5 · final-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.6293372470374181,0,,
+W5 · final-time success override,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9332348992881693,0,,
+W5 · final-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.977468513954211,0,,
+W5 · final-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9389916556847152,0,,
+W5 · final-time success override,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9332348992881693,0,,
+W5 · final-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9928997844641185,0,,
+W5 · final-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+W5 · final-time success override,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+W5 · final-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9928997844641185,0,,
+W5 · final-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+W5 · final-time success override,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,True,False,282,9.4,-0.9648227897071411,0,,
+W5 · final-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,True,False,282,9.4,-0.9659535773867829,0,,
+W5 · final-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9358396653459273,0,,
+W5 · final-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9358396653459273,0,,
+W5 · final-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9562106078799862,0,,
+W5 · final-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9793403375024252,0,,
+W5 · final-time success override,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,True,False,277,9.233333333333333,-0.9781765547424953,0,,
+W5 · final-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9562106078799862,0,,
+W5 · final-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,True,False,277,9.233333333333333,-0.9793403375024252,0,,
+W5 · final-time success override,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,True,False,277,9.233333333333333,-0.9781765547424953,0,,
+W5 · final-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,False,True,False,277,9.233333333333333,-0.9345324675697673,0,,
+W5 · final-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,446,14.866666666666667,-0.8314352155426339,0,,
+W5 · final-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,-0.33800746721168246,0,,
+W5 · final-time success override,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,625,20.833333333333332,-0.803860647703865,0,,
+W5 · final-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,446,14.866666666666667,-0.8314352155426339,0,,
+W5 · final-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,774,25.8,-0.923279434188198,0,,
+W5 · final-time success override,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,True,False,625,20.833333333333332,-0.8937061597868554,0,,
+W5 · final-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,714,23.8,-0.8218205384099287,0,,
+W5 · final-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,True,False,False,,,-0.3105143127657316,0,,
+W5 · final-time success override,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,False,False,,,-0.3428434481107683,0,,
+W5 · final-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,714,23.8,-0.8218205384099287,0,,
+W5 · final-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,True,False,834,27.8,-0.9259265195957103,0,,
+W5 · final-time success override,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,False,True,False,834,27.8,-0.8427263184682691,0,,
+W5 · final-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,491,16.366666666666667,-0.6399132820450038,0,,
+W5 · final-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,False,True,False,491,16.366666666666667,-0.5412214441328878,0,,
+W5 · final-time success override,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,True,True,491,16.366666666666667,-0.5412214441328878,0,,
+W5 · final-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,False,True,False,491,16.366666666666667,-0.7906683378436525,0,,
+W5 · final-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,False,True,False,491,16.366666666666667,-0.7172004613329442,0,,
+W5 · final-time success override,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,False,True,False,491,16.366666666666667,-0.689094565734044,0,,
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-2.1582741737365723,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,,,,,,,-18.87069320678711,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,,,,,,,-13.086189270019531,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.712083339691162,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,,,,,,,-21.328041076660156,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,,,,,,,-20.432388305664062,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-1.8467587232589722,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,,,,,,,-21.05512237548828,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,,,,,,,-22.799949645996094,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-1.9233570098876953,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,,,,,,,-14.952442169189453,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,,,,,,,-26.88425636291504,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-1.992868185043335,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,,,,,,,-5.3358306884765625,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,,,,,,,-5.540351867675781,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.8376514911651611,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,,,,,,,-5.183582305908203,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,,,,,,,-5.062107086181641,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-2.1704280376434326,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,,,,,,,-8.841635704040527,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,,,,,,,-8.49343490600586,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-2.39782452583313,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,,,,,,,-7.581769943237305,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b050_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,False,False,,,,,,,-11.00167179107666,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-1.9399687051773071,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,False,False,,,,,,,-17.782352447509766,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,,,,,,,-12.218461990356445,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.6195471286773682,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,,,,,,,-17.164302825927734,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,,,,,,,-30.14434051513672,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-1.9853872060775757,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,,,,,,,-16.84389877319336,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,,,,,,,-11.418365478515625,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-1.8932315111160278,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,,,,,,,-13.116124153137207,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,False,,,,,,,-21.621360778808594,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-2.05474853515625,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,True,,,,,,,-2.6371445655822754,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,False,False,,,,,,,-3.973802328109741,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.756280541419983,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,False,False,,,,,,,-6.429446220397949,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,False,False,,,,,,,-6.3094706535339355,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-2.2784228324890137,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,False,False,,,,,,,-8.107011795043945,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,False,False,,,,,,,-7.59472131729126,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-2.2179348468780518,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,False,False,,,,,,,-6.477652549743652,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b070_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,False,,,,,,,-13.165558815002441,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-1.9618301391601562,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,False,,,,,,,-5.845635414123535,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,False,,,,,,,-9.959372520446777,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.578993320465088,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,False,,,,,,,-6.956301689147949,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,False,,,,,,,-8.705158233642578,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-1.8061175346374512,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,False,,,,,,,-10.560625076293945,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,False,,,,,,,-9.07009220123291,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-1.7843540906906128,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,False,,,,,,,-6.283539772033691,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_original/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,False,,,,,,,-9.1929931640625,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/replay_control,True,True,,,,,,,-1.9407684803009033,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/hold,True,True,,,,,,,-1.7471681833267212,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e1e35-af9f-7d66-93b0-478d1c079799/random_walk,True,True,,,,,,,-1.8405656814575195,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/replay_control,True,True,,,,,,,-1.7469923496246338,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/hold,True,True,,,,,,,-1.7226784229278564,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2d91-6e08-7f79-a3e4-c843c73a3ef2/random_walk,True,True,,,,,,,-1.7640022039413452,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/replay_control,True,True,,,,,,,-2.113908052444458,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/hold,True,True,,,,,,,-2.1159307956695557,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e3c25-a92e-7824-a264-f1da48b9bd3d/random_walk,True,True,,,,,,,-2.0390326976776123,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/replay_control,True,True,,,,,,,-2.108409881591797,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/hold,True,True,,,,,,,-2.0015130043029785,-3.1662302017211914
+PSI DT · rgb + rgblh · dev threshold,b090_parked/episode_019e2261-5abe-7ece-910d-8988dd12106a/random_walk,True,True,,,,,,,-1.9887981414794922,-3.1662302017211914

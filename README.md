@@ -5,6 +5,7 @@ Public documentation and interactive visualizations for PSI models.
 ## Published documentation
 
 - [PSI dashboard](https://neuroailab.github.io/psi-docs/psi2/training_plan/)
+- [Robot project tracker — plans, evaluations, and results](https://neuroailab.github.io/psi-docs/psi2/robots/)
 - [SNAIL — ccn2 onboarding](https://neuroailab.github.io/psi-docs/snail/onboarding/)
 - [SNAIL — lab directory](https://neuroailab.github.io/psi-docs/snail/directory/)
 - [SNAIL — office hours](https://neuroailab.github.io/psi-docs/snail/office-hours/)
@@ -12,6 +13,15 @@ Public documentation and interactive visualizations for PSI models.
 The dashboard files under `psi2/training_plan/` are generated from the private
 `neuroailab/ccwm` repository. Update the canonical source there; its publishing
 workflow synchronizes only the static website assets into this repository.
+
+The full robot project tracker under `psi2/robots/` is also generated from CCWM.
+Edit its canonical source at `ccwm/psi2/robots/evals/website/`; that directory's
+README documents the live-server and public-site update workflows for
+collaborators. Run `export_static.py` there to update this public snapshot.
+Do not edit the generated files here directly. `export-manifest.json` records
+the source version, export time, and file checksums. The [PSI section](psi2/index.html)
+links the dashboard and tracker. As with other pages, verify the Actions run and
+live URL after publication; local files alone do not establish a deployment.
 
 ## Adding public pages
 

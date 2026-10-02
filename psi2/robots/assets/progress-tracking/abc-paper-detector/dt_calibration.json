@@ -1,0 +1,16 @@
+{
+  "model": "PSI DT rgb+rgblh",
+  "temperature": 1.0,
+  "score": "negative expected DT bin",
+  "score_threshold": -3.1662302017211914,
+  "distance_threshold": 3.1662302017211914,
+  "rule": "Predict successful iff terminal expected DT <= distance_threshold.",
+  "selection": "Maximize development balanced accuracy; ties prefer fewer false successes then higher success-score threshold. Same established ABC calibration criterion.",
+  "development_samples": 36,
+  "development_sources": 2,
+  "test_samples": 72,
+  "test_sources": 4,
+  "source_split_disjoint": true,
+  "poisoned_test_data_does_not_change_threshold": true,
+  "terminal_scores_sha256": "0e5fe75bb2da7e8f05b2e5700db00c955c07278a6645d51436c6cddf53593b88"
+}
